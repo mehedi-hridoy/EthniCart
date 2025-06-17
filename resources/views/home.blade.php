@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>EthniCart- From Earth to You</h1>
+    <h1>Contributors</h1>
+    <ul> 
+        
+        <li>Mehedi Hasan Hridoy</li>
+        <li>Umme Salma Lamyea</li>
+    </ul>
 </body>
 </html>
