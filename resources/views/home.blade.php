@@ -29,7 +29,6 @@
     </style>
 </head>
 <body class="bg-blue-50">
-    <h1 ida="hi">hi</h1>
     <nav class="sticky top-0 z-50">
         <!-- Main Navigation -->
         <div class="bg-white shadow-md">
