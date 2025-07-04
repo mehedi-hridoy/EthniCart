@@ -1,11 +1,19 @@
+@extends('index')
+@push('style')
+  <title>EthniCart</title>
+@endpush
+@section('main-content')
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EthniCart</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
 
@@ -28,7 +36,12 @@
        
     </style>
 </head>
-<body class="bg-blue-50">
+
+<body >
+
+<div class="bg-blue-50">
+
+
     <nav class="sticky top-0 z-50">
         <!-- Main Navigation -->
         <div class="bg-white shadow-md">
@@ -115,6 +128,14 @@
             </form>
         </div>
     </nav>
+
+
+
+
+
+
+
+</div>
 
     
 
