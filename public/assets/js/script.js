@@ -9,3 +9,6 @@
                 mobileSearchBar.style.display = isSearchVisible ? 'block' : 'none';
             });
         });
+
+
+
