@@ -133,12 +133,12 @@
 
 <!--bottom nav design -->
 
-<nav class="bg-white shadow-sm border-b">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Shop by Category Button -->
-                <div class="relative">
-                    <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                <div class="relative -ml-2">
+                    <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -263,7 +263,6 @@
             </div>
         </div>
     </nav>
-
 
 
  
