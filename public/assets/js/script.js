@@ -46,3 +46,111 @@
             });
         });
 
+// script for courasol images 
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel-wrapper');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    let currentSlide = 0;
+    const totalSlides = 4;
+    let autoSlideInterval;
+    
+    // Function to go to a specific slide
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        const translateX = -slideIndex * 100;
+        carousel.style.transform = `translateX(${translateX}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            if (index === slideIndex) {
+                dot.classList.remove('bg-opacity-50');
+                dot.classList.add('bg-opacity-75');
+            } else {
+                dot.classList.remove('bg-opacity-75');
+                dot.classList.add('bg-opacity-50');
+            }
+        });
+    }
+    
+    // Next slide function
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }
+    
+    // Previous slide function
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        goToSlide(currentSlide);
+    }
+    
+    // Auto slide function
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    }
+    
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopAutoSlide();
+            goToSlide(index);
+            startAutoSlide();
+        });
+    });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            stopAutoSlide();
+            if (diff > 0) {
+                nextSlide(); // Swipe left - next slide
+            } else {
+                prevSlide(); // Swipe right - previous slide
+            }
+            startAutoSlide();
+        }
+    }
+    
+    // Pause auto-slide on hover
+    const carouselContainer = carousel.parentElement;
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+    
+    // Start auto-slide
+    startAutoSlide();
+});
