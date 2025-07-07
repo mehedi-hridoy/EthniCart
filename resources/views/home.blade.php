@@ -265,7 +265,117 @@
     </nav>
 
 
-  
+    <!-- main body part of the site -->
+
+    {{-- Scrollable Image Carousel Section --}}
+<div class="relative w-full overflow-hidden bg-gray-50">
+    {{-- Carousel Container --}}
+    <div class="relative h-96 md:h-[500px] lg:h-[600px]">
+        {{-- Carousel Wrapper --}}
+        <div id="carousel-wrapper" class="flex transition-transform duration-500 ease-in-out h-full">
+            {{-- Image Slide 1 --}}
+            <div class="min-w-full relative">
+                <a href="#" class="block w-full h-full">
+                    <img src="{{ asset('images/brash.jpg') }}"
+                         alt="Slide 1" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Healthy Choices</h2>
+                            <p class="text-lg md:text-xl mb-6">Fresh fruits and nutritious meals</p>
+                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Shop Now
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Image Slide 2 --}}
+            <div class="min-w-full relative">
+                <a href="#" class="block w-full h-full">
+                    <img src="{{ asset('images/nimpata_gura.jpg') }}"
+                         alt="Slide 2" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Fashion Collection</h2>
+                            <p class="text-lg md:text-xl mb-6">Explore the latest trends</p>
+                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Explore Now
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Image Slide 3 --}}
+            <div class="min-w-full relative">
+                <a href="#" class="block w-full h-full">
+                    <img src="{{ asset('images/rosemery_oil.jpg') }}"
+                         alt="Slide 3" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Special Offers</h2>
+                            <p class="text-lg md:text-xl mb-6">Up to 50% off on selected items</p>
+                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                Shop Deals
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Image Slide 4 --}}
+            <div class="min-w-full relative">
+                <a href="#" class="block w-full h-full">
+                    <img src="{{ asset('images/perfume.jpg') }}"
+                         alt="Slide 4" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-4">New Arrivals</h2>
+                            <p class="text-lg md:text-xl mb-6">Discover our latest products</p>
+                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                View Collection
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        {{-- Navigation Arrows --}}
+        <button id="prev-btn" 
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+
+        <button id="next-btn" 
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 hover:bg-opacity-100 text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+        {{-- Dots Indicator --}}
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button class="carousel-dot w-3 h-3 bg-white bg-opacity-75 rounded-full transition-all duration-300" data-slide="0"></button>
+            <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="1"></button>
+            <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="2"></button>
+            <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="3"></button>
+        </div>
+    </div>
+
+    {{-- Mobile Swipe Indicator (Optional) --}}
+    <div class="md:hidden text-center py-2 text-gray-500 text-sm">
+        Swipe to navigate
+    </div>
+</div>
+
 
 
 
