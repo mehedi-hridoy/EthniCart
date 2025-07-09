@@ -378,6 +378,235 @@
 
 
 
+{{-- Product Categories Grid Section --}}
+<div class="bg-white py-8 md:py-12 lg:py-16">
+    <div class="container mx-auto px-4">
+        {{-- Section Title (Optional) --}}
+        <div class="text-center mb-8">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
+                Shop by Category
+            </h2>
+            <p class="text-gray-600 text-sm md:text-base">
+                Explore our wide range of products
+            </p>
+        </div>
+
+        {{-- Categories Grid --}}
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+            {{-- Category 1: Grocery --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/F3F4F6/374151?text=Grocery" 
+                             alt="Grocery" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Grocery
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 2: Food & Snacks --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Food+%26+Snacks" 
+                             alt="Food & Snacks" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Food & Snacks
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 3: Fruits & Vegetables --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/D1FAE5/065F46?text=Fruits+%26+Vegetables" 
+                             alt="Fruits & Vegetables" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Fruits & Vegetables
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 4: Fish & Meat --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/FDE2E7/BE185D?text=Fish+%26+Meat" 
+                             alt="Fish & Meat" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Fish & Meat
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 5: Commodities --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/E0E7FF/3730A3?text=Commodities" 
+                             alt="Commodities" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Commodities
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 6: Juice & Beverage --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/FBBF24/92400E?text=Juice+%26+Beverage" 
+                             alt="Juice & Beverage" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Juice & Beverage
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 7: Dairy --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/DBEAFE/1D4ED8?text=Dairy" 
+                             alt="Dairy" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Dairy
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 8: Frozen Item --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/F0F9FF/0369A1?text=Frozen+Item" 
+                             alt="Frozen Item" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Frozen Item
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 9: Beauty & Personal Care --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/FCE7F3/BE185D?text=Beauty+%26+Personal+Care" 
+                             alt="Beauty & Personal Care" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Beauty & Personal Care
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 10: Health & Wellness --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/D1FAE5/047857?text=Health+%26+Wellness" 
+                             alt="Health & Wellness" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Health & Wellness
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 11: Cleaning & Household --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/E5E7EB/374151?text=Cleaning+%26+Household" 
+                             alt="Cleaning & Household" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Cleaning & Household
+                        </h3>
+                    </div>
+                </a>
+            </div>
+
+            {{-- Category 12: Baby Care --}}
+            <div class="group">
+                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                    <div class="aspect-square relative">
+                        <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Baby+Care" 
+                             alt="Baby Care" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                    </div>
+                    <div class="p-3 md:p-4">
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
+                            Baby Care
+                        </h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        {{-- View All Categories Button (Optional) --}}
+        <div class="text-center mt-8 md:mt-12">
+            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                View All Categories
+            </a>
+        </div>
+    </div>
+</div>
+
 
 
 
