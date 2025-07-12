@@ -614,6 +614,284 @@
 
 
 
+@php
+$products = [
+    [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+    [
+        'name' => 'SANDARED',
+        'description' => 'Pouffe, grey, 56 cm',
+        'price' => 'Rp999.000',
+        'image' => 'https://via.placeholder.com/300x200?text=SANDARED'
+    ],
+    [
+        'name' => 'LACK',
+        'description' => 'Side table, white, 55x55 cm',
+        'price' => 'Rp199.000',
+        'image' => 'https://via.placeholder.com/300x200?text=LACK'
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+    // Add as many products as you want...
+];
+@endphp
+
+<section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-bold">Total items {{ count($products) }}</h2>
+        <div class="flex space-x-4">
+            <button class="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-100">Sort by :</button>
+            <button class="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-100 flex items-center gap-2">
+                Filters
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 15.414V20a1 1 0 01-1.447.894l-4-2A1 1 0 018 18v-2.586L3.293 6.707A1 1 0 013 6V4z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @foreach($products as $index => $product)
+        <div class="border rounded-lg p-4 hover:shadow-md transition">
+            <div class="relative">
+                <a href="/product/{{ $index }}">
+                    <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="w-full h-40 object-cover rounded-md">
+                </a>
+                <a href="/product/{{ $index }}" class="absolute top-2 right-2 text-gray-500 hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M16 21a1 1 0 100-2 1 1 0 000 2zm-8 0a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="mt-4">
+                <h3 class="text-sm font-semibold text-gray-800 uppercase">{{ $product['name'] }}</h3>
+                <p class="text-gray-600 text-sm">{{ $product['description'] }}</p>
+                <p class="mt-2 font-bold text-gray-900">{{ $product['price'] }}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
