@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Auto slide function
     function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+        autoSlideInterval = setInterval(nextSlide, 10000); // Change slide every 4 seconds
     }
     
     function stopAutoSlide() {
