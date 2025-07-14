@@ -449,7 +449,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Homemade Masala
+                            Craft Items
                         </h3>
                     </div>
                 </a>
@@ -472,18 +472,18 @@
                 </a>
             </div>
 
-            {{-- Category 6: Juice & Beverage --}}
+            {{-- Category 6: Homemade Masala --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/FBBF24/92400E?text=Juice+%26+Beverage" 
+                        <img src="images/Masala.jpg" 
                              alt="Juice & Beverage" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Craft Items
+                            Homemade Masala
                         </h3>
                     </div>
                 </a>
