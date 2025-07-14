@@ -276,18 +276,12 @@
             {{-- Image Slide 1 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/brash.jpg') }}"
+                    <img src="{{ asset('images/header1.png') }}"
                          alt="Slide 1" 
                          class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Healthy Choices</h2>
-                            <p class="text-lg md:text-xl mb-6">Fresh fruits and nutritious meals</p>
-                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Shop Now
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-lg md:text-xl mb-6">Fresh fruits and nutritious meals</p>
+                           
+                       
                 </a>
             </div>
 
@@ -404,7 +398,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Grocery
+                            Food
                         </h3>
                     </div>
                 </a>
@@ -421,7 +415,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Food & Snacks
+                          Home & Kitchen 
                         </h3>
                     </div>
                 </a>
@@ -438,7 +432,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Fruits & Vegetables
+                            Beauty Products
                         </h3>
                     </div>
                 </a>
@@ -455,7 +449,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Fish & Meat
+                            Homemade Masala
                         </h3>
                     </div>
                 </a>
@@ -472,7 +466,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Commodities
+                            Fish
                         </h3>
                     </div>
                 </a>
@@ -489,7 +483,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Juice & Beverage
+                            Craft Items
                         </h3>
                     </div>
                 </a>
@@ -506,7 +500,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Dairy
+                            Cloths & Apparels
                         </h3>
                     </div>
                 </a>
@@ -523,7 +517,8 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Frozen Item
+                            Gifts & Flowers
+                            
                         </h3>
                     </div>
                 </a>
