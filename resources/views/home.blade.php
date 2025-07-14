@@ -562,7 +562,7 @@
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/E5E7EB/374151?text=Cleaning+%26+Household" 
+                        <img src="images/cleaing_products.png" 
                              alt=" Eco-Friendly Cleaning Products" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
