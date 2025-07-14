@@ -541,18 +541,18 @@
                 </a>
             </div>
 
-            {{-- Category 10:  Pickles & Condiments --}}
+            {{-- Category 10: Flower N Gifts --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/D1FAE5/047857?text=Health+%26+Wellness" 
-                             alt="Pickles & Condiments" 
+                        <img src="images/gifts_flowers.jpg" 
+                             alt=" Flower N Gifts" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                             Pickles & Condiments
+                              Flower N Gifts
                         </h3>
                     </div>
                 </a>
