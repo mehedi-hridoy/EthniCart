@@ -404,52 +404,52 @@
                 </a>
             </div>
 
-            {{-- Category 2: Food & Snacks --}}
+            {{-- Category 2: Pickles & Condiments--}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/home&kitchen.png" 
-                             alt="Food & Snacks" 
+                        <img src="images/pickles.jpg" 
+                             alt=" Pickles & Condiments" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                          Home & Kitchen 
+                           Pickles & Condiments
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 3: Fruits & Vegetables --}}
+            {{-- Category 3:Fish&meat --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/beauty_items.png" 
-                             alt="Fruits & Vegetables" 
+                        <img src="images/fish_meat.png" 
+                             alt=" Fish & Meat" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Beauty Products
+                          Fish & Meat
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 4: Fish & Meat --}}
+            {{-- Category 4: Organic Roots --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/FDE2E7/BE185D?text=Fish+%26+Meat" 
-                             alt="Fish & Meat" 
+                        <img src="organic_roots.jpg" 
+                             alt="Organic Roots" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Craft Items
+                            Organic Roots
                         </h3>
                     </div>
                 </a>
@@ -472,18 +472,18 @@
                 </a>
             </div>
 
-            {{-- Category 6: Fish & Meat --}}
+            {{-- Category 6: Beauty & Care --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/fish_meat.png"
-                             alt="Juice & Beverage" 
+                        <img src="images/beauty_items.png"
+                             alt="Beauty & Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Fish & Meat
+                           Beauty & Care
                         </h3>
                     </div>
                 </a>
@@ -511,7 +511,7 @@
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/F0F9FF/0369A1?text=Frozen+Item" 
-                             alt="Frozen Item" 
+                             alt="Gifts & flowers" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -524,52 +524,52 @@
                 </a>
             </div>
 
-            {{-- Category 9: Beauty & Personal Care --}}
+            {{-- Category 9:Organic & Natural Items --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/FCE7F3/BE185D?text=Beauty+%26+Personal+Care" 
-                             alt="Beauty & Personal Care" 
+                             alt=" Organic & Natural Items" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Beauty & Personal Care
+                           Organic & Natural Items
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 10: Health & Wellness --}}
+            {{-- Category 10:  Pickles & Condiments --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/D1FAE5/047857?text=Health+%26+Wellness" 
-                             alt="Health & Wellness" 
+                             alt="Pickles & Condiments" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Health & Wellness
+                             Pickles & Condiments
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 11: Cleaning & Household --}}
+            {{-- Category 11: Eco-Friendly Cleaning Products --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/E5E7EB/374151?text=Cleaning+%26+Household" 
-                             alt="Cleaning & Household" 
+                             alt=" Eco-Friendly Cleaning Products" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Cleaning & Household
+                             Eco-Friendly Cleaning Products
                         </h3>
                     </div>
                 </a>
