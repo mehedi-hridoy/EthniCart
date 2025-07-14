@@ -276,25 +276,19 @@
             {{-- Image Slide 1 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/brash.jpg') }}"
+                    <img src="{{ asset('images/header1.png') }}"
                          alt="Slide 1" 
                          class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Healthy Choices</h2>
-                            <p class="text-lg md:text-xl mb-6">Fresh fruits and nutritious meals</p>
-                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Shop Now
-                            </button>
-                        </div>
-                    </div>
+                    <p class="text-lg md:text-xl mb-6">Fresh fruits and nutritious meals</p>
+                           
+                       
                 </a>
             </div>
 
             {{-- Image Slide 2 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/nimpata_gura.jpg') }}"
+                    <img src="{{ asset('images/header2.jpg') }}"
                          alt="Slide 2" 
                          class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -393,18 +387,18 @@
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: Grocery --}}
+            {{-- Category 1: food --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/F3F4F6/374151?text=Grocery" 
+                        <img src="{{ asset('images/foods.png') }}"
                              alt="Grocery" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Grocery
+                            Food
                         </h3>
                     </div>
                 </a>
@@ -414,14 +408,14 @@
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Food+%26+Snacks" 
+                        <img src="images/home&kitchen.png" 
                              alt="Food & Snacks" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Food & Snacks
+                          Home & Kitchen 
                         </h3>
                     </div>
                 </a>
@@ -431,14 +425,14 @@
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/D1FAE5/065F46?text=Fruits+%26+Vegetables" 
+                        <img src="images/beauty_items.png" 
                              alt="Fruits & Vegetables" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Fruits & Vegetables
+                            Beauty Products
                         </h3>
                     </div>
                 </a>
@@ -455,64 +449,64 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Fish & Meat
+                            Craft Items
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 5: Commodities --}}
+            {{-- Category 5: Homemade Masala--}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/E0E7FF/3730A3?text=Commodities" 
+                        <img src="images/Masala.jpg"
                              alt="Commodities" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Commodities
+                            Homemade Masala
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 6: Juice & Beverage --}}
+            {{-- Category 6: Fish & Meat --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/FBBF24/92400E?text=Juice+%26+Beverage" 
+                        <img src="images/fish_meat.png"
                              alt="Juice & Beverage" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Juice & Beverage
+                           Fish & Meat
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 7: Dairy --}}
+            {{-- Category 7: cloths  --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/DBEAFE/1D4ED8?text=Dairy" 
+                        <img src="images/cloths.jpg" 
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Dairy
+                            Cloths & Apparels
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 8: Frozen Item --}}
+            {{-- Category 8: Gifts & flowers --}}
             <div class="group">
                 <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -523,7 +517,8 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Frozen Item
+                            Gifts & Flowers
+
                         </h3>
                     </div>
                 </a>
