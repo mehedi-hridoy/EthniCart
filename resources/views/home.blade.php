@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-
-  <!-- // css need to be added  -->
-
-
 
     <script>
         tailwind.config = {
@@ -418,7 +413,7 @@
 
             {{-- Category 3: Fruits & Vegetables --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fruits&vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/beauty_items.png" 
                              alt="Fruits & Vegetables" 
@@ -433,9 +428,9 @@
                 </a>
             </div>
 
-            {{-- Category 4: Fish & Meat --}}
+            {{-- Category 4: Craft Items --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/FDE2E7/BE185D?text=Fish+%26+Meat" 
                              alt="Fish & Meat" 
@@ -452,7 +447,7 @@
 
             {{-- Category 5: Homemade Masala--}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/Masala.jpg"
                              alt="Commodities" 
@@ -469,7 +464,7 @@
 
             {{-- Category 6: Fish & Meat --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/fish_meat.png"
                              alt="Juice & Beverage" 
@@ -486,7 +481,7 @@
 
             {{-- Category 7: cloths  --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/cloths.jpg" 
                              alt="Dairy" 
@@ -503,7 +498,7 @@
 
             {{-- Category 8: Gifts & flowers --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/F0F9FF/0369A1?text=Frozen+Item" 
                              alt="Frozen Item" 
@@ -521,7 +516,7 @@
 
             {{-- Category 9: Beauty & Personal Care --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/beauty&Pcare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/FCE7F3/BE185D?text=Beauty+%26+Personal+Care" 
                              alt="Beauty & Personal Care" 
@@ -537,8 +532,8 @@
             </div>
 
             {{-- Category 10: Health & Wellness --}}
-            <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <div class="health&wellness">
+                <a href="{{url('/health')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/D1FAE5/047857?text=Health+%26+Wellness" 
                              alt="Health & Wellness" 
@@ -555,7 +550,7 @@
 
             {{-- Category 11: Cleaning & Household --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/E5E7EB/374151?text=Cleaning+%26+Household" 
                              alt="Cleaning & Household" 
@@ -571,8 +566,8 @@
             </div>
 
             {{-- Category 12: Baby Care --}}
-            <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <div class="babyCare">
+                <a href="{{url('/babyCare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Baby+Care" 
                              alt="Baby Care" 
