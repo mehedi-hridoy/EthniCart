@@ -1,1 +1,7 @@
-<h1>Vegetable Pages</h1>
+@extends('layouts.app')
+
+@section('title', 'food')
+
+@section('content')
+  
+@endsection
