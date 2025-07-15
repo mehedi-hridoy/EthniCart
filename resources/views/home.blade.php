@@ -4,8 +4,6 @@
 @endpush
 @section('main-content')
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +30,6 @@
             }
         }
     </script>
-    <style>
-       
-    </style>
 </head>
 
 <body >
@@ -142,13 +137,13 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
-                        <span>SHOP BY CATEGORY for now</span>
+                        <span>SHOP BY CATEGORY</span>
                     </button>
                     
                     <!-- Dropdown Menu -->
                     <div id="categoryDropdown" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 border border-gray-200 hidden">
                         <div class="py-2">
-                            <a href="/food" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="{{ url('views/food.blade.php') }}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                                 </svg>
@@ -389,7 +384,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {{-- Category 1: food --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
                              alt="Grocery" 
@@ -406,7 +401,7 @@
 
             {{-- Category 2: Pickles & Condiments--}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/pickles.jpg" 
                              alt=" Pickles & Condiments" 
@@ -604,7 +599,7 @@
 
 
 
-
+<!-- Cart Section -->
 
 
 
