@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    This is food Page
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title', 'food')
+
+@section('content')
+    <h2>This is the homepage</h2>
+    <p>Some welcome message here...</p>
+@endsection

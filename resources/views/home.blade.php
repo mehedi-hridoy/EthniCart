@@ -4,8 +4,6 @@
 @endpush
 @section('main-content')
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -386,7 +384,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {{-- Category 1: food --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
                              alt="Grocery" 
