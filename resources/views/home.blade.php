@@ -401,7 +401,7 @@
 
             {{-- Category 2: Food & Snacks --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/home&kitchen.png" 
                              alt="Food & Snacks" 
