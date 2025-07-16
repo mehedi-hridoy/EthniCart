@@ -1,7 +1,4 @@
 
-
-
-
  <!-- Footer Section for home.blade.php -->
 <footer class="bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
     <!-- Decorative leaf pattern -->
