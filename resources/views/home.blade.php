@@ -394,7 +394,7 @@
                 </a>
             </div>
 
-            {{-- Category 2: Food & Snacks --}}
+            {{-- Category 2: Pickles & Condiments--}}
             <div class="group">
                 <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -406,16 +406,18 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                          Home & Kitchen 
+                           Pickles & Condiments
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 3: Fruits & Vegetables --}}
+            {{-- Category 3:Fish&meat --}}
             <div class="group">
                 <a href="{{url('/fruits&vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
+                        <img src="images/fish_meat.png" 
+                             alt=" Fish & Meat" 
                         <img 
                         src="{{ asset('images/beauty_items.png') }}"
                         
@@ -425,7 +427,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Beauty Products
+                          Fish & Meat
                         </h3>
                     </div>
                 </a>
@@ -443,7 +445,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Craft Items
+                            Organic Roots
                         </h3>
                     </div>
                 </a>
@@ -466,18 +468,18 @@
                 </a>
             </div>
 
-            {{-- Category 6: Fish & Meat --}}
+            {{-- Category 6: Beauty & Care --}}
             <div class="group">
                 <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/fish_meat.png"
-                             alt="Juice & Beverage" 
+                        <img src="images/beauty_items.png"
+                             alt="Beauty & Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Fish & Meat
+                           Beauty & Care
                         </h3>
                     </div>
                 </a>
@@ -500,7 +502,7 @@
                 </a>
             </div>
 
-            {{-- Category 8: Gifts & flowers --}}
+            {{-- Category 8:Crafted Goods--}}
             <div class="group">
                 <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -511,14 +513,14 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Gifts & Flowers
+                            Crafted Goods
 
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 9: Beauty & Personal Care --}}
+            {{-- Category 9:Home & Kitchen  --}}
             <div class="group">
                 <a href="{{url('/beauty&Pcare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -530,7 +532,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Beauty & Personal Care
+                           Home & Kitchen 
                         </h3>
                     </div>
                 </a>
@@ -547,13 +549,13 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Health & Wellness
+                              Flower N Gifts
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 11: Cleaning & Household --}}
+            {{-- Category 11: Eco-Friendly Cleaning Products --}}
             <div class="group">
                 <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -564,7 +566,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Cleaning & Household
+                             Eco-Friendly Cleaning Products
                         </h3>
                     </div>
                 </a>
