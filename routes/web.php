@@ -67,3 +67,8 @@ Route::get('/cleaning&household', function () {
     return view('cleaning&household');
 });
 
+
+Route::get('/pickles&condiments', function () {
+    return view('pickles&condiments');
+});
+
