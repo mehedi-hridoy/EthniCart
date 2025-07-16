@@ -377,7 +377,7 @@
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: food --}}
+            {{-- Category 1: Fruits --}}
             <div class="group">
                 <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -388,7 +388,7 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Food
+                            Seasonal Fruits
                         </h3>
                     </div>
                 </a>
@@ -414,12 +414,11 @@
 
             {{-- Category 3:Fish&meat --}}
             <div class="group">
-                <a href="{{url('/fruits&vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/fish_meat.png" 
-                             alt=" Fish & Meat" 
+                 
                         <img 
-                        src="{{ asset('images/beauty_items.png') }}"
+                        src="{{ asset('images/fish_meat.png') }}"
                         
                              alt="Fruits & Vegetables" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -433,12 +432,12 @@
                 </a>
             </div>
 
-            {{-- Category 4: Craft Items --}}
+            {{-- Category 4: Organic Roots --}}
             <div class="group">
-                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img 
-                         src="{{ asset('images/beauty_items.png') }}"
+                         src="{{ asset('images/organicRoots.png') }}"
                              alt="Fish & Meat" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -470,7 +469,7 @@
 
             {{-- Category 6: Beauty & Care --}}
             <div class="group">
-                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/beauty&care')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/beauty_items.png"
                              alt="Beauty & Care" 
@@ -489,7 +488,7 @@
             <div class="group">
                 <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('images/cloths.jpg') }}" alt="cloths"
+                        <img src="{{ asset('images/cloths&appreals.jpg') }}" alt="cloths"
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -504,9 +503,9 @@
 
             {{-- Category 8:Crafted Goods--}}
             <div class="group">
-                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/beauty_items.png') }}"
+                        <img  src="{{ asset('images/crafts.jpg') }}"
                              alt="Frozen Item" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -522,9 +521,9 @@
 
             {{-- Category 9:Home & Kitchen  --}}
             <div class="group">
-                <a href="{{url('/beauty&Pcare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/beauty_items.png') }}"
+                        <img  src="{{ asset('images/home_kitchen.png') }}"
 
                              alt="Beauty & Personal Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -538,11 +537,11 @@
                 </a>
             </div>
 
-            {{-- Category 10: Health & Wellness --}}
-            <div class="health&wellness">
-                <a href="{{url('/health')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            {{-- Category 10: Flower & Gifts --}}
+            <div class="group">
+                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/beauty_items.png') }}"
+                        <img  src="{{ asset('images/gifts_flowers.jpg') }}"
                              alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -559,7 +558,7 @@
             <div class="group">
                 <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/beauty_items.png') }}"
+                        <img  src="{{ asset('images/cleaning.jpg') }}"
                              alt="Cleaning & Household" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -572,18 +571,18 @@
                 </a>
             </div>
 
-            {{-- Category 12: Baby Care --}}
+            {{-- Category 12: Farm Fresh Vegetables --}}
             <div class="babyCare">
                 <a href="{{url('/babyCare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/beauty_items.png') }}"
+                        <img  src="{{ asset('images/vegetables.jpg') }}"
                              alt="Baby Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Baby Care
+                            Farm Fresh Vegetables
                         </h3>
                     </div>
                 </a>
