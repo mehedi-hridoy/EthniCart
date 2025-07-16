@@ -758,66 +758,14 @@ $products = [
         'price' => 'Rp1.999.000',
          'image' => asset('images/product_images/table.jpg')
     ],
+     
      [
         'name' => 'LISABO',
         'description' => 'Coffee table, ash veneer, 70x70 cm',
         'price' => 'Rp1.999.000',
          'image' => asset('images/product_images/table.jpg')
     ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
-     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-         'image' => asset('images/product_images/table.jpg')
-    ],
+     
      [
         'name' => 'LISABO',
         'description' => 'Coffee table, ash veneer, 70x70 cm',
