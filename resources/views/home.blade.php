@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-
-  <!-- // css need to be added  -->
-
-
 
     <script>
         tailwind.config = {
@@ -403,8 +398,9 @@
             <div class="group">
                 <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/pickles.jpg" 
-                             alt=" Pickles & Condiments" 
+                        <img 
+                        src="{{ asset('images/home&kitchen.png') }}"
+                             alt="Food & Snacks" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -418,10 +414,14 @@
 
             {{-- Category 3:Fish&meat --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fruits&vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/fish_meat.png" 
                              alt=" Fish & Meat" 
+                        <img 
+                        src="{{ asset('images/beauty_items.png') }}"
+                        
+                             alt="Fruits & Vegetables" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -433,12 +433,13 @@
                 </a>
             </div>
 
-            {{-- Category 4: Organic Roots --}}
+            {{-- Category 4: Craft Items --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="organic_roots.jpg" 
-                             alt="Organic Roots" 
+                        <img 
+                         src="{{ asset('images/beauty_items.png') }}"
+                             alt="Fish & Meat" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -452,7 +453,7 @@
 
             {{-- Category 5: Homemade Masala--}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/Masala.jpg"
                              alt="Commodities" 
@@ -469,7 +470,7 @@
 
             {{-- Category 6: Beauty & Care --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="images/beauty_items.png"
                              alt="Beauty & Care" 
@@ -486,9 +487,9 @@
 
             {{-- Category 7: cloths  --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/cloths.jpg" 
+                        <img src="{{ asset('images/cloths.jpg') }}" alt="cloths"
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -503,10 +504,10 @@
 
             {{-- Category 8:Crafted Goods--}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/crafts.jpg" 
-                             alt="Crafted Goods" 
+                        <img  src="{{ asset('images/beauty_items.png') }}"
+                             alt="Frozen Item" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -521,10 +522,11 @@
 
             {{-- Category 9:Home & Kitchen  --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/beauty&Pcare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/home_kitchen.png" 
-                             alt=" Home & Kitchen " 
+                        <img  src="{{ asset('images/beauty_items.png') }}"
+
+                             alt="Beauty & Personal Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -536,12 +538,12 @@
                 </a>
             </div>
 
-            {{-- Category 10: Flower N Gifts --}}
-            <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            {{-- Category 10: Health & Wellness --}}
+            <div class="health&wellness">
+                <a href="{{url('/health')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/gifts_flowers.jpg" 
-                             alt=" Flower N Gifts" 
+                        <img  src="{{ asset('images/beauty_items.png') }}"
+                             alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -555,10 +557,10 @@
 
             {{-- Category 11: Eco-Friendly Cleaning Products --}}
             <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/cleaing_products.png" 
-                             alt=" Eco-Friendly Cleaning Products" 
+                        <img  src="{{ asset('images/beauty_items.png') }}"
+                             alt="Cleaning & Household" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -571,10 +573,10 @@
             </div>
 
             {{-- Category 12: Baby Care --}}
-            <div class="group">
-                <a href="#" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            <div class="babyCare">
+                <a href="{{url('/babyCare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Baby+Care" 
+                        <img  src="{{ asset('images/beauty_items.png') }}"
                              alt="Baby Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
