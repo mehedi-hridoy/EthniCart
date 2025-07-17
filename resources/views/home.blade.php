@@ -635,55 +635,55 @@ $products = [
         'name' => 'Tangail Shari (Handloom Cotton)',
         'description' => 'Authentic Tangail weave, pure cotton',
         'price' => '৳1800',
-        'image' => asset('images/product_images/tangail_shari.jpg')
+        'image' => asset('images/product_images/02_shari.jpg')
     ],
     [
         'name' => 'Natore-er Kacha Golla',
         'description' => 'Soft, fresh dairy sweet',
         'price' => '৳350/box',
-        'image' => asset('images/product_images/kacha_golla.jpg')
+        'image' => asset('images/product_images/03_kachaGolla.jpeg')
     ],
     [
         'name' => 'Chui Jhal Masala Blend',
         'description' => 'Handmade spice mix with Chui',
         'price' => '৳199',
-        'image' => asset('images/product_images/chui_jhal.jpg')
+        'image' => asset('images/product_images/04_chuiJhal.jpg')
     ],
     [
         'name' => 'Hilsha Fish (Padma River)',
         'description' => 'Freshly caught Ilish',
         'price' => '৳1200/kg',
-        'image' => asset('images/product_images/ilish.jpg')
+        'image' => asset('images/product_images/05_hilsha.jpg')
     ],
     [
         'name' => 'Organic Turmeric Powder',
         'description' => 'Hand-ground haldi from Rangpur',
         'price' => '৳120/100g',
-        'image' => asset('images/product_images/turmeric.jpg')
+        'image' => asset('images/product_images/06_termeric.jpg')
     ],
     [
         'name' => 'Rosogolla (Dhaka Style)',
         'description' => 'Spongy, syrupy sweet',
         'price' => '৳240/box',
-        'image' => asset('images/product_images/rosogolla.jpg')
+        'image' => asset('images/product_images/07_rosogolla.jpg')
     ],
     [
         'name' => 'Neem Face Pack',
         'description' => 'Natural skin detox',
         'price' => '৳170',
-        'image' => asset('images/product_images/neem_facepack.jpg')
+        'image' => asset('images/product_images/08_neem.jpeg')
     ],
     [
         'name' => 'Bamboo Toothbrush (Set of 2)',
         'description' => 'Eco-friendly dental hygiene',
         'price' => '৳150/set',
-        'image' => asset('images/product_images/bamboo_brush.jpg')
+        'image' => asset('images/product_images/09_bambooBrush.jpg')
     ],
     [
         'name' => 'Amloki Pickle',
         'description' => 'Sweet & tangy seasonal preserve',
         'price' => '৳130/200g',
-        'image' => asset('images/product_images/amloki_pickle.jpg')
+        'image' => asset('images/product_images/10_amlokiPickle.jpg')
     ],
     [
         'name' => 'Nakshi Kantha (Wall Frame)',
