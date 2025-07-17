@@ -33,17 +33,12 @@ Route::get('/babyCare', function () {
     return view('babyCare');
 });
 
-Route::get('/beauty&Pcare', function () {
-    return view('beauty&Pcare');
-});
+
 
 Route::get('/cloths', function () {
     return view('cloths');
 });
 
-Route::get('/gift', function () {
-    return view('gift');
-});
 
 
 Route::get('/health', function () {
@@ -67,3 +62,23 @@ Route::get('/cleaning&household', function () {
     return view('cleaning&household');
 });
 
+
+Route::get('/pickles&condiments', function () {
+    return view('pickles&condiments');
+});
+
+Route::get('/organicRoots', function () {
+    return view('organicRoots');
+});
+
+Route::get('/beauty&care', function () {
+    return view('beauty&care');
+});
+
+Route::get('/gift', function () {
+    return view('gift');
+});
+
+Route::get('/vegetables', function () {
+    return view('vegetables');
+});

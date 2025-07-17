@@ -12,39 +12,65 @@
 
 
 
-// script for nav bar left bar
-    const categoryBtn = document.getElementById('categoryBtn');
-        const categoryDropdown = document.getElementById('categoryDropdown');
+// // script for nav bar left bar
+//     const categoryBtn = document.getElementById('categoryBtn');
+//         const categoryDropdown = document.getElementById('categoryDropdown');
 
-        categoryBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            categoryDropdown.classList.toggle('hidden');
-        });
+//         categoryBtn.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             categoryDropdown.classList.toggle('hidden');
+//         });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!categoryBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
-                categoryDropdown.classList.add('hidden');
-            }
-        });
+//         // Close dropdown when clicking outside
+//         document.addEventListener('click', function(e) {
+//             if (!categoryBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
+//                 categoryDropdown.classList.add('hidden');
+//             }
+//         });
 
-        // Handle category clicks
-        const categoryLinks = categoryDropdown.querySelectorAll('a');
-        categoryLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const category = this.getAttribute('href').substring(1);
+//         // Handle category clicks
+//         const categoryLinks = categoryDropdown.querySelectorAll('a');
+//         categoryLinks.forEach(link => {
+//             link.addEventListener('click', function(e) {
+//                 e.preventDefault();
+//                 const category = this.getAttribute('href').substring(1);
                 
-                // Hide dropdown
-                categoryDropdown.classList.add('hidden');
+//                 // Hide dropdown
+//                 categoryDropdown.classList.add('hidden');
                 
-                // Here you can add your routing logic
-                console.log('Navigating to category:', category);
+//                 // Here you can add your routing logic
+//                 console.log('Navigating to category:', category);
                 
-                // For demonstration, you can replace this with your actual routing
-                // window.location.href = this.getAttribute('href');
-            });
-        });
+//                 // For demonstration, you can replace this with your actual routing
+//                 // window.location.href = this.getAttribute('href');
+//             });
+//         });
+
+// left nav bar links updated
+const categoryBtn = document.getElementById('categoryBtn');
+const categoryDropdown = document.getElementById('categoryDropdown');
+
+categoryBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    categoryDropdown.classList.toggle('hidden');
+});
+
+document.addEventListener('click', function(e) {
+    if (!categoryBtn.contains(e.target) && !categoryDropdown.contains(e.target)) {
+        categoryDropdown.classList.add('hidden');
+    }
+});
+
+const categoryLinks = categoryDropdown.querySelectorAll('a');
+categoryLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        categoryDropdown.classList.add('hidden');
+
+        const href = this.getAttribute('href');
+        window.location.href = href;
+    });
+});
 
 // script for courasol images 
 document.addEventListener('DOMContentLoaded', function() {
