@@ -629,7 +629,7 @@ $products = [
         'name' => 'Rajshahi Mango (Himsagar)',
         'description' => 'Sweet, juicy seasonal mango',
         'price' => '৳550/kg',
-        'image' => asset('images/product_images/mango.jpg')
+        'image' => asset('images/product_images/01_himsagor.jpeg')
     ],
     [
         'name' => 'Tangail Shari (Handloom Cotton)',
