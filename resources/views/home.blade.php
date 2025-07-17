@@ -623,60 +623,191 @@
 
 
 
-
 @php
 $products = [
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Rajshahi Mango (Himsagar)',
+        'description' => 'Sweet, juicy seasonal mango',
+        'price' => '৳550/kg',
+        'image' => asset('images/product_images/mango.jpg')
     ],
     [
-        'name' => 'SANDARED',
-        'description' => 'Pouffe, grey, 56 cm',
-        'price' => 'Rp999.000',
-        'image' => 'https://via.placeholder.com/300x200?text=SANDARED'
+        'name' => 'Tangail Shari (Handloom Cotton)',
+        'description' => 'Authentic Tangail weave, pure cotton',
+        'price' => '৳1800',
+        'image' => asset('images/product_images/tangail_shari.jpg')
     ],
     [
-        'name' => 'LACK',
-        'description' => 'Side table, white, 55x55 cm',
-        'price' => 'Rp199.000',
-        'image' => 'https://via.placeholder.com/300x200?text=LACK'
+        'name' => 'Natore-er Kacha Golla',
+        'description' => 'Soft, fresh dairy sweet',
+        'price' => '৳350/box',
+        'image' => asset('images/product_images/kacha_golla.jpg')
     ],
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Chui Jhal Masala Blend',
+        'description' => 'Handmade spice mix with Chui',
+        'price' => '৳199',
+        'image' => asset('images/product_images/chui_jhal.jpg')
     ],
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Hilsha Fish (Padma River)',
+        'description' => 'Freshly caught Ilish',
+        'price' => '৳1200/kg',
+        'image' => asset('images/product_images/ilish.jpg')
     ],
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Organic Turmeric Powder',
+        'description' => 'Hand-ground haldi from Rangpur',
+        'price' => '৳120/100g',
+        'image' => asset('images/product_images/turmeric.jpg')
     ],
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Rosogolla (Dhaka Style)',
+        'description' => 'Spongy, syrupy sweet',
+        'price' => '৳240/box',
+        'image' => asset('images/product_images/rosogolla.jpg')
     ],
     [
-        'name' => 'LISABO',
-        'description' => 'Coffee table, ash veneer, 70x70 cm',
-        'price' => 'Rp1.999.000',
-        'image' => asset('images/product_images/table.jpg')
+        'name' => 'Neem Face Pack',
+        'description' => 'Natural skin detox',
+        'price' => '৳170',
+        'image' => asset('images/product_images/neem_facepack.jpg')
     ],
-    // Add as many products as you want...
+    [
+        'name' => 'Bamboo Toothbrush (Set of 2)',
+        'description' => 'Eco-friendly dental hygiene',
+        'price' => '৳150/set',
+        'image' => asset('images/product_images/bamboo_brush.jpg')
+    ],
+    [
+        'name' => 'Amloki Pickle',
+        'description' => 'Sweet & tangy seasonal preserve',
+        'price' => '৳130/200g',
+        'image' => asset('images/product_images/amloki_pickle.jpg')
+    ],
+    [
+        'name' => 'Nakshi Kantha (Wall Frame)',
+        'description' => 'Traditional embroidered art',
+        'price' => '৳950',
+        'image' => asset('images/product_images/nakshi_kantha.jpg')
+    ],
+    [
+        'name' => 'Dhakai Jamdani (Off-White)',
+        'description' => 'Museum-grade Dhakai Jamdani',
+        'price' => '৳6500',
+        'image' => asset('images/product_images/jamdani.jpg')
+    ],
+    [
+        'name' => 'Mustard Oil (Cold Pressed)',
+        'description' => 'Pure ghani mustard oil',
+        'price' => '৳200/L',
+        'image' => asset('images/product_images/mustard_oil.jpg')
+    ],
+    [
+        'name' => 'Coriander Powder',
+        'description' => 'Stone-ground, aromatic',
+        'price' => '৳90/100g',
+        'image' => asset('images/product_images/coriander.jpg')
+    ],
+    [
+        'name' => 'Banana Blossom (Mocha)',
+        'description' => 'Fresh and cleaned',
+        'price' => '৳80/unit',
+        'image' => asset('images/product_images/mocha.jpg')
+    ],
+    [
+        'name' => 'Shidol Shutki',
+        'description' => 'Fermented dry fish from Sylhet',
+        'price' => '৳320/250g',
+        'image' => asset('images/product_images/shidol.jpg')
+    ],
+    [
+        'name' => 'Palmyra Fan (Handmade)',
+        'description' => 'Rural cooling solution',
+        'price' => '৳100',
+        'image' => asset('images/product_images/palmyra_fan.jpg')
+    ],
+    [
+        'name' => 'Handcrafted Clay Teacup (Set)',
+        'description' => 'Earthen teacups from Comilla',
+        'price' => '৳250/set',
+        'image' => asset('images/product_images/clay_teacup.jpg')
+    ],
+    [
+        'name' => 'Fresh Tulsi Leaves',
+        'description' => 'Holy basil bundle',
+        'price' => '৳25/bunch',
+        'image' => asset('images/product_images/tulsi.jpg')
+    ],
+    [
+        'name' => 'Lemon Pickle (Sour-Spicy)',
+        'description' => 'Village-style achar',
+        'price' => '৳110/200g',
+        'image' => asset('images/product_images/lemon_pickle.jpg')
+    ],
+    [
+        'name' => 'Shab-e-Barat Halwa Pack',
+        'description' => 'Flour & semolina sweet pack',
+        'price' => '৳280',
+        'image' => asset('images/product_images/halwa_pack.jpg')
+    ],
+    [
+        'name' => 'Mehendi Paste (Natural)',
+        'description' => 'Fresh leaf paste',
+        'price' => '৳90/50g',
+        'image' => asset('images/product_images/mehendi.jpg')
+    ],
+    [
+        'name' => 'Clay Water Pitcher (Matir Kolshi)',
+        'description' => 'Cools naturally, toxin-free',
+        'price' => '৳300',
+        'image' => asset('images/product_images/kolshi.jpg')
+    ],
+    [
+        'name' => 'Dried Red Chilli (Sun Dried)',
+        'description' => 'Clean, chemical-free',
+        'price' => '৳120/200g',
+        'image' => asset('images/product_images/red_chilli.jpg')
+    ],
+    [
+        'name' => 'Tangail-er Chom Chom',
+        'description' => 'Iconic sweet with thick syrup',
+        'price' => '৳360/box',
+        'image' => asset('images/product_images/chomchom.jpg')
+    ],
+    [
+        'name' => 'Handmade Jute Bag',
+        'description' => 'Sustainable and stylish',
+        'price' => '৳450',
+        'image' => asset('images/product_images/jute_bag.jpg')
+    ],
+    [
+        'name' => 'Fresh Malabar Spinach (Pui Shaak)',
+        'description' => 'Daily greens',
+        'price' => '৳40/bundle',
+        'image' => asset('images/product_images/pui_shaak.jpg')
+    ],
+    [
+        'name' => 'Kanthal (Jackfruit)',
+        'description' => 'Ripe, sweet, local',
+        'price' => '৳70/kg',
+        'image' => asset('images/product_images/jackfruit.jpg')
+    ],
+    [
+        'name' => 'Amra Pickle (Wild Olive)',
+        'description' => 'Wild, tangy flavor',
+        'price' => '৳100/200g',
+        'image' => asset('images/product_images/amra.jpg')
+    ],
+    [
+        'name' => 'Date Palm Molasses (Khejur Gur)',
+        'description' => 'Winter special, thick and dark',
+        'price' => '৳220/500g',
+        'image' => asset('images/product_images/khejur_gur.jpg')
+    ],
 ];
 @endphp
+
 
 <section class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
     <!-- Header Section -->
