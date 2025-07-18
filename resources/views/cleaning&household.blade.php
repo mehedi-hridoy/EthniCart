@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'food')
+@section('title', 'Ethnicart | Eco Friendly Cleaning')
 
 @section('content')
   

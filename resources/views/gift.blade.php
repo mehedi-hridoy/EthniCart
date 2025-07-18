@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'food')
+@section('title', 'EthniCart | Flowers & Gifts')
 
 @section('content')
   
