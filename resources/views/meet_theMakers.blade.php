@@ -88,7 +88,7 @@
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/organicRoots.png') }}"
+                         src="{{ asset('images/harun_mia.png') }}"
                          alt="Harun Mia - Pottery Artist">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -114,12 +114,12 @@
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://via.placeholder.com/600x600/10b981/ffffff?text=Rashida+Khatun" 
+                         src="{{ asset('images/rashida_khatun.jpg') }}"
                          alt="Rashida Khatun - Nakshi Kantha Artist">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <!-- <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                         🪡 Nakshi Kantha Artist
-                    </div>
+                    </div> -->
                 </div>
                 <div class="p-8">
                     <h3 class="text-2xl font-bold text-emerald-900 mb-3">Rashida Khatun</h3>
@@ -148,10 +148,10 @@
                     </div>
                 </div>
                 <div class="p-8">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Shahidul Islam</h3>
-                    <p class="text-emerald-600 font-medium mb-4">Bamboo Artisan & Eco-Warrior</p>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Antim Chakma</h3>
+                    <p class="text-emerald-600 font-medium mb-4">Bamboo Craftsman & Eco-Warrior</p>
                     <p class="text-gray-700 leading-relaxed mb-6">
-                        "Bamboo is nature's gift to us. I create everything from furniture to decorative items using traditional techniques passed down through generations. My mission is to show the world that sustainable living can be beautiful and functional."
+                        "Bamboo is a timeless gift from nature. I craft everything from furniture to decorative pieces using traditional techniques that have been passed down through generations. My mission is to demonstrate that sustainable living can be both elegant and practical."
                     </p>
                     <div class="flex items-center text-sm text-emerald-600">
                         <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
