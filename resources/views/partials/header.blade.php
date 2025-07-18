@@ -10,13 +10,14 @@
                             <i class="fa-solid fa-bars text-xl"></i>
                         </button>
                         
-                        <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
+                        <!-- <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-bars text-2xl"></i>
-                        </button>
+                        </button> -->
                         
-                        <a href="/" class="flex items-center py-2">
-                            <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
-                        </a>
+                       <a href="/" class="relative flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
+    <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
+</a>
+
                     </div>
 
                     <!-- Search Bar -->
@@ -90,7 +91,7 @@
     <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
         <div class="flex justify-between items-center h-16">
             <!-- Shop by Category Button -->
-            <div class="relative -ml-2">
+            <div class="relative -ml-4 sm:-ml-6 md:-ml-10 lg:-ml-24 xl:-ml-36">
                 <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -224,14 +225,14 @@
             </div>
             
             <!-- Other navigation items -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">UNILEVER-STOCK & SAVE</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">BUY & SAVE MORE</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">OUR BRANDS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">ACI PURE FOODS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">WOMEN'S CORNER</a>
-            </div>
+             <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
+                    <a href="{{url('/meet_theMakers')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Meet the Makers</a>
+                    <a href="{{url('/fromTheSource')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">From the Source</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Ethni Promise</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Stories</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
+                </div>
         </div>
     </div>
 </nav>
