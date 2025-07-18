@@ -83,6 +83,9 @@ Route::get('/vegetables', function () {
     return view('vegetables');
 });
 
+Route::get('/meet_theMakers', function () {
+    return view('meet_theMakers');
+});
 
 
 
