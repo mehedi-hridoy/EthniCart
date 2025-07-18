@@ -62,7 +62,7 @@
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://via.placeholder.com/600x600/059669/ffffff?text=Afsana+Begum" 
+                         src="{{ asset('images/afsana_begum.png') }}"
                          alt="Afsana Begum - Jamdani Weaver">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -88,7 +88,7 @@
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://via.placeholder.com/600x600/047857/ffffff?text=Harun+Mia" 
+                         src="{{ asset('images/organicRoots.png') }}"
                          alt="Harun Mia - Pottery Artist">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -97,7 +97,7 @@
                 </div>
                 <div class="p-8">
                     <h3 class="text-2xl font-bold text-emerald-900 mb-3">Harun Mia</h3>
-                    <p class="text-emerald-600 font-medium mb-4">চাটগাঁর মাটির পাত্র শিল্পী</p>
+                    <p class="text-emerald-600 font-medium mb-4">চট্টগ্রামের মৃৎশিল্পী</p>
                     <p class="text-gray-700 leading-relaxed mb-6">
                         "আমার পূর্বপুরুষরা ৫ প্রজন্ম ধরে মাটি দিয়ে বাসন তৈরি করেছেন। আমার হাতে তৈরি প্রতিটি পাত্রে আছে চট্টগ্রামের ঐতিহ্যের ছোঁয়া। EthniCart-এর মাধ্যমে এখন আমার কাজ বিদেশেও পৌঁছাচ্ছে।"
                     </p>
@@ -175,7 +175,7 @@
                 </div>
                 <div class="p-8">
                     <h3 class="text-2xl font-bold text-emerald-900 mb-3">Fatema Begum</h3>
-                    <p class="text-emerald-600 font-medium mb-4">জৈব মশলা চাষি</p>
+                    <p class="text-emerald-600 font-medium mb-4">প্রাকৃতিক মশলা উৎপাদনকারী</p>
                     <p class="text-gray-700 leading-relaxed mb-6">
                         "আমি কোনো রাসায়নিক সার ব্যবহার করি না। আমার হলুদ, মরিচ, ধনিয়া সব প্রাকৃতিক উপায়ে চাষ করি। EthniCart-এর কারণে এখন সারাদেশের মানুষ আমার বিশুদ্ধ মশলা খেতে পাচ্ছে।"
                     </p>
