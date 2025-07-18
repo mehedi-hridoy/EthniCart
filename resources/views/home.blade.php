@@ -319,36 +319,21 @@
             {{-- Image Slide 2 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/header2.jpg') }}"
+                    <img src="{{ asset('images/slide_2.png') }}"
                          alt="Slide 2" 
                          class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Fashion Collection</h2>
-                            <p class="text-lg md:text-xl mb-6">Explore the latest trends</p>
-                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Explore Now
-                            </button>
-                        </div>
-                    </div>
+
                 </a>
             </div>
 
             {{-- Image Slide 3 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/rosemery_oil.jpg') }}"
+                    <img src="{{ asset('images/slide_3.png') }}"
                          alt="Slide 3" 
                          class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h2 class="text-3xl md:text-5xl font-bold mb-4">Special Offers</h2>
-                            <p class="text-lg md:text-xl mb-6">Up to 50% off on selected items</p>
-                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                Shop Deals
-                            </button>
-                        </div>
-                    </div>
+                    
+                         
                 </a>
             </div>
 
