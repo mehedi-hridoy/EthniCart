@@ -84,6 +84,10 @@ Route::get('/meet_theMakers', function () {
     return view('meet_theMakers');
 });
 
+Route::get('/fromTheSource', function () {
+    return view('fromTheSource');
+});
+
 
 
 
