@@ -228,14 +228,14 @@
             </div>
             
             <!-- Other navigation items -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">UNILEVER-STOCK & SAVE</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">BUY & SAVE MORE</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">OUR BRANDS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">ACI PURE FOODS</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">WOMEN'S CORNER</a>
-            </div>
+             <div class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">GREAT DEALS</a>
+                    <a href="{{url('/craftItems')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Meet the Makers</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">From the Source</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Ethni Promise</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Stories</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
+                </div>
         </div>
     </div>
 </nav>
