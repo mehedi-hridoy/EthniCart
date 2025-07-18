@@ -78,3 +78,50 @@ body {
         background: #5a8480;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .tab-button.active {
+    border-bottom: 2px solid #6A9793;
+}
+
+.tab-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6A9793;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5a8480;
+}
