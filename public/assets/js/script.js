@@ -180,3 +180,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start auto-slide
     startAutoSlide();
 });
+
+

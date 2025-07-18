@@ -1,3 +1,7 @@
+
+
+
+
 <div class="bg-blue-50">
     <nav class="sticky top-0 z-50">
         <!-- Main Navigation -->

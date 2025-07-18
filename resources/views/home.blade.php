@@ -4,6 +4,9 @@
 @endpush
 @section('main-content')
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +31,7 @@
 </head>
 
 <body >
+
 
 <div class="bg-blue-50">
 
@@ -273,6 +277,19 @@
         </div>
     </nav>
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
     <!-- main body part of the site -->
 
@@ -626,187 +643,106 @@
 @php
 $products = [
     [
+        'id' => 1,
         'name' => 'Rajshahi Mango (Himsagar)',
         'description' => 'Sweet, juicy seasonal mango',
         'price' => '৳550/kg',
         'image' => asset('images/product_images/01_himsagor.jpeg')
     ],
     [
+        'id' => 2,
         'name' => 'Tangail Shari (Handloom Cotton)',
         'description' => 'Authentic Tangail weave, pure cotton',
         'price' => '৳1800',
         'image' => asset('images/product_images/02_shari.jpg')
     ],
     [
+        'id' => 3,
         'name' => 'Natore-er Kacha Golla',
         'description' => 'Soft, fresh dairy sweet',
         'price' => '৳350/box',
         'image' => asset('images/product_images/03_kachaGolla.jpeg')
     ],
     [
+        'id' => 4,
         'name' => 'Chui Jhal Masala Blend',
         'description' => 'Handmade spice mix with Chui',
         'price' => '৳199',
         'image' => asset('images/product_images/04_chuiJhal.jpg')
     ],
     [
+        'id' => 5,
         'name' => 'Hilsha Fish (Padma River)',
         'description' => 'Freshly caught Ilish',
         'price' => '৳1200/kg',
         'image' => asset('images/product_images/05_hilsha.jpg')
     ],
     [
+        'id' => 6,
         'name' => 'Organic Turmeric Powder',
         'description' => 'Hand-ground haldi from Rangpur',
         'price' => '৳120/100g',
         'image' => asset('images/product_images/06_termeric.jpg')
     ],
     [
+        'id' => 7,
         'name' => 'Rosogolla (Dhaka Style)',
         'description' => 'Spongy, syrupy sweet',
         'price' => '৳240/box',
         'image' => asset('images/product_images/07_rosogolla.jpg')
     ],
     [
+        'id' => 8,
         'name' => 'Neem Face Pack',
         'description' => 'Natural skin detox',
         'price' => '৳170',
         'image' => asset('images/product_images/08_neem.jpeg')
     ],
     [
+        'id' => 9,
         'name' => 'Bamboo Toothbrush (Set of 2)',
         'description' => 'Eco-friendly dental hygiene',
         'price' => '৳150/set',
         'image' => asset('images/product_images/09_bambooBrush.jpg')
     ],
     [
+        'id' => 10,
         'name' => 'Amloki Pickle',
         'description' => 'Sweet & tangy seasonal preserve',
         'price' => '৳130/200g',
         'image' => asset('images/product_images/10_amlokiPickle.jpg')
     ],
     [
+        'id' => 11,
         'name' => 'Nakshi Kantha (Wall Frame)',
         'description' => 'Traditional embroidered art',
         'price' => '৳950',
         'image' => asset('images/product_images/nakshi_kantha.jpg')
     ],
     [
+        'id' => 12,
         'name' => 'Dhakai Jamdani (Off-White)',
         'description' => 'Museum-grade Dhakai Jamdani',
         'price' => '৳6500',
         'image' => asset('images/product_images/jamdani.jpg')
     ],
     [
+        'id' => 13,
         'name' => 'Mustard Oil (Cold Pressed)',
         'description' => 'Pure ghani mustard oil',
         'price' => '৳200/L',
         'image' => asset('images/product_images/mustard_oil.jpg')
     ],
     [
+        'id' => 14,
         'name' => 'Coriander Powder',
         'description' => 'Stone-ground, aromatic',
         'price' => '৳90/100g',
         'image' => asset('images/product_images/coriander.jpg')
     ],
-    [
-        'name' => 'Banana Blossom (Mocha)',
-        'description' => 'Fresh and cleaned',
-        'price' => '৳80/unit',
-        'image' => asset('images/product_images/mocha.jpg')
-    ],
-    [
-        'name' => 'Shidol Shutki',
-        'description' => 'Fermented dry fish from Sylhet',
-        'price' => '৳320/250g',
-        'image' => asset('images/product_images/shidol.jpg')
-    ],
-    [
-        'name' => 'Palmyra Fan (Handmade)',
-        'description' => 'Rural cooling solution',
-        'price' => '৳100',
-        'image' => asset('images/product_images/palmyra_fan.jpg')
-    ],
-    [
-        'name' => 'Handcrafted Clay Teacup (Set)',
-        'description' => 'Earthen teacups from Comilla',
-        'price' => '৳250/set',
-        'image' => asset('images/product_images/clay_teacup.jpg')
-    ],
-    [
-        'name' => 'Fresh Tulsi Leaves',
-        'description' => 'Holy basil bundle',
-        'price' => '৳25/bunch',
-        'image' => asset('images/product_images/tulsi.jpg')
-    ],
-    [
-        'name' => 'Lemon Pickle (Sour-Spicy)',
-        'description' => 'Village-style achar',
-        'price' => '৳110/200g',
-        'image' => asset('images/product_images/lemon_pickle.jpg')
-    ],
-    [
-        'name' => 'Shab-e-Barat Halwa Pack',
-        'description' => 'Flour & semolina sweet pack',
-        'price' => '৳280',
-        'image' => asset('images/product_images/halwa_pack.jpg')
-    ],
-    [
-        'name' => 'Mehendi Paste (Natural)',
-        'description' => 'Fresh leaf paste',
-        'price' => '৳90/50g',
-        'image' => asset('images/product_images/mehendi.jpg')
-    ],
-    [
-        'name' => 'Clay Water Pitcher (Matir Kolshi)',
-        'description' => 'Cools naturally, toxin-free',
-        'price' => '৳300',
-        'image' => asset('images/product_images/kolshi.jpg')
-    ],
-    [
-        'name' => 'Dried Red Chilli (Sun Dried)',
-        'description' => 'Clean, chemical-free',
-        'price' => '৳120/200g',
-        'image' => asset('images/product_images/red_chilli.jpg')
-    ],
-    [
-        'name' => 'Tangail-er Chom Chom',
-        'description' => 'Iconic sweet with thick syrup',
-        'price' => '৳360/box',
-        'image' => asset('images/product_images/chomchom.jpg')
-    ],
-    [
-        'name' => 'Handmade Jute Bag',
-        'description' => 'Sustainable and stylish',
-        'price' => '৳450',
-        'image' => asset('images/product_images/jute_bag.jpg')
-    ],
-    [
-        'name' => 'Fresh Malabar Spinach (Pui Shaak)',
-        'description' => 'Daily greens',
-        'price' => '৳40/bundle',
-        'image' => asset('images/product_images/pui_shaak.jpg')
-    ],
-    [
-        'name' => 'Kanthal (Jackfruit)',
-        'description' => 'Ripe, sweet, local',
-        'price' => '৳70/kg',
-        'image' => asset('images/product_images/jackfruit.jpg')
-    ],
-    [
-        'name' => 'Amra Pickle (Wild Olive)',
-        'description' => 'Wild, tangy flavor',
-        'price' => '৳100/200g',
-        'image' => asset('images/product_images/amra.jpg')
-    ],
-    [
-        'name' => 'Date Palm Molasses (Khejur Gur)',
-        'description' => 'Winter special, thick and dark',
-        'price' => '৳220/500g',
-        'image' => asset('images/product_images/khejur_gur.jpg')
-    ],
 ];
 @endphp
+
 
 
 <section class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
@@ -856,7 +792,7 @@ $products = [
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2 border border-gray-100">
                 <!-- Product Image Container -->
                 <div class="relative overflow-hidden rounded-t-3xl">
-                    <a href="/product/{{ $index }}" class="block">
+                    <a href="{{ url('/product/' . $product['id']) }}" class="block">
                         <img src="{{ $product['image'] }}" 
                              alt="{{ $product['name'] }}" 
                              class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700">
@@ -937,23 +873,6 @@ $products = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  <!-- Footer Section for home.blade.php -->
 <footer class="bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
     <!-- Decorative leaf pattern -->
@@ -989,12 +908,12 @@ $products = [
                             <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
                         </svg>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <a href="https://github.com/mehedi-hridoy" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
-                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <a href="https://github.com/lamyea-salma016" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
                         </svg>
@@ -1153,6 +1072,24 @@ $products = [
 </footer>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
  
           
        
@@ -1187,3 +1124,4 @@ $products = [
 
 </body>
 </html>
+

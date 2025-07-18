@@ -82,3 +82,11 @@ Route::get('/gift', function () {
 Route::get('/vegetables', function () {
     return view('vegetables');
 });
+
+
+
+
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/', [ProductController::class, 'index']);
