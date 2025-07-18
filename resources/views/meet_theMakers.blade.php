@@ -166,7 +166,7 @@
             <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="https://via.placeholder.com/600x600/15803d/ffffff?text=Fatema+Begum" 
+                         src="{{ asset('images/fatema-begum.jpg') }}" 
                          alt="Fatema Begum - Organic Spice Farmer">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
