@@ -184,7 +184,7 @@
             <!-- Jamdani Weaving -->
             <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
                 <div class="relative overflow-hidden">
-                    <img src="https://via.placeholder.com/600x350?text=Jamdani+Weaving" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Jamdani Weaving">
+                   <img src="{{ asset('images/slide_5.png') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Jamdani Weaving">
                     <div class="absolute top-4 left-4">
                         <span class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">ঢাকা</span>
                     </div>
