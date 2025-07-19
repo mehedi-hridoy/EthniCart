@@ -4,9 +4,6 @@
 @endpush
 @section('main-content')
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +29,6 @@
 
 <body >
 
-
 <div class="bg-blue-50">
 
 
@@ -48,14 +44,11 @@
                         </button>
                         
                         <button class="hidden md:block text-gray-700 hover:text-primary transition-colors">
-                            <!-- <i class="fa-solid fa-bars text-2xl"></i> -->
+                            <i class="fa-solid fa-bars text-2xl"></i>
                         </button>
-<a href="/" class="relative flex items-center py-2 lg:left-[-100px] md:left-[-80px] sm:left-[-60px] left-[-40px]">
-    <img class="h-auto max-h-16 w-auto object-contain" src="{{ asset('images/site_logo.png') }}" alt="EthniCart Logo" />
+<a href="/" class="flex items-center py-2">
+    <img class="h-auto max-h-16 w-auto object-contain" src="images/site_logo.png" alt="EthniCart Logo" />
 </a>
-
-
-
 
                     </div>
 
@@ -134,9 +127,7 @@
         <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Shop by Category Button -->
-                <div class="relative -ml-4 sm:-ml-6 md:-ml-10 lg:-ml-24 xl:-ml-36">
-
-
+                <div class="relative -ml-2">
                     <button id="categoryBtn" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900 py-2 rounded-md text-sm font-medium">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -147,120 +138,101 @@
                     <!-- Dropdown Menu -->
                     <div id="categoryDropdown" class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg z-50 border border-gray-200 hidden">
                         <div class="py-2">
-                            <a href="{{url('/food')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="{{ url('views/food.blade.php') }}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
                                 </svg>
-                                Seasonal Fruits
+                                Food
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/pickles&condiments')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/baby-food-care" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                 </svg>
-                                Pickles & Condiments
+                                Baby Food & Care
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/fish&meat')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/home-cleaning" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
                                 </svg>
-                                Fish & Meat
+                                Home Cleaning
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/organicRoots')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/pet-care" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                                 </svg>
-                                Organic Roots
+                                Pet Care
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/homemadeMasala')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/beauty-health" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                                 </svg>
-                                Homemade Masala
+                                Beauty & Health
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/beauty&care')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/fashion-lifestyle" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
                                 </svg>
-                                Beauty & Care
+                                Fashion & Lifestyle
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/cloths')}}" 
-  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/home-kitchen" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
                                 </svg>
-                                Cloths & Apparels
+                                Home & Kitchen
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/craftItems')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/stationeries" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
-                                Craft and Goods
+                                Stationeries
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/home&kitchen')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/toys-sports" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 010 5H9m0-5.5V8a2 2 0 012-2h2a2 2 0 012 2v1.5M12 16v2a2 2 0 002 2h1a2 2 0 002-2v-2M5 12h14"></path>
                                 </svg>
-                                Home & Kitchen 
+                                Toys & Sports
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
                             
-                            <a href="{{url('/gift')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
+                            <a href="/gadget" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
                                 <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                                 </svg>
-                                Flowers & Gifts
-                                <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a href="{{url('/cleaning&household')}}" class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
-                                <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                                </svg>
-                                Eco- Friendly Cleaning Products
-                                <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                            </a>
-                            <a href="{{url('/vegetables')}}"  class="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-150">
-                                <svg class="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                                </svg>
-                               Farm Fresh Vegetables
+                                Gadget
                                 <svg class="w-4 h-4 ml-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
@@ -282,19 +254,6 @@
         </div>
     </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
     <!-- main body part of the site -->
 
@@ -418,7 +377,7 @@
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: Fruits --}}
+            {{-- Category 1: food --}}
             <div class="group">
                 <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
@@ -429,63 +388,58 @@
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Seasonal Fruits
+                            Food
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 2: Pickles & Condiments--}}
+            {{-- Category 2: Food & Snacks --}}
             <div class="group">
-                <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                        src="{{ asset('images/pickles.jpg') }}"
+                        <img src="images/home&kitchen.png" 
                              alt="Food & Snacks" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Pickles & Condiments
+                          Home & Kitchen 
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 3:Fish&meat --}}
+            {{-- Category 3: Fruits & Vegetables --}}
             <div class="group">
-                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fruits&vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                 
-                        <img 
-                        src="{{ asset('images/fish_meat.png') }}"
-                        
+                        <img src="images/beauty_items.png" 
                              alt="Fruits & Vegetables" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                          Fish & Meat
+                            Beauty Products
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 4: Organic Roots --}}
+            {{-- Category 4: Craft Items --}}
             <div class="group">
-                <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                         src="{{ asset('images/organicRoots.png') }}"
+                        <img src="https://via.placeholder.com/300x300/FDE2E7/BE185D?text=Fish+%26+Meat" 
                              alt="Fish & Meat" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Organic Roots
+                            Craft Items
                         </h3>
                     </div>
                 </a>
@@ -508,18 +462,18 @@
                 </a>
             </div>
 
-            {{-- Category 6: Beauty & Care --}}
+            {{-- Category 6: Fish & Meat --}}
             <div class="group">
-                <a href="{{url('/beauty&care')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/beauty_items.png"
-                             alt="Beauty & Care" 
+                        <img src="images/fish_meat.png"
+                             alt="Juice & Beverage" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Beauty & Care
+                           Fish & Meat
                         </h3>
                     </div>
                 </a>
@@ -529,7 +483,7 @@
             <div class="group">
                 <a href="{{url('/cloths')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('images/cloths&appreals.jpg') }}" alt="cloths"
+                        <img src="images/cloths.jpg" 
                              alt="Dairy" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -542,88 +496,87 @@
                 </a>
             </div>
 
-            {{-- Category 8:Crafted Goods--}}
+            {{-- Category 8: Gifts & flowers --}}
             <div class="group">
-                <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/crafts.jpg') }}"
+                        <img src="https://via.placeholder.com/300x300/F0F9FF/0369A1?text=Frozen+Item" 
                              alt="Frozen Item" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Crafted Goods
+                            Gifts & Flowers
 
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 9:Home & Kitchen  --}}
+            {{-- Category 9: Beauty & Personal Care --}}
             <div class="group">
-                <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/beauty&Pcare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home_kitchen.png') }}"
-
+                        <img src="https://via.placeholder.com/300x300/FCE7F3/BE185D?text=Beauty+%26+Personal+Care" 
                              alt="Beauty & Personal Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Home & Kitchen 
+                            Beauty & Personal Care
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 10: Flower & Gifts --}}
-            <div class="group">
-                <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+            {{-- Category 10: Health & Wellness --}}
+            <div class="health&wellness">
+                <a href="{{url('/health')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/gifts_flowers.jpg') }}"
+                        <img src="https://via.placeholder.com/300x300/D1FAE5/047857?text=Health+%26+Wellness" 
                              alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                              Flower N Gifts
+                            Health & Wellness
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 11: Eco-Friendly Cleaning Products --}}
+            {{-- Category 11: Cleaning & Household --}}
             <div class="group">
                 <a href="{{url('/cleaning&household')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/cleaning.jpg') }}"
+                        <img src="https://via.placeholder.com/300x300/E5E7EB/374151?text=Cleaning+%26+Household" 
                              alt="Cleaning & Household" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                             Eco-Friendly Cleaning Products
+                            Cleaning & Household
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 12: Farm Fresh Vegetables --}}
+            {{-- Category 12: Baby Care --}}
             <div class="babyCare">
-                <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/babyCare')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/vegetables.jpg') }}"
+                        <img src="https://via.placeholder.com/300x300/FEF3C7/92400E?text=Baby+Care" 
                              alt="Baby Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Farm Fresh Vegetables
+                            Baby Care
                         </h3>
                     </div>
                 </a>
@@ -645,230 +598,283 @@
 
 
 
+
 @php
 $products = [
     [
-        'id' => 1,
-        'name' => 'Rajshahi Mango (Himsagar)',
-        'description' => 'Sweet, juicy seasonal mango',
-        'price' => '৳550/kg',
-        'image' => asset('images/product_images/01_himsagor.jpeg')
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
     [
-        'id' => 2,
-        'name' => 'Tangail Shari (Handloom Cotton)',
-        'description' => 'Authentic Tangail weave, pure cotton',
-        'price' => '৳1800',
-        'image' => asset('images/product_images/02_shari.jpg')
+        'name' => 'SANDARED',
+        'description' => 'Pouffe, grey, 56 cm',
+        'price' => 'Rp999.000',
+        'image' => 'https://via.placeholder.com/300x200?text=SANDARED'
     ],
     [
-        'id' => 3,
-        'name' => 'Natore-er Kacha Golla',
-        'description' => 'Soft, fresh dairy sweet',
-        'price' => '৳350/box',
-        'image' => asset('images/product_images/03_kachaGolla.jpeg')
+        'name' => 'LACK',
+        'description' => 'Side table, white, 55x55 cm',
+        'price' => 'Rp199.000',
+        'image' => 'https://via.placeholder.com/300x200?text=LACK'
     ],
-    [
-        'id' => 4,
-        'name' => 'Chui Jhal Masala Blend',
-        'description' => 'Handmade spice mix with Chui',
-        'price' => '৳199',
-        'image' => asset('images/product_images/04_chuiJhal.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 5,
-        'name' => 'Hilsha Fish (Padma River)',
-        'description' => 'Freshly caught Ilish',
-        'price' => '৳1200/kg',
-        'image' => asset('images/product_images/05_hilsha.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 6,
-        'name' => 'Organic Turmeric Powder',
-        'description' => 'Hand-ground haldi from Rangpur',
-        'price' => '৳120/100g',
-        'image' => asset('images/product_images/06_termeric.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 7,
-        'name' => 'Rosogolla (Dhaka Style)',
-        'description' => 'Spongy, syrupy sweet',
-        'price' => '৳240/box',
-        'image' => asset('images/product_images/07_rosogolla.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 8,
-        'name' => 'Neem Face Pack',
-        'description' => 'Natural skin detox',
-        'price' => '৳170',
-        'image' => asset('images/product_images/08_neem.jpeg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 9,
-        'name' => 'Bamboo Toothbrush (Set of 2)',
-        'description' => 'Eco-friendly dental hygiene',
-        'price' => '৳150/set',
-        'image' => asset('images/product_images/09_bambooBrush.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 10,
-        'name' => 'Amloki Pickle',
-        'description' => 'Sweet & tangy seasonal preserve',
-        'price' => '৳130/200g',
-        'image' => asset('images/product_images/10_amlokiPickle.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 11,
-        'name' => 'Nakshi Kantha (Wall Frame)',
-        'description' => 'Traditional embroidered art',
-        'price' => '৳950',
-        'image' => asset('images/product_images/nakshi_kantha.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 12,
-        'name' => 'Dhakai Jamdani (Off-White)',
-        'description' => 'Museum-grade Dhakai Jamdani',
-        'price' => '৳6500',
-        'image' => asset('images/product_images/jamdani.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 13,
-        'name' => 'Mustard Oil (Cold Pressed)',
-        'description' => 'Pure ghani mustard oil',
-        'price' => '৳200/L',
-        'image' => asset('images/product_images/mustard_oil.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
-    [
-        'id' => 14,
-        'name' => 'Coriander Powder',
-        'description' => 'Stone-ground, aromatic',
-        'price' => '৳90/100g',
-        'image' => asset('images/product_images/coriander.jpg')
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
     ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+     [
+        'name' => 'LISABO',
+        'description' => 'Coffee table, ash veneer, 70x70 cm',
+        'price' => 'Rp1.999.000',
+         'image' => asset('images/product_images/table.jpg')
+    ],
+    // Add as many products as you want...
 ];
 @endphp
 
-
-
-<section class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-    <!-- Header Section -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="text-center mb-8">
-            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Ethnic<span class="text-[#6A9793]">Art</span> Collection
-            </h1>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto">
-                Discover our curated selection of beautiful handcrafted furniture and decor
-            </p>
-        </div>
-
-        <!-- Filters and Controls -->
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm">
-            <div class="flex items-center space-x-4 mb-4 sm:mb-0">
-                <h2 class="text-2xl font-bold text-gray-800">{{ count($products) }} Items</h2>
-                <div class="h-6 w-px bg-gray-300"></div>
-                <span class="text-sm text-gray-500">Premium Quality</span>
-            </div>
-            
-            <div class="flex flex-wrap gap-3">
-                <button class="group relative px-6 py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#6A9793] transition-all duration-300 hover:shadow-md">
-                    <span class="flex items-center gap-2">
-                        Sort by: Featured
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </button>
-                
-                <button class="group relative px-6 py-3 bg-white border-2 border-gray-200 rounded-xl text-sm font-medium hover:border-[#GA9793] transition-all duration-300 hover:shadow-md">
-                    <span class="flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 15.414V20a1 1 0 01-1.447.894l-4-2A1 1 0 018 18v-2.586L3.293 6.707A1 1 0 013 6V4z" />
-                        </svg>
-                        Filters
-                    </span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Products Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            @foreach($products as $index => $product)
-            <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2 border border-gray-100">
-                <!-- Product Image Container -->
-                <div class="relative overflow-hidden rounded-t-3xl">
-                    <a href="{{ url('/product/' . $product['id']) }}" class="block">
-                        <img src="{{ $product['image'] }}" 
-                             alt="{{ $product['name'] }}" 
-                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700">
-                    </a>
-                    
-                    <!-- Overlay with Quick Actions -->
-                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                        <div class="transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                            <button class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 mx-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                </svg>
-                            </button>
-                            <button class="bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 mx-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Sale Badge -->
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">NEW</span>
-                    </div>
-                </div>
-
-                <!-- Product Details -->
-                <div class="p-7 space-y-4">
-                    <div class="space-y-2">
-                        <h3 class="text-lg font-bold text-gray-900 uppercase tracking-wide group-hover:text-[#6A9793] transition-colors">
-                            {{ $product['name'] }}
-                        </h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">
-                            {{ $product['description'] }}
-                        </p>
-                    </div>
-                    
-                    <!-- Price -->
-                    <div class="flex items-center justify-between">
-                        <span class="text-2xl font-bold text-gray-900">{{ $product['price'] }}</span>
-                        <div class="flex items-center space-x-1">
-                            @for($i = 1; $i <= 5; $i++)
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                                </svg>
-                            @endfor
-                        </div>
-                    </div>
-
-                    <!-- Add to Cart Button -->
-                    <button class="w-full bg-[#6A9793] hover:bg-[#5a8480] text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95 flex items-center justify-center space-x-2 group">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M16 21a1 1 0 100-2 1 1 0 000 2zm-8 0a1 1 0 100-2 1 1 0 000 2z"/>
-                        </svg>
-                        <span>Add to Cart</span>
-                    </button>
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        <!-- Load More Button -->
-        <div class="text-center mt-16">
-            <button class="bg-white hover:bg-gray-50 text-gray-700 font-semibold py-4 px-8 rounded-2xl border-2 border-gray-200 hover:border-[#6A9793] transition-all duration-300 hover:shadow-lg">
-                Load More Products
+<section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-bold">Total items {{ count($products) }}</h2>
+        <div class="flex space-x-4">
+            <button class="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-100">Sort by :</button>
+            <button class="px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-100 flex items-center gap-2">
+                Filters
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L14 15.414V20a1 1 0 01-1.447.894l-4-2A1 1 0 018 18v-2.586L3.293 6.707A1 1 0 013 6V4z" />
+                </svg>
             </button>
         </div>
     </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @foreach($products as $index => $product)
+        <div class="border rounded-lg p-4 hover:shadow-md transition">
+            <div class="relative">
+                <a href="/product/{{ $index }}">
+                    <img src="{{ $product['image'] }}" alt="{{ $product['name'] }}" class="w-full h-40 object-cover rounded-md">
+                </a>
+                <a href="/product/{{ $index }}" class="absolute top-2 right-2 text-gray-500 hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M16 21a1 1 0 100-2 1 1 0 000 2zm-8 0a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="mt-4">
+                <h3 class="text-sm font-semibold text-gray-800 uppercase">{{ $product['name'] }}</h3>
+                <p class="text-gray-600 text-sm">{{ $product['description'] }}</p>
+                <p class="mt-2 font-bold text-gray-900">{{ $product['price'] }}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -913,12 +919,12 @@ $products = [
                             <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"></path>
                         </svg>
                     </a>
-                    <a href="https://github.com/mehedi-hridoy" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
-                    <a href="https://github.com/lamyea-salma016" target="_blank" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
+                    <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-green-600 rounded-full flex items-center justify-center transition-colors duration-300">
                         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
                         </svg>
@@ -1077,24 +1083,6 @@ $products = [
 </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
  
           
        
@@ -1129,4 +1117,3 @@ $products = [
 
 </body>
 </html>
-
