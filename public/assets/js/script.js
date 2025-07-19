@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dots = document.querySelectorAll('.carousel-dot');
     
     let currentSlide = 0;
-    const totalSlides = 4;
+    const totalSlides = 5;
     let autoSlideInterval;
     
     // Function to go to a specific slide
