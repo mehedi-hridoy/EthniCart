@@ -88,6 +88,10 @@ Route::get('/fromTheSource', function () {
     return view('fromTheSource');
 });
 
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+});
+
 Route::get('/ethniPromise', function () {
     return view('ethniPromise');
 });

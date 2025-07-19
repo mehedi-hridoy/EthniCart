@@ -277,6 +277,7 @@
                     <a href="{{url('/ethniPromise')}}" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Ethni Promise</a>
                     <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Stories</a>
                     <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Join as Seller</a>
+                    <a href="{{url('/aboutUs')}}"    class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">About Us</a>
                 </div>
             </div>
         </div>
@@ -340,18 +341,19 @@
             {{-- Image Slide 4 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/perfume.jpg') }}"
+                    <img src="{{ asset('images/slide_5.png') }}"
                          alt="Slide 4" 
                          class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <h2 class="text-3xl md:text-5xl font-bold mb-4">New Arrivals</h2>
-                            <p class="text-lg md:text-xl mb-6">Discover our latest products</p>
-                            <button class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                View Collection
-                            </button>
-                        </div>
-                    </div>
+                    
+                </a>
+            </div>
+             {{-- Image Slide 4 --}}
+            <div class="min-w-full relative">
+                <a href="#" class="block w-full h-full">
+                    <img src="{{ asset('images/slide_5.png') }}"
+                         alt="Slide 4" 
+                         class="w-full h-full object-cover">
+                    
                 </a>
             </div>
         </div>
