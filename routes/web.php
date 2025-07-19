@@ -92,6 +92,12 @@ Route::get('/ethniPromise', function () {
     return view('ethniPromise');
 });
 
+Route::get('/stories', function () {
+    return view('stories');
+});
+Route::get('/joinAsSeller', function () {
+    return view('joinAsSeller');
+});
 
 
 
