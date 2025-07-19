@@ -61,35 +61,7 @@
 
         <!-- Regional Products Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <!-- Rajshahi Mangoes -->
-            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                <div class="relative overflow-hidden">
-                    <img src="{{ asset('images/rajshahi.jpg') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Rajshahi Mangoes">
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">রাজশাহী</span>
-                    </div>
-                    <div class="absolute bottom-4 right-4">
-                        <div class="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-800">
-                            🥭 May - July
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Rajshahi – The Mango Kingdom</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Where the mighty Padma River meets golden sunlight, Rajshahi's legendary Himsagar and Langra mangoes ripen to perfection. Each fruit carries the sweetness of 500 years of cultivation mastery.
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
-                                <span class="text-orange-600 text-sm">🌱</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Hand-picked daily</span>
-                        </div>
-                        <div class="text-emerald-600 font-semibold">250+ varieties</div>
-                    </div>
-                </div>
-            </div>
+           
 
             <!-- Jamuna Clay Pots -->
             <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
@@ -117,6 +89,36 @@
                             <span class="text-sm text-gray-500">Handcrafted</span>
                         </div>
                         <div class="text-emerald-600 font-semibold">5 generations</div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Rajshahi Mangoes -->
+            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
+                <div class="relative overflow-hidden">
+                    <img src="{{ asset('images/rajshahi.jpg') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Rajshahi Mangoes">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">রাজশাহী</span>
+                    </div>
+                    <div class="absolute bottom-4 right-4">
+                        <div class="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-800">
+                            🥭 May - July
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Rajshahi – The Mango Kingdom</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Where the mighty Padma River meets golden sunlight, Rajshahi's legendary Himsagar and Langra mangoes ripen to perfection. Each fruit carries the sweetness of 500 years of cultivation mastery.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                                <span class="text-orange-600 text-sm">🌱</span>
+                            </div>
+                            <span class="text-sm text-gray-500">Hand-picked daily</span>
+                        </div>
+                        <div class="text-emerald-600 font-semibold">250+ varieties</div>
                     </div>
                 </div>
             </div>
@@ -151,36 +153,7 @@
                 </div>
             </div>
 
-            <!-- Sundarbans Honey -->
-            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                <div class="relative overflow-hidden">
-                    <img src="{{ asset('images/sundarban.jpg') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Sundarbans Honey">
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">সুন্দরবন</span>
-                    </div>
-                    <div class="absolute bottom-4 right-4">
-                        <div class="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-800">
-                            🍯 Dec - Feb
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Sundarbans – Tiger's Gold</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">
-                        Deep in the mangrove forests where Royal Bengal tigers roam, brave honey collectors gather liquid gold from wild hives. Each drop carries the untamed spirit of the world's largest mangrove forest.
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
-                                <span class="text-yellow-600 text-sm">🍯</span>
-                            </div>
-                            <span class="text-sm text-gray-500">Wild harvest</span>
-                        </div>
-                        <div class="text-emerald-600 font-semibold">100% raw</div>
-                    </div>
-                </div>
-            </div>
-
+           
             <!-- Jamdani Weaving -->
             <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
                 <div class="relative overflow-hidden">
@@ -211,10 +184,42 @@
                 </div>
             </div>
 
+
+             <!-- Sundarbans Honey -->
+            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
+                <div class="relative overflow-hidden">
+                    <img src="{{ asset('images/sundarban.jpg') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Sundarbans Honey">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">সুন্দরবন</span>
+                    </div>
+                    <div class="absolute bottom-4 right-4">
+                        <div class="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium text-gray-800">
+                            🍯 Dec - Feb
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-3">Sundarbans – Tiger's Gold</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Deep in the mangrove forests where Royal Bengal tigers roam, brave honey collectors gather liquid gold from wild hives. Each drop carries the untamed spirit of the world's largest mangrove forest.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <span class="text-yellow-600 text-sm">🍯</span>
+                            </div>
+                            <span class="text-sm text-gray-500">Wild harvest</span>
+                        </div>
+                        <div class="text-emerald-600 font-semibold">100% raw</div>
+                    </div>
+                </div>
+            </div>
+
+
             <!-- Bogura Sweets -->
             <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
                 <div class="relative overflow-hidden">
-                    <img src="https://via.placeholder.com/600x350?text=Bogura+Sweets" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Bogura Sweets">
+                    <img src="{{ asset('images/Bogura.png') }}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700" alt="Bogura Sweets">
                     <div class="absolute top-4 left-4">
                         <span class="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">বগুড়া</span>
                     </div>
