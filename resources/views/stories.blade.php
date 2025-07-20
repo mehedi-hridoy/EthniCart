@@ -90,7 +90,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="artisan">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/mango-garden-story.jpg') }}" 
+                         src="{{ asset('images/mango_garden.png') }}" 
                          alt="Naogaon Mango Garden">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -126,7 +126,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="culture">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/jamdani-heritage.jpg') }}" 
+                         src="{{ asset('images/jamdani_heritage.jpg') }}" 
                          alt="Jamdani Heritage">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -162,7 +162,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="customer">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/customer-story.jpg') }}" 
+                         src="{{ asset('images/swals.jpg') }}" 
                          alt="Customer Story">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -198,7 +198,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="artisan">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/clay-artist-story.jpg') }}" 
+                         src="{{ asset('images/aklima_apa.png') }}" 
                          alt="Clay Artist Story">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -234,7 +234,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="culture">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/bullock-cart-tradition.jpg') }}" 
+                         src="{{ asset('images/gorurGari.jpg') }}" 
                          alt="Bullock Cart Tradition">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -270,7 +270,7 @@
             <article class="story-card bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 group" data-category="customer">
                 <div class="relative overflow-hidden">
                     <img class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-700" 
-                         src="{{ asset('images/home-decor-story.jpg') }}" 
+                         src="{{ asset('images/ethnic_rug.jpg') }}" 
                          alt="Home Decor Story">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
