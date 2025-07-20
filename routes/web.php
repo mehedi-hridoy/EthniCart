@@ -101,6 +101,9 @@ Route::get('/stories', function () {
     return view('stories');
 });
 
+Route::get('/accounts/account', function () {
+    return view('accounts.account');
+});
 
 use App\Http\Controllers\ProductController;
 
