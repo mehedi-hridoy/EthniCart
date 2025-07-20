@@ -17,9 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/food', function () {
-    return view('food');
-});
 
 Route::get('/home&kitchen', function () {
     return view('home&kitchen');
@@ -82,3 +79,29 @@ Route::get('/gift', function () {
 Route::get('/vegetables', function () {
     return view('vegetables');
 });
+
+Route::get('/meet_theMakers', function () {
+    return view('meet_theMakers');
+});
+
+Route::get('/fromTheSource', function () {
+    return view('fromTheSource');
+});
+
+Route::get('/aboutUs', function () {
+    return view('aboutUs');
+});
+
+Route::get('/ethniPromise', function () {
+    return view('ethniPromise');
+});
+
+
+Route::get('/stories', function () {
+    return view('stories');
+});
+
+
+use App\Http\Controllers\ProductController;
+
+Route::get('/', [ProductController::class, 'index']);
