@@ -33,7 +33,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 <div class="relative">
                     <img class="w-full h-96 lg:h-full object-cover" 
-                         src="{{ asset('images/featured-story.jpg') }}" 
+                         src="{{ asset('images/jamdani.jpeg') }}" 
                          alt="Featured Story">
                     <div class="absolute top-4 left-4 bg-white text-emerald-600 px-4 py-2 rounded-full text-sm font-bold">
                         ✨ Featured Story
