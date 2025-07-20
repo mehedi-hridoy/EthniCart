@@ -97,6 +97,9 @@ Route::get('/ethniPromise', function () {
 });
 
 
+Route::get('/stories', function () {
+    return view('stories');
+});
 
 
 use App\Http\Controllers\ProductController;
