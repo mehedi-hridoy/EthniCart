@@ -88,9 +88,7 @@
                     <img src="{{ asset('images/mehedi.jpg') }}" 
                          class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" 
                          alt="Mehedi Hasan Hridoy">
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">Lead Developer</span>
-                    </div>
+                   
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div class="p-8">
@@ -136,9 +134,7 @@
                     <img src="{{ asset('images/lamyea.jpg') }}" 
                          class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700" 
                          alt="Umme Salma Lamyea">
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm font-bold">Frontend Specialist</span>
-                    </div>
+                    
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div class="p-8">
