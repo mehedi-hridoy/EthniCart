@@ -551,7 +551,7 @@
             <div class="group">
                 <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home_kitchen.png') }}"
+                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
 
                              alt="Beauty & Personal Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
