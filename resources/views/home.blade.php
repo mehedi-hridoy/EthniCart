@@ -341,7 +341,7 @@
             {{-- Image Slide 4 --}}
             <div class="min-w-full relative">
                 <a href="#" class="block w-full h-full">
-                    <img src="{{ asset('images/slide_5.png') }}"
+                    <img src="{{ asset('images/slide_4.png') }}"
                          alt="Slide 4" 
                          class="w-full h-full object-cover">
                     
@@ -405,18 +405,18 @@
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: Fruits --}}
+            {{-- Category 1: Foods --}}
             <div class="group">
                 <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
-                             alt="Grocery" 
+                             alt="Foods" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                            Seasonal Fruits
+                            Foods
                         </h3>
                     </div>
                 </a>
@@ -465,7 +465,7 @@
                 <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img 
-                         src="{{ asset('images/organicRoots.png') }}"
+                         src="{{ asset('images/organicroots.jpg') }}"
                              alt="Fish & Meat" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -499,7 +499,7 @@
             <div class="group">
                 <a href="{{url('/beauty&care')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/beauty_items.png"
+                        <img src="images/beauty&care.jpg"
                              alt="Beauty & Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
@@ -551,7 +551,7 @@
             <div class="group">
                 <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home_kitchen.png') }}"
+                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
 
                              alt="Beauty & Personal Care" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -569,7 +569,7 @@
             <div class="group">
                 <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/gifts_flowers.jpg') }}"
+                        <img  src="{{ asset('images/flowerNgifts.jpg') }}"
                              alt="Health & Wellness" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
