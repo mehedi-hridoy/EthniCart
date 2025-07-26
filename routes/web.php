@@ -22,13 +22,31 @@ Route::get('/home&kitchen', function () {
     return view('home&kitchen');
 });
 
-Route::get('/fruits&vegetables', function () {
-    return view('fruits&vegetables');
+// routes of food section
+
+Route::get('/foods', function () {
+    return view('foods');
 });
 
-Route::get('/babyCare', function () {
-    return view('babyCare');
+Route::get('/A1_foods_fruits', function () {
+    return view('A1_foods_fruits');
 });
+
+Route::get('/A2_foods_sweets', function () {
+    return view('A2_foods_sweets');
+});
+
+Route::get('/A3_foods_snacks', function () {
+    return view('A3_foods_snacks');
+});
+
+Route::get('/A4_foods_dairy', function () {
+    return view('A4_foods_dairy');
+});
+
+// Route::get('/babyCare', function () {
+//     return view('babyCare');
+// });
 
 
 
@@ -91,9 +109,13 @@ Route::get('/fromTheSource', function () {
 Route::get('/aboutUs', function () {
     return view('aboutUs');
 });
-
+ 
 Route::get('/ethniPromise', function () {
     return view('ethniPromise');
+});
+
+Route::get('/contactUs', function () {
+    return view('contactUs');
 });
 
 

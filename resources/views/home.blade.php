@@ -407,7 +407,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {{-- Category 1: Foods --}}
             <div class="group">
-                <a href="{{url('/food')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <a href="{{url('/foods')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
                              alt="Foods" 
@@ -941,7 +941,7 @@ $products = [
                         </svg>
                         Quality Guarantee
                     </a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center">
+                    <li><a href="{{url('/contactUs')}}"  class="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center">
                         <svg class="w-3 h-3 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                         </svg>
