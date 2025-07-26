@@ -6,14 +6,14 @@
 <!-- Hero Section -->
 <div class="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 min-h-screen">
     <!-- Header Banner -->
-    <div class="relative overflow-hidden bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 py-16">
+    <div class="relative overflow-hidden bg-gradient-to-r from-green-300 via-yellow-300 to-green-300 py-8">
         <div class="absolute inset-0 bg-black opacity-10"></div>
         <div class="relative container mx-auto px-4 text-center">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-                Fresh <span class="text-green-200">Foods</span>
+                Foods <span class="text-green-200"></span>
             </h1>
-            <p class="text-xl md:text-2xl text-green-100 mb-8 max-w-2xl mx-auto">
-                Discover authentic flavors from nature's finest collection
+            <p class="text-xl md:text-2xl text-green-100 mb-8 max-w-3gitxl mx-auto">
+                From fresh fruits to delightful sweets, discover the finest selection of authentic foods
             </p>
             <div class="flex justify-center">
                 <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2">
@@ -38,9 +38,7 @@
     <div class="container mx-auto px-4 py-16">
         <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">Explore Our Categories</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                From fresh fruits to delightful sweets, discover the finest selection of authentic foods
-            </p>
+           
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -51,10 +49,7 @@
                         <div class="relative h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
                             <!-- Placeholder for fruit image -->
                             <div class="w-32 h-32 bg-green-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl">🍎</span>
-                            </div>
-                            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                                Fresh
+                                <span class="text-6xl"></span>
                             </div>
                         </div>
                         <div class="p-6">
@@ -77,7 +72,7 @@
                         <div class="relative h-64 bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center">
                             <!-- Placeholder for sweets image -->
                             <div class="w-32 h-32 bg-pink-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl">🍰</span>
+                                <span class="text-6xl"></span>
                             </div>
                         </div>
                         <div class="p-6">
@@ -99,7 +94,7 @@
                         <div class="relative h-64 bg-gradient-to-br from-orange-100 to-yellow-200 flex items-center justify-center">
                             <!-- Placeholder for snacks image -->
                             <div class="w-32 h-32 bg-orange-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl">🥨</span>
+                                <span class="text-6xl"></span>
                             </div>
                            
                         </div>
@@ -122,7 +117,7 @@
                         <div class="relative h-64 bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center">
                             <!-- Placeholder for dairy image -->
                             <div class="w-32 h-32 bg-blue-300 rounded-full flex items-center justify-center">
-                                <span class="text-6xl">🥛</span>
+                                <span class="text-6xl"></span>
                             </div>
                           
                         </div>
@@ -176,11 +171,11 @@
     </div>
 
     <!-- Call to Action -->
-    <div class="bg-gradient-to-r from-green-600 to-emerald-600 py-12">
+    <div class="bg-gradient-to-r from-green-600 to-emerald-600 py-4">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Explore?</h2>
-            <p class="text-green-100 text-lg mb-6">Start your culinary journey with EthniCart today</p>
-            <button class="bg-white text-green-600 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
+            <h2 class="text-xl font-bold text-white mb-2">Ready to Explore?</h2>
+            <p class="text-green-100 text-lg mb-2">Start your culinary journey with EthniCart today</p>
+            <button class="bg-white text-green-600 px-4 py-2 rounded-full font-bold hover:bg-green-50 transition-colors shadow-lg">
                 Shop Now
             </button>
         </div>
