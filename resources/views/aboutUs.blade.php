@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Us | EthniCart - From The Source')
+@section('title', 'About Us | EthniCart - Earth to you')
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
 @section('content')
