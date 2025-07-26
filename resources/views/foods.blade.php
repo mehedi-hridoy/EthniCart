@@ -138,6 +138,8 @@
 
     
 <!-- Cart started from here -->
+
+
 @php
 $products = [
     [
@@ -168,23 +170,22 @@ $products = [
         'price' => '৳199',
         'image' => asset('images/product_images/04_chuiJhal.jpg')
     ],
+   
 ];
 @endphp
 
-<section class="bg-gray-50 min-h-screen py-8">
+<section class="bg-gradient-to-br from-green-100 via-lime-50 to-green-50 min-h-screen py-8">
     <div class="container mx-auto px-4">
         <!-- Header Section -->
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Ethnic<span class="text-teal-600">Art</span> Collection
+                <span class="text-green-600">Food</span> Section
             </h1>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                Discover authentic Bangladeshi products - from fresh mangoes to handcrafted textiles
-            </p>
+           
         </div>
 
         <!-- Filter Bar -->
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
+        <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-white/20 p-6 mb-8">
             <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
                 <div class="flex items-center gap-6">
                     <h2 class="text-xl font-semibold text-gray-900">{{ count($products) }} Products</h2>
@@ -195,14 +196,14 @@ $products = [
                 </div>
                 
                 <div class="flex items-center gap-3">
-                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-lime-500 bg-white/90">
                         <option>Sort by Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
                         <option>Name: A to Z</option>
                     </select>
                     
-                    <button class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors">
+                    <button class="flex items-center gap-2 px-4 py-2 bg-white/60 hover:bg-white/80 rounded-lg text-sm font-medium transition-colors backdrop-blur-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707L13 13.293V19a1 1 0 01-.553.894l-2 1A1 1 0 019 20v-6.707L3.293 7.707A1 1 0 013 7V4z"/>
                         </svg>
@@ -215,7 +216,7 @@ $products = [
         <!-- Products Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach($products as $product)
-            <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg hover:border-teal-200 transition-all duration-300">
+            <div class="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-sm border border-white/30 overflow-hidden hover:shadow-lg hover:border-lime-200/50 hover:bg-white/95 transition-all duration-300">
                 
                 <!-- Product Image -->
                 <div class="relative aspect-square overflow-hidden bg-gray-100">
@@ -228,39 +229,24 @@ $products = [
                     
                     <!-- Quick Actions -->
                     <div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors" title="Quick View">
+                        <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-white transition-colors" title="Quick View">
                             <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
                             </svg>
                         </button>
-                        <button class="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-red-50 transition-colors group/heart" title="Add to Wishlist">
+                        <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-red-50 transition-colors group/heart" title="Add to Wishlist">
                             <svg class="w-5 h-5 text-gray-600 group-hover/heart:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                             </svg>
                         </button>
                     </div>
-                    
-                    <!-- Product Badge -->
-                    @if($product['id'] == 1 || $product['id'] == 3)
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">FRESH</span>
-                    </div>
-                    @elseif($product['id'] == 2)
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">HANDMADE</span>
-                    </div>
-                    @else
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-orange-600 text-white text-xs font-semibold px-3 py-1 rounded-full">PREMIUM</span>
-                    </div>
-                    @endif
-                </div>
+                  </div>
 
                 <!-- Product Info -->
                 <div class="p-5">
                     <div class="mb-3">
-                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-teal-600 transition-colors">
+                        <h3 class="font-semibold text-gray-900 mb-1 line-clamp-1 hover:text-lime-600 transition-colors">
                             {{ $product['name'] }}
                         </h3>
                         <p class="text-sm text-gray-600 line-clamp-2">{{ $product['description'] }}</p>
@@ -279,7 +265,7 @@ $products = [
                     <!-- Price & Add to Cart -->
                     <div class="flex items-center justify-between">
                         <span class="text-xl font-bold text-gray-900">{{ $product['price'] }}</span>
-                        <button class="bg-[#49993e] hover:bg-[#3d8034] text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center gap-2 text-sm group/btn">
+                        <button class="bg-gradient-to-r from-green-600 to-lime-600 hover:from-green-700 hover:to-lime-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 text-sm group/btn shadow-md hover:shadow-lg">
                             <svg class="w-4 h-4 group-hover/btn:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.293 2.707A1 1 0 007 17h10a1 1 0 001-1v-1M9 21v-8a1 1 0 011-1h4a1 1 0 011 1v8"/>
                             </svg>
@@ -293,7 +279,7 @@ $products = [
 
         <!-- Load More Section -->
         <div class="text-center mt-12">
-            <button class="bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-gray-200 hover:border-teal-300 transition-all duration-300 hover:shadow-md">
+            <button class="bg-white/80 backdrop-blur-sm hover:bg-white/90 text-gray-700 font-semibold py-3 px-8 rounded-xl border border-white/30 hover:border-lime-300/50 transition-all duration-300 hover:shadow-md">
                 Load More Products
             </button>
         </div>
@@ -301,7 +287,7 @@ $products = [
         <!-- Empty State -->
         @if(count($products) === 0)
         <div class="text-center py-20">
-            <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div class="w-32 h-32 bg-white/60 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 border border-white/30">
                 <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/>
                 </svg>
@@ -328,10 +314,6 @@ $products = [
         overflow: hidden;
     }
 </style>
-
-
-
-
     <!-- Features Section -->
     <div class="bg-white bg-opacity-70 backdrop-blur-sm py-16">
         <div class="container mx-auto px-4">
