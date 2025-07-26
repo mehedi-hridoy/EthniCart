@@ -97,14 +97,13 @@
         <h2 class="text-2xl font-bold text-gray-900 mb-2">User Access</h2>
         <p class="text-gray-600">Choose your preferred option</p>
       </div>
-      <div class="space-y-4">
-        <a href="/user/login" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
-          User Login
-        </a>
-        <a href="/user/register" class="block w-full bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 text-center font-semibold py-3 px-6 rounded-lg transition duration-300">
-          User Registration
-        </a>
-      </div>
+      <a href="{{ route('login') }}" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg">
+  User Login
+</a>
+<a href="{{ route('register') }}" class="block w-full bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 text-center font-semibold py-3 px-6 rounded-lg transition duration-300">
+  User Registration
+</a>
+
     `;
     showModal(content);
   }
