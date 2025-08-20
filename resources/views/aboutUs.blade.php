@@ -275,123 +275,75 @@
             </div>
         </div>
 
-        <!-- Project Contributions -->
-        <div class="mt-16 bg-white rounded-3xl shadow-xl p-8">
-            <h3 class="text-3xl font-bold text-emerald-900 mb-8 text-center">প্রকল্পে অবদান • Project Contributions</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Mehedi's Contributions -->
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-200">
-                            <img src="{{ asset('images/mehedi.png') }}" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Mehedi">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-gray-900">Mehedi Hasan Hridoy</h4>
-                            <p class="text-sm text-gray-600">Technical Lead</p>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">⚙️</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Laravel backend architecture & API development</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🗄️</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Database design & optimization</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🔐</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Authentication & security implementation</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🛒</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">E-commerce functionality & payment integration</span>
-                        </div>
-                    </div>
+       <section class="min-h-screen bg-white">
+    <div class="h-screen flex flex-col lg:flex-row">
+        <!-- Full Screen Image Side with Centered Image -->
+        <div class="w-full lg:w-1/2 h-64 lg:h-full relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-emerald-50 to-green-50">
+            <div class="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-8 border-white">
+                <img src="{{ asset('images/zionsir.jpg') }}" 
+                     class="w-full h-full object-cover" 
+                     alt="Md. Mezbaul Islam Zion">
+                <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent"></div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="absolute top-10 left-10 w-20 h-20 bg-emerald-200/30 rounded-full blur-xl"></div>
+            <div class="absolute bottom-20 right-20 w-32 h-32 bg-green-200/20 rounded-full blur-2xl"></div>
+        </div>
+        
+        <!-- Content Side -->
+        <div class="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
+            <div class="max-w-lg">
+                <div class="mb-12 text-center lg:text-left">
+                    <h2 class="text-4xl lg:text-5xl font-bold text-emerald-900 mb-4">
+                        Our Mentor
+                    </h2>
+                    <p class="text-xl text-gray-700">
+                        Under the expert guidance of our esteemed instructor
+                    </p>
                 </div>
 
-                <!-- Lamyea's Contributions -->
-                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-pink-200">
-                            <img src="{{ asset('images/salmaa.jpg') }}" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Lamyea">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-gray-900">Umme Salma Lamyea</h4>
-                            <p class="text-sm text-gray-600">Design Lead</p>
-                        </div>
+                <div class="text-center lg:text-left">
+                    <h3 class="text-3xl font-bold text-emerald-900 mb-4">
+                        Md. Mezbaul Islam Zion
+                    </h3>
+                    <div class="text-lg text-emerald-600 font-semibold mb-2">
+                        Lecturer
                     </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">🎨</span>
+                    <div class="text-gray-600 mb-6 font-medium">
+                        Daffodil International University
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-8">
+                        We sincerely thank our mentor, Md. Mezbaul Islam Zion, whose guidance helped us build EthniCart. 
+                        With his support, we gained strong knowledge in web development, PHP, and Laravel, and stayed 
+                        focused through his rigorous standards.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center lg:justify-start space-x-3">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                <span class="text-emerald-600">🎯</span>
                             </div>
-                            <span class="text-gray-700 text-sm">UI/UX design & user experience optimization</span>
+                            <span class="text-gray-700 font-medium">Project Vision & Strategy</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">📱</span>
+                        <div class="flex items-center justify-center lg:justify-start space-x-3">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                <span class="text-emerald-600">💡</span>
                             </div>
-                            <span class="text-gray-700 text-sm">Responsive frontend development</span>
+                            <span class="text-gray-700 font-medium">Technical Architecture Guidance</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">🌈</span>
+                        <div class="flex items-center justify-center lg:justify-start space-x-3">
+                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                <span class="text-emerald-600">🌟</span>
                             </div>
-                            <span class="text-gray-700 text-sm">Visual branding & cultural design elements</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">✨</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Interactive animations & user engagement features</span>
+                            <span class="text-gray-700 font-medium">Cultural Heritage Preservation</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Vision Section -->
-        <div class="mt-16 bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl p-8 text-white text-center">
-            <h3 class="text-3xl font-bold mb-6">আমাদের দৃষ্টিভঙ্গি • Our Vision</h3>
-            <p class="text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
-                Together, we envision a world where Bangladesh's rich cultural heritage thrives in the digital age, 
-                where every artisan's story is heard, and where authentic craftsmanship finds its rightful place in modern commerce.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">🌍</div>
-                    <h4 class="text-xl font-bold mb-2">Global Reach</h4>
-                    <p class="text-white/90 text-sm">Connecting Bangladesh's heritage with customers worldwide</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">💡</div>
-                    <h4 class="text-xl font-bold mb-2">Innovation</h4>
-                    <p class="text-white/90 text-sm">Bridging traditional crafts with modern technology</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h4 class="text-xl font-bold mb-2">Community</h4>
-                    <p class="text-white/90 text-sm">Building sustainable partnerships with local artisans</p>
-                </div>
-            </div>
-        </div>
+       
     </div>
 </section>
 @endsection

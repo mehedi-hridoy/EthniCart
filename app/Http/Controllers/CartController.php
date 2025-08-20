@@ -69,7 +69,7 @@ class CartController extends Controller
         return redirect()->back();
     }
     
-    // Transfer guest cart to user cart (call this after login)
+    
    // Transfer guest cart to user cart (call this after login)
 public function transferGuestCartToUser()
 {
