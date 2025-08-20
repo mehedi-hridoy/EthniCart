@@ -2,52 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('home');
-// });
-// Route::get('/', function() {
-//     return view('home');
-// })->name('home');
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\SellerController;
 
 
 
 
-// Route::get('/', function () {
-//     $products = DB::table('products')->get()->toArray();
-//     return view('home', compact('products'));
-// })->name('home');
-// Route::get('/home', function () {
-//     return view('home');
-// })->name('home');
 
-// Route::get('/', function () {
-//     $products = DB::table('products')
-//         ->where('display_page', 'home') 
-//         ->get();
+//home route with products
 
-//     return view('home', compact('products'));
-// });
-
-// Route::get('/', function () {
-//     $products = DB::table('products')
-//         ->where('display_page', 'home')
-//         ->get();
-
-//     return view('home', compact('products'));
-// })->name('home'); // ✅ keep the route name!
 Route::get('/home', function () {
     $products = DB::table('products')
         ->where('display_page', 'home')
@@ -55,8 +18,7 @@ Route::get('/home', function () {
 
     return view('home', compact('products'));
 })->name('home');
-// routes of food section
-
+// pages
 Route::get('/foods', function () {
     return view('foods');
 });
@@ -208,7 +170,7 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Protected route example
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
@@ -223,22 +185,17 @@ use App\Http\Controllers\Seller\ProductController;
 
 Route::prefix('seller')->name('seller.')->group(function () {
     
-    // Public routes (open to anyone)
     Route::get('/register', [SellerAuthController::class, 'showRegisterForm'])->name('register');
     Route::post('/register', [SellerAuthController::class, 'register']);
 
     Route::get('/login', [SellerAuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [SellerAuthController::class, 'login']);
-
-    // Protected seller-only routes
     Route::middleware('auth:seller')->group(function () {
         Route::get('/dashboard', function () {
             return view('seller.dashboard');
         })->name('dashboard');
 
         Route::post('/logout', [SellerAuthController::class, 'logout'])->name('logout');
-
-        // Future: seller product management
         Route::get('/products', [ProductController::class, 'index'])->name('products.index');
         Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
         Route::post('/products', [ProductController::class, 'store'])->name('products.store');
@@ -256,7 +213,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::middleware('admin')->group(function () {
         Route::get('/dashboard', function () {
-            // You can load stats here from database
             return view('admin.dashboard');
         })->name('dashboard');
     });
@@ -264,9 +220,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
 // seller routes
-use App\Http\Controllers\SellerController;
 
-// Seller Routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/seller/upload', [SellerController::class, 'showUploadForm']);
     Route::post('/seller/upload', [SellerController::class, 'uploadProduct']);
@@ -432,8 +386,6 @@ Route::middleware('auth')->group(function () {
 
 
 // admin dashboard
-use App\Http\Controllers\Admin\AdminDashboardController;
-
 Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::delete('/delete-user/{id}', [AdminDashboardController::class, 'deleteUser'])->name('admin.deleteUser');
@@ -444,7 +396,6 @@ Route::post('/admin/logout', function () {
     session()->forget('is_admin');
     return redirect('/admin/login');
 })->name('admin.logout');
-
 
 Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
@@ -459,25 +410,20 @@ Route::prefix('admin')->middleware('admin')->group(function () {
 });
 
 
-
-// Block a user
+// user block unblock 
 Route::post('/admin/users/{id}/block', [AdminDashboardController::class, 'blockUser'])->name('admin.block.user');
-
-// Unblock a user
 Route::post('/admin/users/{id}/unblock', [AdminDashboardController::class, 'unblockUser'])->name('admin.unblock.user');
 
 
 
-// seller update
-// Add these routes inside the seller middleware group
+// seller update middleware
+
 Route::post('/products/update-stock', [ProductController::class, 'updateStock'])->name('seller.product.updateStock');
 Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('seller.product.destroy');
 
 
 
 // SSLCOMMERZ Start
-
-
 use App\Http\Controllers\SslCommerzPaymentController;
 Route::get('/checkout', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
@@ -493,18 +439,16 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
 
 
-//admin approval 
 
-
+// admin approval routes 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-    // User management
+    // User 
     Route::get('/users/{id}/delete', [AdminDashboardController::class, 'deleteUser'])->name('users.delete');
     Route::get('/users/{id}/toggle-block', [AdminDashboardController::class, 'toggleUserBlock'])->name('users.toggleBlock');
 
-    // Seller management
-    Route::get('/sellers/{id}/delete', [AdminDashboardController::class, 'deleteSeller'])->name('sellers.delete');
+
     Route::get('/sellers/{id}/toggle-block', [AdminDashboardController::class, 'toggleSellerBlock'])->name('sellers.toggleBlock');
     Route::get('/sellers/{id}/approve', [AdminDashboardController::class, 'approveSeller'])->name('sellers.approve');
     Route::get('/sellers/{id}/disapprove', [AdminDashboardController::class, 'disapproveSeller'])->name('sellers.disapprove');
@@ -514,14 +458,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 //pdf generation
-
-
-// Route::post('/cod', [CartController::class, 'cashOnDelivery'])->name('cart.cod');
-
-
-// // cod
-// Route::post('/cart/cod', [CartController::class, 'codOrder'])->name('cart.cod');
-
 Route::post('/cart/cod', [CartController::class, 'codOrder'])->name('cart.cod');
 
 
@@ -532,3 +468,7 @@ Route::get('/seller/stats', [SellerStatController::class, 'index'])
     ->middleware('auth')
     ->name('seller.stats');
 
+
+// updated seller delete 
+
+Route::delete('/admin/sellers/{id}', [AdminDashboardController::class, 'deleteSeller'])->name('admin.sellers.delete');
