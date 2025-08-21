@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'EthniCart | Meet the Makers')
+@section('title', 'EthniCart | Meet the Producers')
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
 @section('content')
@@ -15,7 +15,7 @@
                 <span class="text-4xl">🧑‍🌾</span>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold text-emerald-900 mb-6 leading-tight">
-                Meet the <span class="text-emerald-600">Makers</span>
+                Meet the <span class="text-emerald-600">Producers</span>
             </h1>
             <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                 Behind every product is a passionate creator. Meet the talented farmers, artisans, and makers who bring authentic Bengali craftsmanship to your doorstep through EthniCart.
@@ -66,7 +66,7 @@
                          alt="Afsana Begum - Jamdani Weaver">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="absolute top-4 left-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                        🧵 Jamdani Weaver
+                        🧵 Jamdani Weaver`
                     </div>
                 </div>
                 <div class="p-8">
