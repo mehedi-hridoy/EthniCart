@@ -47,7 +47,8 @@ Go to your C Drive → xampp → look for the php.ini file.
 
 Open php.ini in a text editor.
 
-Search for the line:
+Search for the line:;extension=gd
+Remove the ; at the beginning to enable the GD extension:
 ### 6. Copy the `.env` File
 
 ```bash
