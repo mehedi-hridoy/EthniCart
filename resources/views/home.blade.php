@@ -220,9 +220,15 @@
                         </button>
                         
                         <a href="{{ url('/cart') }}" class="relative text-gray-700 hover:text-primary transition-colors">
-                            <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
-                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
-                        </a>
+    <i class="fa-solid fa-basket-shopping text-xl md:text-2xl" style="color: #90c552;"></i>
+    
+    @if($globalCartCount > 0)
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+            {{ $globalCartCount }}
+        </span>
+    @endif
+</a>
+
                         
                         <a href="/accounts/account" class="text-gray-700 hover:text-primary transition-colors">
                             <i class="fa-solid fa-user text-xl md:text-2xl"></i>
@@ -1042,6 +1048,52 @@ document.querySelectorAll('.add-to-cart-form').forEach(form => {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll(".add-to-cart-form");
+
+    forms.forEach(form => {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // stop page reload
+
+            const productId = this.dataset.productId;
+            const token = this.querySelector('input[name="_token"]').value;
+
+            fetch("{{ url('/cart/add') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": token,
+                },
+                body: JSON.stringify({
+                    product_id: productId
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                // Update cart count badge
+                document.querySelector("#cart-count").innerText = data.cart_count;
+            })
+            .catch(err => console.error(err));
+        });
+    });
+});
+
+
 </script>
 
 

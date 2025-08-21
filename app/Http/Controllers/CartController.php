@@ -69,7 +69,6 @@ class CartController extends Controller
         return redirect()->back();
     }
     
-    // Transfer guest cart to user cart (call this after login)
    // Transfer guest cart to user cart (call this after login)
 public function transferGuestCartToUser()
 {
@@ -102,5 +101,22 @@ public function transferGuestCartToUser()
         session()->forget($guestCartKey);
     }
 }
+
+    // Method to return current cart count (total quantity)
+    public function getCartCount()
+    {
+        // Get cart from session (or wherever you are storing it)
+        $cart = session()->get('cart', []);
+
+        // Sum all product quantities
+        $cartCount = collect($cart)->sum('quantity');
+
+        // Return as JSON
+        return response()->json([
+            'cart_count' => $cartCount
+        ]);
+    }
+
+
 
 }

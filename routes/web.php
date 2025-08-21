@@ -167,7 +167,6 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
-
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
@@ -261,7 +260,7 @@ Route::get('/vegetables', function () {
 });
 
 
-
+// products
 Route::get('/foods', function () {
     $products = Product::where('display_page', 'foods')->get();
     return view('foods', compact('products'));
@@ -377,8 +376,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
 });
 
-
-
 Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });
@@ -472,3 +469,6 @@ Route::get('/seller/stats', [SellerStatController::class, 'index'])
 // updated seller delete 
 
 Route::delete('/admin/sellers/{id}', [AdminDashboardController::class, 'deleteSeller'])->name('admin.sellers.delete');
+// routes/web.php
+
+
