@@ -4,156 +4,91 @@
 <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
 @section('content')
-  <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-700 py-20 overflow-hidden">
-    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-700 py-24 overflow-hidden">
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.08"%3E%3Cpath d="M50 50c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30zm0 0c0 16.569 13.431 30 30 30s30-13.431 30-30-13.431-30-30-30-30 13.431-30 30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    </div>
     
-    <div class="relative max-w-7xl mx-auto px-4 text-center">
-        <div class="inline-block mb-6">
-            <div class="bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 border border-white/30">
-                <span class="text-white font-medium">🤝 আমাদের সম্পর্কে • About Us</span>
-            </div>
-        </div>
-        
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            আমাদের গল্প<br>
-            <span class="text-yellow-300">About Us</span>
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-            Meet the passionate minds behind EthniCart — a team rooted in culture, driven by purpose, and committed to making local products global.
-        </p>
-    </div>
-</section>
-
-<!-- About EthniCart Section -->
-<section class="bg-gradient-to-b from-green-50 to-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-emerald-900 mb-4">
-                EthniCart সম্পর্কে
-            </h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                Where tradition meets technology, preserving Bangladesh's rich cultural heritage through authentic products
+    <div class="relative container mx-auto px-6 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-black text-white mb-8 leading-tight tracking-tight">
+                <span class="block text-white/90">Meet Our</span>
+                <span class="text-yellow-300 bg-gradient-to-r from-yellow-300 to-amber-300 bg-clip-text text-transparent">Team</span>
+            </h1>
+            
+            <p class="text-2xl md:text-3xl text-white/95 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+                The passionate minds behind EthniCart — rooted in culture, driven by purpose, 
+                and committed to making local products global.
             </p>
-        </div>
 
-        <div class="bg-white rounded-3xl shadow-xl p-8 mb-16">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-3xl font-bold text-emerald-900 mb-6">Our Mission</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
-                        EthniCart bridges the gap between traditional Bangladeshi artisans and modern consumers. 
-                        We believe every handcrafted product tells a story of generations of skill, passion, and cultural heritage.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                <span class="text-emerald-600 text-sm">🌱</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Preserve traditional craftsmanship</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                <span class="text-emerald-600 text-sm">🤝</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Support local artisan communities</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                <span class="text-emerald-600 text-sm">🌍</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Connect Bangladesh with the world</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
-                                <span class="text-emerald-600 text-sm">💚</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Promote sustainable practices</span>
-                        </div>
-                    </div>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-4">
+                    <div class="text-3xl font-bold text-yellow-300">3</div>
+                    <div class="text-white/80">Team Members</div>
                 </div>
-                <div class="relative">
-                    <div class="bg-gradient-to-br from-emerald-400 to-green-500 rounded-3xl p-8 text-white text-center">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
-                                <div class="text-3xl font-bold">500+</div>
-                                <div class="text-sm opacity-90">Artisans</div>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
-                                <div class="text-3xl font-bold">64</div>
-                                <div class="text-sm opacity-90">Districts</div>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
-                                <div class="text-3xl font-bold">1000+</div>
-                                <div class="text-sm opacity-90">Products</div>
-                            </div>
-                            <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-4">
-                                <div class="text-3xl font-bold">100%</div>
-                                <div class="text-sm opacity-90">Authentic</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-4">
+                    <div class="text-3xl font-bold text-yellow-300">1</div>
+                    <div class="text-white/80">Vision</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-4">
+                    <div class="text-3xl font-bold text-yellow-300">∞</div>
+                    <div class="text-white/80">Possibilities</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Instructor Section -->
-<section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-emerald-900 mb-4">
-                Our Mentor
+<section class="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            
+            <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+                 Our Mentor
             </h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                Under the expert guidance of our esteemed instructor from Daffodil International University
-            </p>
+            
         </div>
 
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-gradient-to-br from-emerald-50 to-green-50 rounded-3xl shadow-xl overflow-hidden">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                    <div class="relative overflow-hidden h-96 lg:h-full flex items-center justify-center bg-gradient-to-br from-emerald-100 to-green-100">
-                        <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                            <img src="{{ asset('images/zionsir.jpg') }}" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Md. Mezbaul Islam Zion">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200/50">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-0 min-h-[600px]">
+                    <div class="lg:col-span-2 relative overflow-hidden bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center p-12">
+                        <div class="relative z-10">
+                            <div class="w-100 h-140 rounded-3xl overflow-hidden border-8 border-white/20 shadow-2xl backdrop-blur-sm">
+                                <img src="{{ asset('images/zionsir.jpg') }}" 
+                                     class="w-full h-full object-cover" 
+                                     alt="Md. Mezbaul Islam Zion">
+                            </div>
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-900/20 to-transparent"></div>
+                        <div class="absolute inset-0 opacity-10">
+                            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+                        </div>
                     </div>
-                    <div class="p-8 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-3xl font-bold text-emerald-900 mb-4">
-                            Md. Mezbaul Islam Zion 
-                        </h3>
-                        <div class="text-lg text-emerald-600 font-semibold mb-2">
-                            Lecturer
-                        </div>
-                        <div class="text-gray-600 mb-6 font-medium">
-                            Daffodil International University
-                        </div>
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            We sincerely thank our mentor, Md. Mezbaul Islam Zion, whose guidance helped us build EthniCart. With his support, we gained strong knowledge in web development, PHP, and Laravel, and stayed focused through his rigorous standards.
-                        </p>
-                        <div class="space-y-3">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-emerald-600 text-sm">🎯</span>
+                    
+                    <div class="lg:col-span-3 p-12 lg:p-16 flex flex-col justify-center">
+                        <div class="max-w-2xl">
+                            <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                                Md. Mezbaul Islam Zion 
+                            </h3>
+                            
+                            <div class="flex flex-wrap gap-4 mb-8">
+                                <div class="bg-emerald-100 text-emerald-800 px-6 py-3 rounded-full text-lg font-semibold">
+                                    Lecturer
                                 </div>
-                                <span class="text-gray-700">Project Vision & Strategy</span>
+                                <div class="bg-slate-100 text-slate-700 px-6 py-3 rounded-full text-lg">
+                                    Daffodil International University
+                                </div>
                             </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-emerald-600 text-sm">💡</span>
-                                </div>
-                                <span class="text-gray-700">Technical Architecture Guidance</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <span class="text-emerald-600 text-sm">🌟</span>
-                                </div>
-                                <span class="text-gray-700">Cultural Heritage Preservation</span>
+                            
+                            <p class="text-xl text-slate-600 leading-relaxed mb-12 font-light">
+                                We sincerely thank our mentor, whose guidance helped us build EthniCart. With his support, 
+                                we gained strong knowledge in web development, PHP, and Laravel, and stayed focused through 
+                                his rigorous standards.
+                            </p>
+                            
+                            
                             </div>
                         </div>
                     </div>
@@ -163,235 +98,170 @@
     </div>
 </section>
 
-<!-- Contributors Section -->
-<section class="bg-gradient-to-b from-green-50 to-white py-16">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-emerald-900 mb-4">
+<section class="py-24 bg-gradient-to-b from-slate-50/50 to-blue-50/30">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <div class="inline-block bg-emerald-50 text-emerald-700 px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-sm">
+                Our Team
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold text-slate-800 mb-6">
                 Project Contributors
             </h2>
-            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p class="text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
                 Meet the dedicated team members who brought EthniCart to life through their passion and expertise
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <!-- Mehedi Hasan Hridoy -->
-            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                <div class="relative overflow-hidden h-64 flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
-                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-500">
-                        <img src="{{ asset('images/hridoy.png') }}" 
-                             class="w-full h-full object-cover" 
-                             alt="Mehedi Hasan Hridoy">
-                    </div>
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">Lead Developer</span>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-2 text-center">Mehedi Hasan Hridoy</h3>
-                    <div class="text-emerald-600 font-semibold mb-4 text-center">Full-Stack Developer & Project Lead</div>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-center">
-                        Passionate about blending technology with cultural preservation. Led the technical architecture, 
-                        backend development, and user experience design of EthniCart.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-sm">⚙️</span>
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Mehedi Hasan Hridoy -->
+                <div class="group">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-xl transition-all duration-700 hover:-translate-y-3 overflow-hidden border border-slate-200/30">
+                        <!-- Image Section with Soft Gradient -->
+                        <div class="relative overflow-hidden h-96 bg-gradient-to-br from-sky-300/70 to-blue-400/70 flex items-center justify-center p-8">
+                            <div class="relative z-10">
+                                <div class="w-72 h-72 rounded-3xl overflow-hidden border-6 border-white/40 shadow-xl group-hover:scale-105 transition-transform duration-700 backdrop-blur-sm">
+                                    <img src="{{ asset('images/hridoy.png') }}" 
+                                         class="w-full h-full object-cover" 
+                                         alt="Mehedi Hasan Hridoy">
+                                </div>
                             </div>
-                            <span class="text-gray-700 font-medium">Backend Development</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-sm">🗄️</span>
+                            <!-- Soft animated background -->
+                            <div class="absolute inset-0 opacity-15">
+                                <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.6"%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
                             </div>
-                            <span class="text-gray-700 font-medium">Database Architecture</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-sm">🔐</span>
+                            <div class="absolute top-8 right-8 bg-white/25 backdrop-blur-md rounded-2xl px-4 py-2 shadow-sm">
+                                <span class="text-slate-700 font-semibold">Project Lead</span>
                             </div>
-                            <span class="text-gray-700 font-medium">Security Implementation</span>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-sm">🛒</span>
+                        
+                        <!-- Content Section -->
+                        <div class="p-10 bg-gradient-to-b from-white to-slate-50/30">
+                            <div class="text-center mb-8">
+                                <h3 class="text-3xl font-bold text-slate-800 mb-3">Mehedi Hasan Hridoy</h3>
+                                <div class="text-xl text-sky-600 font-semibold mb-6">Full-Stack Developer & Project Lead</div>
+                                <p class="text-lg text-slate-600 leading-relaxed">
+                                    Passionate about blending technology with cultural preservation. Led the technical architecture, 
+                                    backend development, and user experience design of EthniCart.
+                                </p>
                             </div>
-                            <span class="text-gray-700 font-medium">E-commerce Integration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Umme Salma Lamyea -->
-            <div class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden group">
-                <div class="relative overflow-hidden h-64 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
-                    <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-500">
-                        <img src="{{ asset('images/salmaa.jpg') }}" 
-                             class="w-full h-full object-cover" 
-                             alt="Umme Salma Lamyea">
-                    </div>
-                    <div class="absolute top-4 left-4">
-                        <span class="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-2 rounded-full text-sm font-bold">Frontend Specialist</span>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-emerald-900 mb-2 text-center">Umme Salma Lamyea</h3>
-                    <div class="text-emerald-600 font-semibold mb-4 text-center">UI/UX Designer & Frontend Developer</div>
-                    <p class="text-gray-600 mb-6 leading-relaxed text-center">
-                        Creative mind behind EthniCart's beautiful and intuitive user interface. Specialized in creating 
-                        engaging user experiences that honor Bangladesh's aesthetic traditions.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-sm">🎨</span>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-4 p-4 bg-sky-50/70 rounded-2xl border border-sky-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-sky-400 to-sky-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">⚙️</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">Backend Development</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-sky-50/70 rounded-2xl border border-sky-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">🗄️</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">Database Architecture</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-sky-50/70 rounded-2xl border border-sky-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-violet-400 to-violet-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">🔐</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">Security Implementation</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-sky-50/70 rounded-2xl border border-sky-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">🛒</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">E-commerce Integration</span>
+                                </div>
                             </div>
-                            <span class="text-gray-700 font-medium">UI/UX Design</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-sm">📱</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Responsive Development</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-sm">🌈</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">Visual Branding</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-sm">✨</span>
-                            </div>
-                            <span class="text-gray-700 font-medium">User Engagement</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Contributions -->
-        <div class="mt-16 bg-white rounded-3xl shadow-xl p-8">
-            <h3 class="text-3xl font-bold text-emerald-900 mb-8 text-center">প্রকল্পে অবদান • Project Contributions</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Mehedi's Contributions -->
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-blue-200">
-                            <img src="{{ asset('images/mehedi.png') }}" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Mehedi">
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-gray-900">Mehedi Hasan Hridoy</h4>
-                            <p class="text-sm text-gray-600">Technical Lead</p>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">⚙️</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Laravel backend architecture & API development</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🗄️</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Database design & optimization</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🔐</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Authentication & security implementation</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                                <span class="text-blue-600 text-xs">🛒</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">E-commerce functionality & payment integration</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Lamyea's Contributions -->
-                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-6 border border-pink-100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-pink-200">
-                            <img src="{{ asset('images/salmaa.jpg') }}" 
-                                 class="w-full h-full object-cover" 
-                                 alt="Lamyea">
+                <!-- Umme Salma Lamyea -->
+                <div class="group">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg hover:shadow-xl transition-all duration-700 hover:-translate-y-3 overflow-hidden border border-slate-200/30">
+                        <!-- Image Section with Soft Gradient -->
+                        <div class="relative overflow-hidden h-96 bg-gradient-to-br from-rose-300/60 to-pink-400/60 flex items-center justify-center p-8">
+                            <div class="relative z-10">
+                                <div class="w-72 h-72 rounded-3xl overflow-hidden border-6 border-white/40 shadow-xl group-hover:scale-105 transition-transform duration-700 backdrop-blur-sm">
+                                    <img src="{{ asset('images/salmaa.jpg') }}" 
+                                         class="w-full h-full object-cover" 
+                                         alt="Umme Salma Lamyea">
+                                </div>
+                            </div>
+                            <!-- Soft animated background -->
+                            <div class="absolute inset-0 opacity-15">
+                                <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.6"%3E%3Ccircle cx="20" cy="20" r="1.5"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] animate-pulse"></div>
+                            </div>
+                            <div class="absolute top-8 right-8 bg-white/25 backdrop-blur-md rounded-2xl px-4 py-2 shadow-sm">
+                                <span class="text-slate-700 font-semibold">UI/UX Lead</span>
+                            </div>
                         </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-gray-900">Umme Salma Lamyea</h4>
-                            <p class="text-sm text-gray-600">Design Lead</p>
+                        
+                        <!-- Content Section -->
+                        <div class="p-10 bg-gradient-to-b from-white to-rose-50/20">
+                            <div class="text-center mb-8">
+                                <h3 class="text-3xl font-bold text-slate-800 mb-3">Umme Salma Lamyea</h3>
+                                <div class="text-xl text-rose-600 font-semibold mb-6">UI/UX Designer & Frontend Developer</div>
+                                <p class="text-lg text-slate-600 leading-relaxed">
+                                    Creative mind behind EthniCart's beautiful and intuitive user interface. Specialized in creating 
+                                    engaging user experiences that honor Bangladesh's aesthetic traditions.
+                                </p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-4 p-4 bg-rose-50/60 rounded-2xl border border-rose-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-rose-400 to-rose-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">🎨</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">UI/UX Design</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-rose-50/60 rounded-2xl border border-rose-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">📱</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">Responsive Development</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-rose-50/60 rounded-2xl border border-rose-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">🌈</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">Visual Branding</span>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 bg-rose-50/60 rounded-2xl border border-rose-100/50 backdrop-blur-sm">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center shadow-sm">
+                                        <span class="text-white text-lg">✨</span>
+                                    </div>
+                                    <span class="text-slate-700 font-medium">User Engagement</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">🎨</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">UI/UX design & user experience optimization</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">📱</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Responsive frontend development</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">🌈</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Visual branding & cultural design elements</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-6 h-6 bg-pink-100 rounded-full flex items-center justify-center">
-                                <span class="text-pink-600 text-xs">✨</span>
-                            </div>
-                            <span class="text-gray-700 text-sm">Interactive animations & user engagement features</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Vision Section -->
-        <div class="mt-16 bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl p-8 text-white text-center">
-            <h3 class="text-3xl font-bold mb-6">আমাদের দৃষ্টিভঙ্গি • Our Vision</h3>
-            <p class="text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
-                Together, we envision a world where Bangladesh's rich cultural heritage thrives in the digital age, 
-                where every artisan's story is heard, and where authentic craftsmanship finds its rightful place in modern commerce.
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">🌍</div>
-                    <h4 class="text-xl font-bold mb-2">Global Reach</h4>
-                    <p class="text-white/90 text-sm">Connecting Bangladesh's heritage with customers worldwide</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">💡</div>
-                    <h4 class="text-xl font-bold mb-2">Innovation</h4>
-                    <p class="text-white/90 text-sm">Bridging traditional crafts with modern technology</p>
-                </div>
-                
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                    <div class="text-4xl mb-4">🤝</div>
-                    <h4 class="text-xl font-bold mb-2">Community</h4>
-                    <p class="text-white/90 text-sm">Building sustainable partnerships with local artisans</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="py-24 bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-700 relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M50 50c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30zm0 0c0 16.569 13.431 30 30 30s30-13.431 30-30-13.431-30-30-30-30 13.431-30 30z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+    
+    <div class="relative container mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8">
+                Ready to explore <span class="text-yellow-300">EthniCart</span>?
+            </h2>
+            <p class="text-2xl text-white/90 mb-12 leading-relaxed">
+                Discover authentic Bangladeshi products and support local artisans through our platform
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="{{ route('home') }}" class="bg-yellow-400 hover:bg-yellow-300 text-emerald-900 px-12 py-4 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                    Explore Products
+                </a>
+               
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection
