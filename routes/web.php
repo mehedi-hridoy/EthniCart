@@ -5,6 +5,7 @@ use App\Models\Product;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\ProductViewController;
+use App\Http\Controllers\SearchController;
 
 
 
@@ -259,6 +260,9 @@ Route::middleware('auth:seller')->group(function () {
     Route::get('/seller/settings', [SellerSettingsController::class, 'edit'])->name('seller.settings.edit');
     Route::put('/seller/settings', [SellerSettingsController::class, 'update'])->name('seller.settings.update');
 });
+
+// Search route
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 // show products on specific page
 use App\Helpers\ProductHelper;

@@ -192,13 +192,15 @@
                     </div>
 
                     <!-- Search Bar -->
-                    <div class="hidden md:flex flex-1 max-w-2xl mx-8">
-                        <form method="GET" action="{{ url('/search') }}" class="w-full">
-                            <div class="search-container flex items-center bg-white rounded-lg overflow-hidden border border-gray-200 transition-all duration-200">
+                    <div class="hidden md:flex flex-1 max-w-2xl mx-8 relative">
+                        <form method="GET" action="{{ url('/search') }}" class="w-full" id="homeSearchForm">
+                            <div class="search-container flex items-center bg-white rounded-lg overflow-hidden border border-gray-200 transition-all duration-200 focus-within:ring-2 focus-within:ring-primary/30">
                                 <input
                                     type="text"
                                     name="query"
+                                    id="homeSearchInput"
                                     placeholder="Search your products"
+                                    autocomplete="off"
                                     class="flex-grow px-4 lg:px-6 py-3 text-sm lg:text-base text-gray-700 focus:outline-none bg-transparent min-w-0"
                                 >
                                 <button
@@ -212,6 +214,11 @@
                                 </button>
                             </div>
                         </form>
+                        
+                        <!-- Autocomplete Dropdown for Homepage -->
+                        <div id="homeSearchSuggestions" class="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-y-auto z-50 hidden">
+                            <!-- Results will be inserted here -->
+                        </div>
                     </div>
 
                     <div class="flex items-center space-x-4 md:space-x-6">
@@ -1091,6 +1098,119 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(err => console.error(err));
         });
     });
+});
+
+// Live Search Autocomplete for Homepage
+document.addEventListener('DOMContentLoaded', function() {
+    const homeSearchInput = document.getElementById('homeSearchInput');
+    const homeSearchSuggestions = document.getElementById('homeSearchSuggestions');
+    let debounceTimer;
+
+    if (homeSearchInput) {
+        homeSearchInput.addEventListener('input', function() {
+            const query = this.value.trim();
+            
+            clearTimeout(debounceTimer);
+            
+            if (query.length === 0) {
+                homeSearchSuggestions.classList.add('hidden');
+                return;
+            }
+            
+            debounceTimer = setTimeout(() => {
+                if (query.length >= 1) {
+                    fetchHomeSearchSuggestions(query);
+                }
+            }, 300);
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!homeSearchInput.contains(e.target) && !homeSearchSuggestions.contains(e.target)) {
+                homeSearchSuggestions.classList.add('hidden');
+            }
+        });
+
+        homeSearchInput.addEventListener('focus', function() {
+            if (this.value.trim().length >= 1 && homeSearchSuggestions.children.length > 0) {
+                homeSearchSuggestions.classList.remove('hidden');
+            }
+        });
+    }
+
+    function fetchHomeSearchSuggestions(query) {
+        fetch(`{{ url('/api/search-suggestions') }}?query=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                displayHomeSearchSuggestions(data.products, query);
+            })
+            .catch(error => {
+                console.error('Search error:', error);
+            });
+    }
+
+    function displayHomeSearchSuggestions(products, query) {
+        if (!products || products.length === 0) {
+            homeSearchSuggestions.innerHTML = `
+                <div class="p-4 text-center text-gray-500">
+                    <svg class="w-12 h-12 mx-auto mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <p class="text-sm">No products found for "${query}"</p>
+                </div>
+            `;
+            homeSearchSuggestions.classList.remove('hidden');
+            return;
+        }
+
+        let html = '<div class="py-2">';
+        
+        products.forEach(product => {
+            const imageUrl = product.image ? `{{ asset('storage/') }}/${product.image}` : '';
+            const productUrl = `{{ url('/product') }}/${product.id}`;
+            const price = parseFloat(product.price).toFixed(2);
+            
+            html += `
+                <a href="${productUrl}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 group">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                        ${imageUrl ? 
+                            `<img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover">` :
+                            `<div class="w-full h-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>`
+                        }
+                    </div>
+                    <div class="flex-grow min-w-0">
+                        <p class="font-medium text-gray-900 truncate group-hover:text-primary transition-colors">${product.name}</p>
+                        <p class="text-sm text-gray-500 truncate">${product.description || 'No description'}</p>
+                    </div>
+                    <div class="flex-shrink-0 text-right">
+                        <p class="font-semibold text-gray-900">৳${price}</p>
+                        ${product.stock > 0 ? 
+                            `<p class="text-xs text-green-600">In Stock</p>` :
+                            `<p class="text-xs text-red-600">Out of Stock</p>`
+                        }
+                    </div>
+                </a>
+            `;
+        });
+        
+        html += `
+            <div class="border-t border-gray-200 mt-2">
+                <button onclick="document.getElementById('homeSearchForm').submit()" class="w-full px-4 py-3 text-center text-sm font-medium text-primary hover:bg-primary/5 transition-colors">
+                    View all results for "${query}"
+                    <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </button>
+            </div>
+        `;
+        
+        html += '</div>';
+        homeSearchSuggestions.innerHTML = html;
+        homeSearchSuggestions.classList.remove('hidden');
+    }
 });
 
 
