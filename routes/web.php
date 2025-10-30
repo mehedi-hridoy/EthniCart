@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\ProductViewController;
 
 
 
@@ -158,6 +159,9 @@ Route::get('/terms_of_service', function () {
 Route::get('/accounts/account', function () {
     return view('accounts.account');
 });
+
+// Public product detail page
+Route::get('/product/{product}', [ProductViewController::class, 'show'])->name('product.show');
 
 // login 
 use App\Http\Controllers\AuthController;

@@ -228,40 +228,32 @@
                             <div class="px-6 py-4 border-b border-gray-200">
                                 <h3 class="text-lg font-semibold text-gray-800 flex items-center">
                                     <i class="fas fa-image text-orange-500 mr-2"></i>
-                                    Product Images
+                                    Product Image
                                 </h3>
                             </div>
                             <div class="p-6">
-                                <div id="images-dropzone" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-orange-400 transition-colors">
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-orange-400 transition-colors">
                                     <div class="space-y-4">
                                         <div class="mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center">
                                             <i class="fas fa-cloud-upload-alt text-gray-400 text-2xl"></i>
                                         </div>
                                         <div>
-                                            <label for="images" class="cursor-pointer">
+                                            <label for="image" class="cursor-pointer">
                                                 <span class="text-orange-600 font-semibold hover:text-orange-700">Click to upload</span>
                                                 <span class="text-gray-600"> or drag and drop</span>
                                             </label>
-                                            <input type="file" name="images[]" id="images" class="hidden" accept="image/*" multiple required>
+                                            <input type="file" name="image" id="image" class="hidden" accept="image/*" required>
                                         </div>
-                                        <p class="text-sm text-gray-500">Select 1–5 images (PNG, JPG, JPEG up to 2MB each). The first image becomes the cover.</p>
+                                        <p class="text-sm text-gray-500">PNG, JPG, JPEG up to 5MB</p>
                                     </div>
                                 </div>
-                                <!-- Preview container -->
-                                <div id="images-preview" class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
-                                @if ($errors->has('images'))
-                                    <p class="text-sm text-red-600 mt-2">{{ $errors->first('images') }}</p>
-                                @endif
-                                @if ($errors->has('images.*'))
-                                    <p class="text-sm text-red-600 mt-1">{{ $errors->first('images.*') }}</p>
-                                @endif
                                 <div class="mt-4 flex items-start space-x-2 text-sm text-gray-600">
                                     <i class="fas fa-lightbulb text-yellow-500 mt-0.5"></i>
                                     <div>
                                         <strong>Tips for great product photos:</strong>
                                         <ul class="list-disc list-inside mt-1 space-y-1">
                                             <li>Use good lighting and clear background</li>
-                                            <li>Show product from multiple angles if possible (you can upload up to 5)</li>
+                                            <li>Show product from multiple angles if possible</li>
                                             <li>Ensure image is high resolution (at least 800px wide)</li>
                                         </ul>
                                     </div>
@@ -296,106 +288,36 @@
     </div>
 
     <script>
-        // Robust multi-image selection with accumulation, removal, and drag-and-drop (max 5)
-        const imagesInput = document.getElementById('images');
-        const dropzone = document.getElementById('images-dropzone');
-        const previewContainer = document.getElementById('images-preview');
-
-        // Accumulator for files; allows re-opening dialog to add more
-        const fileBuffer = new DataTransfer();
-
-        function addFiles(newFiles) {
-            const max = 5;
-            for (const file of newFiles) {
-                if (!file.type.startsWith('image/')) continue;
-                if (fileBuffer.files.length >= max) break;
-
-                // Avoid simple duplicates by name+size
-                const exists = Array.from(fileBuffer.files).some(f => f.name === file.name && f.size === file.size);
-                if (exists) continue;
-                fileBuffer.items.add(file);
-            }
-            // Sync to input
-            imagesInput.files = fileBuffer.files;
-            renderPreviews();
-        }
-
-        function removeAt(index) {
-            const items = new DataTransfer();
-            Array.from(fileBuffer.files).forEach((f, i) => { if (i !== index) items.items.add(f); });
-            // Replace buffer
-            while (fileBuffer.items.length) fileBuffer.items.remove(0);
-            Array.from(items.files).forEach(f => fileBuffer.items.add(f));
-            imagesInput.files = fileBuffer.files;
-            renderPreviews();
-        }
-
-        function renderPreviews() {
-            previewContainer.innerHTML = '';
-            Array.from(fileBuffer.files).forEach((file, idx) => {
+        // File upload preview
+        document.getElementById('image').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
                 const reader = new FileReader();
-                reader.onload = e => {
-                    const card = document.createElement('div');
-                    card.className = 'p-3 border border-gray-200 rounded-lg bg-white flex items-center justify-between gap-3';
-                    card.innerHTML = `
-                        <div class="flex items-center gap-3 min-w-0">
-                            <img src="${e.target.result}" alt="Preview ${idx + 1}" class="w-16 h-16 object-cover rounded">
-                            <div class="min-w-0">
-                                <p class="text-sm font-medium text-gray-900 truncate">${file.name}</p>
-                                <p class="text-xs text-gray-500">${(file.size / 1024).toFixed(0)} KB${idx === 0 ? ' • Cover' : ''}</p>
+                reader.onload = function(e) {
+                    const preview = document.createElement('div');
+                    preview.className = 'mt-4 p-4 border border-gray-200 rounded-lg';
+                    preview.innerHTML = `
+                        <div class="flex items-center space-x-3">
+                            <img src="${e.target.result}" alt="Preview" class="w-16 h-16 object-cover rounded">
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">${file.name}</p>
+                                <p class="text-sm text-gray-500">${(file.size / 1024 / 1024).toFixed(2)} MB</p>
                             </div>
                         </div>
-                        <button type="button" class="text-red-600 hover:text-red-700 text-sm remove-btn" aria-label="Remove image" data-index="${idx}">Remove</button>`;
-                    previewContainer.appendChild(card);
-
-                    // Attach click for removal after insertion
-                    card.querySelector('.remove-btn').addEventListener('click', () => removeAt(idx));
+                    `;
+                    
+                    // Remove existing preview
+                    const existingPreview = document.querySelector('.file-preview');
+                    if (existingPreview) {
+                        existingPreview.remove();
+                    }
+                    
+                    preview.className += ' file-preview';
+                    e.target.closest('.border-dashed').parentNode.appendChild(preview);
                 };
                 reader.readAsDataURL(file);
-            });
-        }
-
-        if (imagesInput) {
-            // Allow picking the same file again by clearing the native value BEFORE the picker opens
-            imagesInput.addEventListener('click', () => { imagesInput.value = null; });
-
-            imagesInput.addEventListener('change', (e) => {
-                const incoming = Array.from(e.target.files || []);
-                const allowed = 5 - fileBuffer.files.length;
-                if (incoming.length > allowed) {
-                    alert(`You can upload a maximum of 5 images. Only ${allowed} more will be added.`);
-                }
-                addFiles(incoming.slice(0, Math.max(0, allowed)));
-            });
-        }
-
-        if (dropzone) {
-            ['dragenter','dragover'].forEach(evt => dropzone.addEventListener(evt, (e) => {
-                e.preventDefault(); e.stopPropagation();
-                dropzone.classList.add('border-orange-400', 'bg-orange-50/30');
-            }));
-            ;['dragleave','drop'].forEach(evt => dropzone.addEventListener(evt, (e) => {
-                e.preventDefault(); e.stopPropagation();
-                dropzone.classList.remove('border-orange-400', 'bg-orange-50/30');
-            }));
-            dropzone.addEventListener('drop', (e) => {
-                const files = Array.from(e.dataTransfer.files || []);
-                addFiles(files);
-            });
-        }
-
-        // Ensure the latest buffer is attached to the input right before submit
-        const form = document.querySelector('form[action*="seller/upload-product"]');
-        if (form) {
-            form.addEventListener('submit', () => {
-                imagesInput.files = fileBuffer.files; // sync once more to be safe
-                const submitBtn = form.querySelector('button[type="submit"]');
-                if (submitBtn) {
-                    submitBtn.disabled = true;
-                    submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
-                }
-            });
-        }
+            }
+        });
     </script>
 </body>
 </html>
