@@ -242,7 +242,8 @@
     </nav>
 </div>
 
-<!-- Bottom Navigation - This will scroll normally, with top padding on desktop to account for fixed nav -->
+<!-- Bottom Navigation -->
+
 <nav class="bg-white shadow-sm border-b md:mt-20 lg:mt-24">
     <div class="max-w-7xl mx-auto pl-0 pr-4 sm:pr-6 lg:pr-8">
         <div class="flex justify-center items-center h-16">
@@ -346,6 +347,7 @@
             <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="1"></button>
             <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="2"></button>
             <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="3"></button>
+            <button class="carousel-dot w-3 h-3 bg-white bg-opacity-50 rounded-full transition-all duration-300" data-slide="4"></button>
         </div>
     </div>
 

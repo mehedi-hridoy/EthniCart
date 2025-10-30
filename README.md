@@ -40,7 +40,17 @@ Or open it manually in any IDE you use.
 ```bash
 composer update
 ```
+⚠️ Troubleshooting composer update Issues
+If you face an error while running composer update, do the following:
 
+Go to your C Drive → xampp → php look for the php.ini file.
+
+Open php.ini in a text editor.
+
+Search for the line:        
+;extension=gd
+
+Remove the ; at the beginning to enable the GD extension:
 ### 6. Copy the `.env` File
 
 ```bash

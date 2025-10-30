@@ -10,11 +10,8 @@
     <div class="container mx-auto px-4 py-8">
         <div class="text-center mb-8">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                Ethni<span class="text-[#6A9793]">Cart</span> Collection
-            </h1>
-            <p class="text-base text-gray-600 max-w-2xl mx-auto">
-                Discover our curated selection of beautiful handcrafted furniture and decor
-            </p>
+                Pure <span class="text-4xl font-bold text-green-600"> & Organic </span> Products
+            </h1>      
         </div>
 
        

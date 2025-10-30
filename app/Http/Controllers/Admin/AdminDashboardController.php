@@ -59,7 +59,7 @@ public function toggleSellerBlock($id)
 public function showSellerProfile($id)
 {
     $seller = Seller::findOrFail($id);
-    $products = $seller->products()->latest()->take(5)->get();
+    $products = $seller->products()->latest()->take(50)->get();
     $totalProducts = $seller->products()->count();
 
     return view('admin.seller_profile', compact('seller', 'products', 'totalProducts'));
