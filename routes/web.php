@@ -261,123 +261,119 @@ Route::middleware('auth:seller')->group(function () {
 });
 
 // show products on specific page
-Route::get('/', function () {
-    $products = DB::table('products')
-        ->where('display_page', 'home') 
-        ->get();
+use App\Helpers\ProductHelper;
 
+Route::get('/', function () {
+    $products = ProductHelper::getProductsForPage('homepage');
     return view('home', compact('products'));
 });
 
 Route::get('/vegetables', function () {
-    $products = DB::table('products')
-        ->where('display_page', 'vegetables')
-        ->get();
-
+    $products = ProductHelper::getProductsForPage('vegetables');
     return view('vegetables', compact('products'));
 });
 
 
 // products
 Route::get('/foods', function () {
-    $products = Product::where('display_page', 'foods')->get();
+    $products = ProductHelper::getProductsForPage('foods');
     return view('foods', compact('products'));
 });
 
 Route::get('/A1_foods_fruits', function () {
-    $products = Product::where('display_page', 'A1_foods_fruits')->get();
+    $products = ProductHelper::getProductsForPage('A1_foods_fruits');
     return view('A1_foods_fruits', compact('products'));
 });
 
 Route::get('/A2_foods_sweets', function () {
-    $products = Product::where('display_page', 'A2_foods_sweets')->get();
+    $products = ProductHelper::getProductsForPage('A2_foods_sweets');
     return view('A2_foods_sweets', compact('products'));
 });
 
 Route::get('/A3_foods_snacks', function () {
-    $products = Product::where('display_page', 'A3_foods_snacks')->get();
+    $products = ProductHelper::getProductsForPage('A3_foods_snacks');
     return view('A3_foods_snacks', compact('products'));
 });
 
 Route::get('/A4_foods_dairy', function () {
-    $products = Product::where('display_page', 'A4_foods_dairy')->get();
+    $products = ProductHelper::getProductsForPage('A4_foods_dairy');
     return view('A4_foods_dairy', compact('products'));
 });
 
 Route::get('/fish&meat', function () {
-    $products = Product::where('display_page', 'fish&meat')->get();
+    $products = ProductHelper::getProductsForPage('fish&meat');
     return view('fish&meat', compact('products'));
 });
 
 Route::get('/C1_Fish&Meat_fish', function () {
-    $products = Product::where('display_page', 'C1_Fish&Meat_fish')->get();
+    $products = ProductHelper::getProductsForPage('C1_Fish&Meat_fish');
     return view('C1_Fish&Meat_fish', compact('products'));
 });
 Route::get('/C2_Fish&Meat_Meat', function () {
-    $products = Product::where('display_page', 'C2_Fish&Meat_Meat')->get();
+    $products = ProductHelper::getProductsForPage('C2_Fish&Meat_Meat');
     return view('C2_Fish&Meat_Meat', compact('products'));
 });
 
 Route::get('/homemadeMasala', function () {
-    $products = Product::where('display_page', 'homemadeMasala')->get();
+    $products = ProductHelper::getProductsForPage('homemadeMasala');
     return view('homemadeMasala', compact('products'));
 });
 
 Route::get('/pickles&condiments', function () {
-    $products = Product::where('display_page', 'pickles&condiments')->get();
+    $products = ProductHelper::getProductsForPage('pickles&condiments');
     return view('pickles&condiments', compact('products'));
 });
 Route::get('/home&kitchen', function () {
-    $products = Product::where('display_page', 'home&kitchen')->get();
+    $products = ProductHelper::getProductsForPage('home&kitchen');
     return view('home&kitchen', compact('products'));
 });
 
 Route::get('/organicRoots', function () {
-    $products = Product::where('display_page', 'organicRoots')->get();
+    $products = ProductHelper::getProductsForPage('organicRoots');
     return view('organicRoots', compact('products'));
 });
 
 Route::get('/beauty&care', function () {
-    $products = Product::where('display_page', 'beauty&care')->get();
+    $products = ProductHelper::getProductsForPage('beauty&care');
     return view('beauty&care', compact('products'));
 });
 
 
 Route::get('/F1_Beauty&Care_SkinCare', function () {
-    $products = Product::where('display_page', 'F1_Beauty&Care_SkinCare')->get();
+    $products = ProductHelper::getProductsForPage('F1_Beauty&Care_SkinCare');
     return view('F1_Beauty&Care_SkinCare', compact('products'));
 });
 Route::get('/F2_Beauty&Care_HairCare', function () {
-    $products = Product::where('display_page', 'F2_Beauty&Care_HairCare')->get();
+    $products = ProductHelper::getProductsForPage('F2_Beauty&Care_HairCare');
     return view('F2_Beauty&Care_HairCare', compact('products'));
 });
 
 
 Route::get('/Clothing&Apparels', function () {
-    $products = Product::where('display_page', 'Clothing&Apparels')->get();
+    $products = ProductHelper::getProductsForPage('Clothing&Apparels');
     return view('Clothing&Apparels', compact('products'));
 });
 Route::get('/craftItems', function () {
-    $products = Product::where('display_page', 'craftItems')->get();
+    $products = ProductHelper::getProductsForPage('craftItems');
     return view('craftItems', compact('products'));
 });
 Route::get('/gift', function () {
-    $products = Product::where('display_page', 'gift')->get();
+    $products = ProductHelper::getProductsForPage('gift');
     return view('gift', compact('products'));
 });
 
 Route::get('/ecoFriendlyProducts', function () {
-    $products = Product::where('display_page', 'ecoFriendlyProducts')->get();
+    $products = ProductHelper::getProductsForPage('ecoFriendlyProducts');
     return view('ecoFriendlyProducts', compact('products'));
 });
 
 Route::get('/I1_Clothings_WomenWear', function () {
-    $products = Product::where('display_page', 'I1_Clothings_WomenWear')->get();
+    $products = ProductHelper::getProductsForPage('I1_Clothings_WomenWear');
     return view('I1_Clothings_WomenWear', compact('products'));
 });
 
 Route::get('/I2_Clothings_MenWear', function () {
-    $products = Product::where('display_page', 'I2_Clothings_MenWear')->get();
+    $products = ProductHelper::getProductsForPage('I2_Clothings_MenWear');
     return view('I2_Clothings_MenWear', compact('products'));
 });
 

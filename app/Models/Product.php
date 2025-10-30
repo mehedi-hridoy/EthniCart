@@ -17,6 +17,8 @@ class Product extends Model
         'stock',
         'image',
         'display_page', 
+        'parent_category',
+        'show_on_homepage',
         'unit',
     ];
 

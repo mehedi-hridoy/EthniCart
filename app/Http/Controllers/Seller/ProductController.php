@@ -39,8 +39,31 @@ class ProductController extends Controller
             'images' => 'required|array|min:1|max:5',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'display_page' => 'required|string|max:255', 
-            'unit' => 'required|string|max:10', 
+            'unit' => 'required|string|max:10',
+            'show_homepage' => 'nullable|boolean',
         ]);
+
+        $selectedTag = $request->input('display_page');
+        $showHomepage = $request->input('show_homepage', 0);
+        
+        // Determine parent category from subcategory tags
+        $parentCategory = null;
+        $categoryMap = [
+            'A1_foods_fruits' => 'foods',
+            'A2_foods_sweets' => 'foods',
+            'A3_foods_snacks' => 'foods',
+            'A4_foods_dairy' => 'foods',
+            'C1_Fish&Meat_fish' => 'fish&meat',
+            'C2_Fish&Meat_Meat' => 'fish&meat',
+            'F1_Beauty&Care_SkinCare' => 'beauty&care',
+            'F2_Beauty&Care_HairCare' => 'beauty&care',
+            'I1_Clothings_WomenWear' => 'Clothing&Apparels',
+            'I2_Clothings_MenWear' => 'Clothing&Apparels',
+        ];
+        
+        if (isset($categoryMap[$selectedTag])) {
+            $parentCategory = $categoryMap[$selectedTag];
+        }
 
         // Store first image as primary
         $primaryImagePath = $request->file('images')[0]->store('products', 'public');
@@ -53,7 +76,9 @@ class ProductController extends Controller
             'stock' => $request->stock,
             'description' => $request->description,
             'image' => $primaryImagePath,
-            'display_page' => $request->display_page,
+            'display_page' => $selectedTag,
+            'parent_category' => $parentCategory,
+            'show_on_homepage' => $showHomepage,
             'unit' => $request->unit, 
         ]);
 
@@ -67,7 +92,15 @@ class ProductController extends Controller
             ]);
         }
         
-        return redirect()->route('seller.product.create')->with('success', 'Product uploaded successfully!');
+        $message = 'Product uploaded successfully! ';
+        if ($showHomepage) {
+            $message .= 'Your product will appear on the homepage.';
+        }
+        if ($parentCategory) {
+            $message .= ' It will also show in the ' . $parentCategory . ' category.';
+        }
+        
+        return redirect()->route('seller.product.create')->with('success', $message);
     }
     
     // Update product stock
