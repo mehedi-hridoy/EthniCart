@@ -9,6 +9,18 @@ use App\Models\ProductImage;
 
 class ProductController extends Controller
 {
+    // List products for the authenticated seller
+    public function index(Request $request)
+    {
+        $sellerId = Auth::guard('seller')->id();
+        $q = trim($request->get('q', ''));
+        $query = Product::where('seller_id', $sellerId);
+        if ($q !== '') {
+            $query->where('name', 'like', "%{$q}%");
+        }
+        $products = $query->latest()->get();
+        return view('seller.products', compact('products', 'q'));
+    }
     // Show the upload form
     public function create()
     {

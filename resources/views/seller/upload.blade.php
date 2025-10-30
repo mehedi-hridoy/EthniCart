@@ -27,22 +27,22 @@
                     <i class="fas fa-plus mr-3"></i>
                     <span class="font-medium">Add Product</span>
                 </div>
-                <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+                <a href="{{ route('seller.products.index') }}" class="block px-6 py-3 hover:bg-gray-800 transition-colors">
                     <i class="fas fa-box mr-3"></i>
                     <span>Products</span>
-                </div>
-                <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+                </a>
+                <a href="{{ route('seller.orders.index') }}" class="block px-6 py-3 hover:bg-gray-800 transition-colors">
                     <i class="fas fa-shopping-cart mr-3"></i>
                     <span>Orders</span>
-                </div>
-                <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+                </a>
+                <a href="{{ route('seller.analytics.index') }}" class="block px-6 py-3 hover:bg-gray-800 transition-colors">
                     <i class="fas fa-chart-line mr-3"></i>
                     <span>Analytics</span>
-                </div>
-                <div class="px-6 py-3 hover:bg-gray-800 transition-colors cursor-pointer">
+                </a>
+                <a href="{{ route('seller.settings.edit') }}" class="block px-6 py-3 hover:bg-gray-800 transition-colors">
                     <i class="fas fa-cog mr-3"></i>
                     <span>Settings</span>
-                </div>
+                </a>
             </nav>
             
             <!-- User Info & Logout -->

@@ -241,9 +241,23 @@ Route::post('/seller/upload-product', [App\Http\Controllers\Seller\ProductContro
 
 //seller dashboard
 use App\Http\Controllers\Seller\DashboardController;
+use App\Http\Controllers\Seller\ProductController as SellerProductController;
+use App\Http\Controllers\Seller\OrderController as SellerOrderController;
+use App\Http\Controllers\Seller\AnalyticsController as SellerAnalyticsController;
+use App\Http\Controllers\Seller\SettingsController as SellerSettingsController;
 
 Route::middleware('auth:seller')->group(function () {
     Route::get('/seller/dashboard', [DashboardController::class, 'index'])->name('seller.dashboard');
+    // Products
+    Route::get('/seller/products', [SellerProductController::class, 'index'])->name('seller.products.index');
+    // Orders
+    Route::get('/seller/orders', [SellerOrderController::class, 'index'])->name('seller.orders.index');
+    Route::patch('/seller/orders/{order}/status', [SellerOrderController::class, 'updateStatus'])->name('seller.orders.updateStatus');
+    // Analytics
+    Route::get('/seller/analytics', [SellerAnalyticsController::class, 'index'])->name('seller.analytics.index');
+    // Settings
+    Route::get('/seller/settings', [SellerSettingsController::class, 'edit'])->name('seller.settings.edit');
+    Route::put('/seller/settings', [SellerSettingsController::class, 'update'])->name('seller.settings.update');
 });
 
 // show products on specific page
