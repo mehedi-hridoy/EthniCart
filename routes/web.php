@@ -166,6 +166,7 @@ Route::get('/product/{product}', [ProductViewController::class, 'show'])->name('
 
 // login 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GoogleManualAuthController;
 
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
@@ -173,6 +174,10 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Manual Google OAuth (no Socialite)
+Route::get('/auth/google', [GoogleManualAuthController::class, 'redirect'])->name('google.redirect');
+Route::get('/auth/google/callback', [GoogleManualAuthController::class, 'callback'])->name('google.callback');
 
 
 Route::get('/dashboard', function () {
