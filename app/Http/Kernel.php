@@ -66,6 +66,8 @@ class Kernel extends HttpKernel
 
         // ✅ Add this line for your admin middleware
     'admin' => \App\Http\Middleware\AdminMiddleware::class,
+    'admin.setup' => \App\Http\Middleware\AdminSetupMiddleware::class,
+    'admin.loginShield' => \App\Http\Middleware\AdminLoginShieldMiddleware::class,
     ];
 
 

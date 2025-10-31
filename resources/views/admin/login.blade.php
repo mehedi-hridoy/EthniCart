@@ -8,6 +8,12 @@
     <div class="backdrop-blur-sm bg-white/10 border border-white/20 shadow-2xl rounded-2xl p-8 w-full max-w-md text-white">
         <h2 class="text-3xl font-bold mb-6 text-center">Admin Login</h2>
 
+        @if(session('status'))
+            <div class="mb-4 p-3 bg-emerald-500/30 text-white rounded-lg">
+                <p class="text-sm">{{ session('status') }}</p>
+            </div>
+        @endif
+
         @if($errors->any())
             <div class="mb-4 p-3 bg-red-500/30 text-white rounded-lg">
                 @foreach($errors->all() as $error)
@@ -16,12 +22,16 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('admin.login') }}" class="space-y-5">
+    <form method="POST" action="{{ route('admin.login') }}" class="space-y-5">
             @csrf
+            @php($loginToken = config('admin.login_token'))
+            @if(request()->query('token') || $loginToken)
+                <input type="hidden" name="token" value="{{ request()->query('token') ?? $loginToken }}">
+            @endif
 
             <div>
-                <label for="username" class="block mb-1 text-sm font-semibold">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter admin username"
+        <label for="email" class="block mb-1 text-sm font-semibold">Email</label>
+        <input type="email" id="email" name="email" placeholder="admin@example.com"
                     class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-emerald-300 placeholder-white/70" required>
             </div>
 
@@ -36,6 +46,17 @@
                 Login
             </button>
         </form>
+
+        @php($hasAdmin = \App\Models\User::where('role','admin')->exists())
+        @if(!$hasAdmin)
+            <div class="mt-6 text-center">
+                @if(app()->environment('local'))
+                    <a href="{{ route('admin.register') }}" class="underline text-white/90 hover:text-white">Create first admin</a>
+                @else
+                    <p class="text-sm text-white/80">Admin setup is available with a one-time token. Contact the deployer to obtain the secure link.</p>
+                @endif
+            </div>
+        @endif
     </div>
 </div>
 @endsection

@@ -216,8 +216,14 @@ Route::prefix('seller')->name('seller.')->group(function () {
 use App\Http\Controllers\AdminAuthController;
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
-    Route::post('/login', [AdminAuthController::class, 'login']);
+    Route::middleware('admin.loginShield')->group(function () {
+        Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('login');
+        Route::post('/login', [AdminAuthController::class, 'login']);
+    });
+    Route::middleware('admin.setup')->group(function () {
+        Route::get('/register', [AdminAuthController::class, 'showRegisterForm'])->name('register');
+        Route::post('/register', [AdminAuthController::class, 'register']);
+    });
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
 
     Route::middleware('admin')->group(function () {
