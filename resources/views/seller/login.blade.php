@@ -17,22 +17,7 @@
             Access your dashboard, manage your products & track sales
         </p>
 
-        {{-- Flash/Error Messages --}}
-        @if(session('status'))
-            <div class="mb-4 p-3 rounded-lg text-white {{ session('status_type') == 'success' ? 'bg-green-600' : 'bg-red-600' }}">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        @if($errors->any())
-            <div class="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
-                <ul class="list-disc list-inside text-sm">
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+        {{-- SweetAlert handles flash/errors globally via layout --}}
 
         <form method="POST" action="{{ route('seller.login') }}" class="space-y-6">
             @csrf

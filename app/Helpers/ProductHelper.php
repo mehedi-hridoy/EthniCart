@@ -11,22 +11,26 @@ class ProductHelper
      * Includes products tagged for homepage and parent categories
      * 
      * @param string $page The page/category identifier
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @param int|null $perPage Number of items per page (null for all items)
+     * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public static function getProductsForPage($page)
+    public static function getProductsForPage($page, $perPage = null)
     {
         // For homepage, get all products with show_on_homepage = true
         if ($page === 'home' || $page === 'homepage') {
-            return Product::where('show_on_homepage', true)->get();
+            $query = Product::where('show_on_homepage', true)->orderByDesc('created_at');
+            return $perPage ? $query->paginate($perPage) : $query->get();
         }
         
         // For other pages, get:
         // 1. Products directly tagged for this page
         // 2. Products where this page is the parent category (subcategory products)
-        return Product::where(function($query) use ($page) {
+        $query = Product::where(function($query) use ($page) {
             $query->where('display_page', $page)
                   ->orWhere('parent_category', $page);
-        })->get();
+        })->orderByDesc('created_at');
+        
+        return $perPage ? $query->paginate($perPage) : $query->get();
     }
     
     /**

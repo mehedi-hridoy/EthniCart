@@ -19,7 +19,7 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:8|confirmed',
         ]);
 
         User::create([
@@ -28,7 +28,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('login')->with('success', 'Registration successful!');
+        return redirect()->route('login')->with('success', 'Registration successful! Please sign in.');
     }
 
     public function showLoginForm()
@@ -38,20 +38,27 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $validated = $request->validate([
+            'email' => ['required','email'],
+            'password' => ['required']
+        ]);
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('home'); // change route as needed
+        if (Auth::attempt(['email' => $validated['email'], 'password' => $validated['password']])) {
+            $request->session()->regenerate();
+            return redirect()->intended(route('home'))
+                ->with('success', 'Welcome back!');
         }
 
-        return back()->withErrors([
-            'email' => 'Invalid credentials.',
-        ]);
+        return back()
+            ->with('error', 'Invalid email or password.')
+            ->withInput($request->except('password'));
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect()->route('login')->with('success','Logged out successfully.');
     }
 }

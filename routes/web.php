@@ -279,7 +279,7 @@ Route::get('/search', [SearchController::class, 'search'])->name('search');
 use App\Helpers\ProductHelper;
 
 Route::get('/', function () {
-    $products = ProductHelper::getProductsForPage('homepage');
+    $products = ProductHelper::getProductsForPage('homepage', 50);
     return view('home', compact('products'));
 });
 

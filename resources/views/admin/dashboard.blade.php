@@ -392,14 +392,26 @@
                         </span>
                     </td>
                     <td class="px-6 py-4 text-center text-sm font-medium">
-
-
-    <a href="{{ route('admin.sellers.approve', $seller->id) }}" 
-       class="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600">Approve</a>
-
-    <a href="{{ route('admin.sellers.delete', $seller->id) }}" 
-       class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600">Delete</a>
-</td>
+                        <div class="flex flex-col sm:flex-row sm:justify-center sm:space-x-2 space-y-2 sm:space-y-0">
+                            <a href="{{ route('admin.sellers.profile', $seller->id) }}" 
+                               class="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200">
+                                View Profile
+                            </a>
+                            <a href="{{ route('admin.sellers.approve', $seller->id) }}" 
+                               class="px-3 py-1 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200">
+                                Approve
+                            </a>
+                            <form action="{{ route('admin.sellers.delete', $seller->id) }}" method="POST" class="inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" 
+                                        class="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors duration-200"
+                                        onclick="return confirm('Are you sure you want to delete this seller?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </td>
 
                 </tr>
                 @endforeach
@@ -433,7 +445,7 @@
                                     {{ $seller->is_blocked ? 'Unblock' : 'Block' }}
                                 </button>
                             </form>
-                            <a href="{{ route('admin.sellerProfile', $seller->id) }}" class="text-blue-600 hover:text-blue-900">
+                            <a href="{{ route('admin.sellers.profile', $seller->id) }}" class="text-blue-600 hover:text-blue-900">
                                 View Profile
                             </a>
                             <a href="{{ route('admin.sellers.disapprove', $seller->id) }}" class="text-yellow-600 hover:text-yellow-900">

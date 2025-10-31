@@ -22,7 +22,7 @@ class SellerAuthController extends Controller
     $request->validate([
         'name' => 'required',
         'email' => 'required|email|unique:sellers',
-        'password' => 'required|min:6|confirmed',
+        'password' => 'required|min:8|confirmed',
         'phone' => 'required|string',
         'seller_image' => 'nullable|image|max:2048',
         'nid' => 'required|string',
@@ -58,7 +58,7 @@ class SellerAuthController extends Controller
 
     Seller::create($data);
 
-    return redirect()->route('seller.login')->with('success', 'Registration successful! Please login.');
+    return redirect()->route('seller.login')->with('success', 'Registration successful! Please log in.');
 }
 
 
@@ -75,20 +75,26 @@ class SellerAuthController extends Controller
 
  public function login(Request $request)
 {
-    $credentials = $request->only('email', 'password');
+    $validated = $request->validate([
+        'email' => ['required','email'],
+        'password' => ['required'],
+    ]);
 
-    if (Auth::guard('seller')->attempt($credentials)) {
+    if (Auth::guard('seller')->attempt(['email' => $validated['email'], 'password' => $validated['password']])) {
         $seller = Auth::guard('seller')->user();
 
         if (!$seller->is_approved) {
             Auth::guard('seller')->logout();
-            return back()->withErrors(['email' => 'Your account is pending approval by the admin.']);
+            return back()->with('error', 'Your account is pending approval by the admin.')
+                         ->withInput($request->except('password'));
         }
 
-        return redirect()->route('seller.dashboard');
+        $request->session()->regenerate();
+        return redirect()->route('seller.dashboard')->with('success','Welcome back!');
     }
 
-    return back()->withErrors(['email' => 'Invalid login credentials.']);
+    return back()->with('error', 'Invalid login credentials.')
+                ->withInput($request->except('password'));
 }
 
 

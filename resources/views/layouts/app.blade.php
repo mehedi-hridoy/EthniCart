@@ -26,6 +26,46 @@
 </body>
 </html>
 <script>
+// Global SweetAlert helpers for flash messages and validation errors
+document.addEventListener('DOMContentLoaded', function () {
+    try {
+        const success = @json(session('success'));
+        const error = @json(session('error'));
+        const errors = @json($errors->any() ? $errors->all() : []);
+
+        if (success) {
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: success,
+                showConfirmButton: false,
+                timer: 2200
+            });
+        }
+        if (error) {
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: error,
+                showConfirmButton: false,
+                timer: 2400
+            });
+        }
+        if (errors && errors.length) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Please fix the highlighted fields',
+                html: '<ul style="text-align:left;margin-left:8px">' + errors.map(e => `<li>${e}</li>`).join('') + '</ul>'
+            });
+        }
+    } catch (e) {
+        // no-op
+    }
+});
+</script>
+<script>
 document.querySelectorAll('.add-to-cart-form').forEach(form => {
     form.addEventListener('submit', function (e) {
         e.preventDefault();

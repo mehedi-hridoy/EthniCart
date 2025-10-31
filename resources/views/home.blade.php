@@ -632,7 +632,7 @@
         <!-- Filters and Controls -->
         <div class="flex flex-col sm:flex-row justify-between items-center mb-6 bg-white rounded-2xl shadow-lg p-4 backdrop-blur-sm">
             <div class="flex items-center space-x-4 mb-4 sm:mb-0">
-                <h2 class="text-2xl font-bold text-gray-800">{{ count($products) }} Items</h2>
+                <h2 class="text-2xl font-bold text-gray-800">{{ method_exists($products, 'total') ? $products->total() : count($products) }} Items</h2>
                 <div class="h-6 w-px bg-gray-300"></div>
                 <span class="text-sm text-gray-500">Premium Quality</span>
             </div>
@@ -780,6 +780,81 @@
     </div>
     <h3 class="text-xl font-semibold text-gray-900 mb-2">No products found</h3>
     <p class="text-gray-600">Check back later for authentic EthniCart products.</p>
+</div>
+@endif
+
+<!-- Pagination -->
+@if(method_exists($products, 'hasPages') && $products->hasPages())
+<div class="flex justify-center items-center mt-12 mb-8">
+    <nav class="flex items-center gap-2">
+        {{-- Previous Button --}}
+        @if($products->onFirstPage())
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-300 cursor-not-allowed">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </span>
+        @else
+            <a href="{{ $products->previousPageUrl() }}" class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-600 hover:border-blue-500 hover:text-blue-500 transition-all duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </a>
+        @endif
+
+        {{-- Page Numbers --}}
+        @php
+            $current = $products->currentPage();
+            $last = $products->lastPage();
+            $start = max(1, $current - 2);
+            $end = min($last, $current + 2);
+        @endphp
+
+        @if($start > 1)
+            <a href="{{ $products->url(1) }}" class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-500 transition-all duration-200 font-medium">
+                1
+            </a>
+            @if($start > 2)
+                <span class="text-gray-400 px-2">...</span>
+            @endif
+        @endif
+
+        @for($i = $start; $i <= $end; $i++)
+            @if($i == $current)
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-semibold shadow-lg">
+                    {{ $i }}
+                </span>
+            @else
+                <a href="{{ $products->url($i) }}" class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-500 transition-all duration-200 font-medium">
+                    {{ $i }}
+                </a>
+            @endif
+        @endfor
+
+        @if($end < $last)
+            @if($end < $last - 1)
+                <span class="text-gray-400 px-2">...</span>
+            @endif
+            <a href="{{ $products->url($last) }}" class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-700 hover:border-blue-500 hover:text-blue-500 transition-all duration-200 font-medium">
+                {{ $last }}
+            </a>
+        @endif
+
+        {{-- Next Button --}}
+        @if($products->hasMorePages())
+            <a href="{{ $products->nextPageUrl() }}" class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-600 hover:border-blue-500 hover:text-blue-500 transition-all duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </a>
+        @else
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-200 text-gray-300 cursor-not-allowed">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </span>
+        @endif
+    </nav>
 </div>
 @endif
 
