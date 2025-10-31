@@ -150,7 +150,7 @@
                             </div>
                             <h3 class="text-xl font-semibold text-gray-900 mb-2">Your cart is empty</h3>
                             <p class="text-gray-600 mb-6">Discover amazing authentic products from EthniCart</p>
-                            <a href="{{ route('home') }}" 
+                                     <a href="{{ url('/') }}" 
                                class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
                                 <i class="fas fa-leaf mr-2"></i>
                                 Explore Products
@@ -253,7 +253,7 @@
                 </div>
                 <!-- Continue Shopping -->
                 <div class="mt-4 lg:mt-6">
-                    <a href="{{ route('home') }}" 
+                          <a href="{{ url('/') }}" 
                        class="w-full bg-white/90 hover:bg-white text-gray-700 font-semibold py-3 px-6 rounded-xl border border-green-200 hover:border-green-300 transition-colors flex items-center justify-center backdrop-blur-sm">
                         <i class="fas fa-arrow-left mr-2"></i>
                         Continue Shopping
