@@ -27,11 +27,21 @@ class EthniOrder extends Model
     // Relations
     public function seller()
     {
-        return $this->belongsTo(User::class, 'seller_id');
+        return $this->belongsTo(Seller::class, 'seller_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function buyer()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_id');
     }
 }

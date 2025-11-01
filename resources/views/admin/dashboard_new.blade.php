@@ -41,38 +41,44 @@
                 <div class="px-4 mb-3">
                     <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">GENERAL</p>
                 </div>
-                <a href="{{ route('admin.dashboard') }}" class="sidebar-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }} flex items-center gap-3 px-6 py-3 text-sm font-medium {{ request()->routeIs('admin.dashboard') ? '' : 'text-gray-300' }}">
+                <a href="#dashboard" class="sidebar-link active flex items-center gap-3 px-6 py-3 text-sm font-medium">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                     </svg>
                     Dashboard
                 </a>
-                <a href="{{ route('admin.inventory') }}" class="sidebar-link {{ request()->routeIs('admin.inventory') ? 'active' : '' }} flex items-center gap-3 px-6 py-3 text-sm font-medium {{ request()->routeIs('admin.inventory') ? '' : 'text-gray-300' }}">
+                <a href="#inventory" class="sidebar-link flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
                     </svg>
                     Inventory
                 </a>
-                <a href="{{ route('admin.customers') }}" class="sidebar-link {{ request()->routeIs('admin.customers') ? 'active' : '' }} flex items-center gap-3 px-6 py-3 text-sm font-medium {{ request()->routeIs('admin.customers') ? '' : 'text-gray-300' }}">
+                <a href="#customers" class="sidebar-link flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
                     Customers
                 </a>
-                <a href="{{ route('admin.sellers') }}" class="sidebar-link {{ request()->routeIs('admin.sellers') ? 'active' : '' }} flex items-center gap-3 px-6 py-3 text-sm font-medium {{ request()->routeIs('admin.sellers') ? '' : 'text-gray-300' }}">
+                <a href="#sellers" class="sidebar-link flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
                     </svg>
                     Sellers
-                    @if(isset($pendingSellers) && $pendingSellers->count() > 0)
+                    @if($pendingSellers->count() > 0)
                     <span class="ml-auto px-2 py-0.5 text-xs bg-emerald-500 text-white rounded-full">{{ $pendingSellers->count() }}</span>
                     @endif
                 </a>
-                <a href="{{ route('admin.analytics') }}" class="sidebar-link {{ request()->routeIs('admin.analytics') ? 'active' : '' }} flex items-center gap-3 px-6 py-3 text-sm font-medium {{ request()->routeIs('admin.analytics') ? '' : 'text-gray-300' }}">
+                <a href="#review" class="sidebar-link flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                    </svg>
+                    Review
+                </a>
+                <a href="{{ route('seller.stats') }}" class="sidebar-link flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                     </svg>
-                    Analytics
+                    Payment
                 </a>
                 
                 <div class="px-4 my-6">
@@ -117,7 +123,7 @@
             <header class="bg-white border-b border-gray-200 px-8 py-5">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-900">Welcome Back, {{ $adminName }}!</h1>
+                        <h1 class="text-2xl font-bold text-gray-900">Welcome Back, Mahfuzul!</h1>
                         <p class="text-sm text-gray-500 mt-1">Here's what happening with your store today</p>
                     </div>
                     <div class="flex items-center gap-4">
@@ -301,48 +307,6 @@
                         </div>
                     </div>
 
-                    <!-- Most Selling Products -->
-                    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-lg font-bold text-gray-900">Most Selling Products</h2>
-                            <span class="text-xs text-gray-500">Last 10 days</span>
-                        </div>
-                        <div class="space-y-4">
-                            @forelse($topSellingProducts as $item)
-                            <div class="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors">
-                                <div class="flex-shrink-0">
-                                    @if($item->product && $item->product->images->first())
-                                    <img src="{{ asset('storage/' . $item->product->images->first()->image_path) }}" 
-                                         alt="{{ $item->product_name }}" 
-                                         class="w-16 h-16 rounded-lg object-cover border border-gray-200">
-                                    @else
-                                    <div class="w-16 h-16 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center">
-                                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                                        </svg>
-                                    </div>
-                                    @endif
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-semibold text-gray-900 truncate">{{ $item->product_name }}</p>
-                                    <p class="text-xs text-gray-500">ID: {{ $item->product_id }}</p>
-                                </div>
-                                <div class="text-right flex-shrink-0">
-                                    <p class="text-lg font-bold text-emerald-600">{{ $item->total_sales }}</p>
-                                    <p class="text-xs text-gray-500">Sales</p>
-                                </div>
-                            </div>
-                            @empty
-                            <div class="text-center py-8">
-                                <p class="text-gray-500 text-sm">No sales in the last 10 days</p>
-                            </div>
-                            @endforelse
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Top Sellers Section -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                     <!-- Top Sellers -->
                     <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
                         <div class="flex items-center justify-between mb-6">
@@ -365,36 +329,6 @@
                                 </div>
                                 <div class="text-right">
                                     <p class="text-sm font-bold text-gray-900">৳{{ number_format($seller->total_revenue, 0) }}</p>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                    </div>
-
-                    <!-- Top Buyers -->
-                    <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-                        <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-lg font-bold text-gray-900">Top Buyers</h2>
-                            <select id="topBuyersPeriod" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                                <option value="7">7 Days</option>
-                                <option value="30" selected>30 Days</option>
-                            </select>
-                        </div>
-                        <div id="topBuyersContainer" class="space-y-4">
-                            @foreach($topBuyers30Days as $index => $buyer)
-                            <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                                <div class="flex-shrink-0">
-                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center text-white font-bold text-lg">
-                                        {{ substr($buyer->user_name, 0, 1) }}
-                                    </div>
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-semibold text-gray-900 truncate">{{ $buyer->user_name }}</p>
-                                    <p class="text-xs text-gray-500 truncate">{{ $buyer->user_email }}</p>
-                                    <p class="text-xs text-gray-500 mt-1">{{ $buyer->total_orders }} orders</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-lg font-bold text-emerald-600">৳{{ number_format($buyer->total_spent, 0) }}</p>
                                 </div>
                             </div>
                             @endforeach
@@ -557,291 +491,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Full User Management Section -->
-                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-8" id="users">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-lg font-bold text-gray-900">User Management</h2>
-                        <div class="flex items-center gap-3">
-                            <input type="text" id="userSearch" placeholder="Search users..." class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            <button onclick="searchUsers()" class="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors">
-                                Search
-                            </button>
-                        </div>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead>
-                                <tr class="border-b border-gray-200">
-                                    <th class="text-left py-3 px-4 text-xs font-semibold text-gray-600 uppercase">User</th>
-                                    <th class="text-left py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Email</th>
-                                    <th class="text-center py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Status</th>
-                                    <th class="text-center py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($users as $user)
-                                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-                                                {{ substr($user->name, 0, 1) }}
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-semibold text-gray-900">{{ $user->name }}</p>
-                                                <p class="text-xs text-gray-500">Platform Member</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-4 text-sm text-gray-600">{{ $user->email }}</td>
-                                    <td class="py-3 px-4 text-center">
-                                        <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full {{ $user->is_blocked ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700' }}">
-                                            {{ $user->is_blocked ? 'Blocked' : 'Active' }}
-                                        </span>
-                                    </td>
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center justify-center gap-2">
-                                            <form method="POST" action="{{ route($user->is_blocked ? 'admin.unblock.user' : 'admin.block.user', $user->id) }}" class="inline">
-                                                @csrf
-                                                <button type="submit" class="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors {{ $user->is_blocked ? 'bg-green-100 text-green-700 hover:bg-green-200' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' }}">
-                                                    {{ $user->is_blocked ? 'Unblock' : 'Block' }}
-                                                </button>
-                                            </form>
-                                            <form method="POST" action="{{ route('admin.deleteUser', $user->id) }}" class="inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Are you sure you want to delete this user?')" class="px-3 py-1.5 text-xs font-medium bg-red-100 text-red-700 hover:bg-red-200 rounded-lg transition-colors">
-                                                    Delete
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Full Seller Management Section -->
-                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-8" id="seller-management">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-lg font-bold text-gray-900">Seller Management</h2>
-                        <div class="flex items-center gap-3">
-                            <input type="text" id="sellerSearch" placeholder="Search sellers..." class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            <button onclick="searchSellers()" class="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors">
-                                Search
-                            </button>
-                        </div>
-                    </div>
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead>
-                                <tr class="border-b border-gray-200">
-                                    <th class="text-left py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Seller</th>
-                                    <th class="text-left py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Email</th>
-                                    <th class="text-center py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Status</th>
-                                    <th class="text-center py-3 px-4 text-xs font-semibold text-gray-600 uppercase">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {{-- Pending Sellers --}}
-                                @foreach ($pendingSellers as $seller)
-                                <tr class="border-b border-gray-100 hover:bg-yellow-50">
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 font-bold">
-                                                {{ substr($seller->name, 0, 1) }}
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-semibold text-gray-900">{{ $seller->name }}</p>
-                                                <p class="text-xs text-yellow-600">Pending Approval</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-4 text-sm text-gray-600">{{ $seller->email }}</td>
-                                    <td class="py-3 px-4 text-center">
-                                        <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-700">
-                                            Pending
-                                        </span>
-                                    </td>
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center justify-center gap-2">
-                                            <a href="{{ route('admin.sellers.profile', $seller->id) }}" class="px-3 py-1.5 text-xs font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 rounded-lg transition-colors">
-                                                View
-                                            </a>
-                                            <a href="{{ route('admin.sellers.approve', $seller->id) }}" class="px-3 py-1.5 text-xs font-medium bg-green-100 text-green-700 hover:bg-green-200 rounded-lg transition-colors">
-                                                Approve
-                                            </a>
-                                            <form action="{{ route('admin.sellers.delete', $seller->id) }}" method="POST" class="inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Delete this seller?')" class="px-3 py-1.5 text-xs font-medium bg-red-100 text-red-700 hover:bg-red-200 rounded-lg transition-colors">
-                                                    Delete
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @endforeach
-
-                                {{-- Approved Sellers --}}
-                                @foreach ($approvedSellers as $seller)
-                                <tr class="border-b border-gray-100 hover:bg-gray-50">
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center gap-3">
-                                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">
-                                                {{ substr($seller->name, 0, 1) }}
-                                            </div>
-                                            <div>
-                                                <p class="text-sm font-semibold text-gray-900">{{ $seller->name }}</p>
-                                                <p class="text-xs text-gray-500">Approved Vendor</p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="py-3 px-4 text-sm text-gray-600">{{ $seller->email }}</td>
-                                    <td class="py-3 px-4 text-center">
-                                        <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full {{ $seller->is_blocked ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700' }}">
-                                            {{ $seller->is_blocked ? 'Blocked' : 'Active' }}
-                                        </span>
-                                    </td>
-                                    <td class="py-3 px-4">
-                                        <div class="flex items-center justify-center gap-2 flex-wrap">
-                                            <form action="{{ route('admin.sellers.toggleBlock', $seller->id) }}" method="POST" class="inline">
-                                                @csrf
-                                                <button type="submit" class="px-3 py-1.5 text-xs font-medium rounded-lg transition-colors {{ $seller->is_blocked ? 'bg-green-100 text-green-700 hover:bg-green-200' : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200' }}">
-                                                    {{ $seller->is_blocked ? 'Unblock' : 'Block' }}
-                                                </button>
-                                            </form>
-                                            <a href="{{ route('admin.sellers.profile', $seller->id) }}" class="px-3 py-1.5 text-xs font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 rounded-lg transition-colors">
-                                                Profile
-                                            </a>
-                                            <a href="{{ route('admin.sellers.disapprove', $seller->id) }}" class="px-3 py-1.5 text-xs font-medium bg-orange-100 text-orange-700 hover:bg-orange-200 rounded-lg transition-colors">
-                                                Disapprove
-                                            </a>
-                                            <form action="{{ route('admin.sellers.delete', $seller->id) }}" method="POST" class="inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" onclick="return confirm('Delete this seller?')" class="px-3 py-1.5 text-xs font-medium bg-red-100 text-red-700 hover:bg-red-200 rounded-lg transition-colors">
-                                                    Delete
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Products Per Seller Analytics -->
-                <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mb-8" id="analytics">
-                    <div class="flex items-center justify-between mb-6">
-                        <h2 class="text-lg font-bold text-gray-900">Products Per Seller Analytics</h2>
-                        <span class="text-sm text-gray-500">Total Sellers: {{ $sellers->count() }}</span>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="productPerSellerChart"></canvas>
-                    </div>
-                </div>
             </main>
         </div>
     </div>
 
     <script>
-        // Products Per Seller Chart
-        const sellerNames = @json($sellers->pluck('name'));
-        const productCounts = @json($sellers->map(fn($s) => $s->products->count()));
-        
-        const productPerSellerCtx = document.getElementById('productPerSellerChart').getContext('2d');
-        new Chart(productPerSellerCtx, {
-            type: 'bar',
-            data: {
-                labels: sellerNames,
-                datasets: [{
-                    label: 'Products Uploaded',
-                    data: productCounts,
-                    backgroundColor: 'rgba(16, 185, 129, 0.8)',
-                    borderColor: 'rgba(16, 185, 129, 1)',
-                    borderWidth: 1,
-                    borderRadius: 8,
-                    borderSkipped: false,
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        padding: 12,
-                        titleColor: '#fff',
-                        bodyColor: '#fff',
-                        borderColor: 'rgba(255, 255, 255, 0.2)',
-                        borderWidth: 1,
-                        cornerRadius: 8,
-                        displayColors: false,
-                        callbacks: {
-                            label: function(context) {
-                                return 'Products: ' + context.parsed.y;
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                        ticks: {
-                            color: '#6b7280',
-                            font: {
-                                size: 11
-                            },
-                            maxRotation: 45,
-                            minRotation: 0
-                        }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        },
-                        ticks: {
-                            color: '#6b7280',
-                            font: {
-                                size: 11
-                            },
-                            precision: 0
-                        }
-                    }
-                }
-            }
-        });
-
-        // Search functions
-        function searchUsers() {
-            const searchTerm = document.getElementById('userSearch').value.toLowerCase();
-            const rows = document.querySelectorAll('#users tbody tr');
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(searchTerm) ? '' : 'none';
-            });
-        }
-
-        function searchSellers() {
-            const searchTerm = document.getElementById('sellerSearch').value.toLowerCase();
-            const rows = document.querySelectorAll('#seller-management tbody tr');
-            rows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                row.style.display = text.includes(searchTerm) ? '' : 'none';
-            });
-        }
-
         // Summary Chart
         const summaryCtx = document.getElementById('summaryChart').getContext('2d');
         new Chart(summaryCtx, {
@@ -1011,52 +665,16 @@
             });
         });
 
-        // Smooth scrolling for navigation and active state management
-        document.querySelectorAll('.sidebar-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                
-                // If it's an anchor link (starts with #)
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    
-                    // Remove active class from all links
-                    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
-                    
-                    // Add active class to clicked link
-                    this.classList.add('active');
-                    
-                    // Scroll to target
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-
-        // Update active sidebar link based on scroll position
-        const sections = document.querySelectorAll('[id]');
-        const sidebarLinks = document.querySelectorAll('.sidebar-link[href^="#"]');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            sidebarLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
         });

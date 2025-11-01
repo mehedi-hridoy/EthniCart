@@ -425,6 +425,10 @@ Route::post('/admin/logout', function () {
 
 Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/inventory', [AdminDashboardController::class, 'inventory'])->name('admin.inventory');
+    Route::get('/customers', [AdminDashboardController::class, 'customers'])->name('admin.customers');
+    Route::get('/sellers', [AdminDashboardController::class, 'sellers'])->name('admin.sellers');
+    Route::get('/analytics', [AdminDashboardController::class, 'analytics'])->name('admin.analytics');
 
     Route::delete('/user/{id}', [AdminDashboardController::class, 'deleteUser'])->name('admin.deleteUser');
     Route::delete('/seller/{id}', [AdminDashboardController::class, 'deleteSeller'])->name('admin.deleteSeller');
