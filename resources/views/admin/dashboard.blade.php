@@ -283,14 +283,15 @@
                                     @foreach($recentOrders as $order)
                                     <tr class="border-b border-gray-100 hover:bg-gray-50">
                                         <td class="py-3 px-4 text-sm font-medium text-gray-900">{{ Str::limit($order->product_name, 30) }}</td>
-                                        <td class="py-3 px-4 text-sm text-gray-600">{{ $order->user_name ?? 'Guest' }}</td>
-                                        <td class="py-3 px-4 text-sm text-gray-600">#{{ $order->order_id }}</td>
+                                        <td class="py-3 px-4 text-sm text-gray-600">{{ $order->user ? $order->user->name : 'Guest' }}</td>
+                                        <td class="py-3 px-4 text-sm text-gray-600">#{{ $order->id }}</td>
                                         <td class="py-3 px-4 text-sm text-gray-600">{{ $order->created_at->format('M d, Y') }}</td>
                                         <td class="py-3 px-4 text-right">
                                             <span class="inline-flex px-2 py-1 text-xs font-medium rounded-full 
                                                 {{ $order->status == 'completed' ? 'bg-green-100 text-green-700' : '' }}
                                                 {{ $order->status == 'pending' ? 'bg-yellow-100 text-yellow-700' : '' }}
-                                                {{ $order->status == 'processing' ? 'bg-blue-100 text-blue-700' : '' }}">
+                                                {{ $order->status == 'processing' ? 'bg-blue-100 text-blue-700' : '' }}
+                                                {{ $order->status == 'delivered' ? 'bg-green-100 text-green-700' : '' }}">
                                                 {{ ucfirst($order->status) }}
                                             </span>
                                         </td>
