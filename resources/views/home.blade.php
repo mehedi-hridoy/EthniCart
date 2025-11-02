@@ -1,37 +1,71 @@
 @extends('index')
 @push('style')
-  <title>EthniCart</title>
+  <title>EthniCart - Fresh From Earth To You</title>
+  <meta name="description" content="EthniCart - Your trusted source for authentic, farm-fresh products directly from producers to your doorstep.">
+  <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+  <link rel="preload" href="{{ asset('images/header1.png') }}" as="image">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#90c552'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Optimized carousel styles - Full Width */
+    .carousel-wrapper {
+      will-change: transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translate3d(0, 0, 0);
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-slide {
+      contain: layout style paint;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel-slide img {
+      will-change: auto;
+      backface-visibility: hidden;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .carousel-dot.active {
+      background: white !important;
+      transform: scale(1.3);
+    }
+    /* Line clamp utilities */
+    .line-clamp-1 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-wrapper { transition: none !important; }
+    }
+  </style>
 @endpush
 @section('main-content')
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EthniCart</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#90c552'
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-
-<body >
 
 
 
@@ -273,68 +307,65 @@
 
     <!-- main body part of the site -->
 
-    {{-- Optimized Hero Slider Section --}}
-<div class="relative w-full overflow-hidden bg-gray-50">
-    <div class="relative h-96 md:h-[500px] lg:h-[600px]">
-        {{-- Preload first image for immediate display --}}
-        <link rel="preload" as="image" href="{{ asset('images/header1.png') }}">
-        
+    {{-- Optimized Hero Slider Section - Full Width --}}
+<div class="relative w-full overflow-hidden bg-white">
+    <div class="relative h-[400px] md:h-[500px] lg:h-[600px] w-full">
         {{-- Carousel Wrapper with GPU acceleration --}}
-        <div id="carousel-wrapper" class="flex h-full will-change-transform" style="transition: transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+        <div id="carousel-wrapper" class="carousel-wrapper flex h-full w-full" style="transition: transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);">
             {{-- Slide 1 --}}
-            <div class="carousel-slide min-w-full relative flex-shrink-0">
+            <div class="carousel-slide min-w-full h-full relative flex-shrink-0 bg-gray-50">
                 <img src="{{ asset('images/header1.png') }}"
                      alt="Fresh fruits and nutritious meals" 
-                     class="w-full h-full object-cover"
+                     class="w-full h-full object-cover object-center"
+                     style="max-width: 100%; display: block;"
                      loading="eager"
                      fetchpriority="high"
                      decoding="async">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </div>
 
             {{-- Slide 2 --}}
-            <div class="carousel-slide min-w-full relative flex-shrink-0">
+            <div class="carousel-slide min-w-full h-full relative flex-shrink-0 bg-gray-50">
                 <img src="{{ asset('images/slide_2.png') }}"
                      alt="Quality meats and seafood" 
-                     class="w-full h-full object-cover"
+                     class="w-full h-full object-cover object-center"
+                     style="max-width: 100%; display: block;"
                      loading="lazy"
                      decoding="async">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </div>
 
             {{-- Slide 3 --}}
-            <div class="carousel-slide min-w-full relative flex-shrink-0">
+            <div class="carousel-slide min-w-full h-full relative flex-shrink-0 bg-gray-50">
                 <img src="{{ asset('images/slide_3.png') }}"
                      alt="Organic vegetables" 
-                     class="w-full h-full object-cover"
+                     class="w-full h-full object-cover object-center"
+                     style="max-width: 100%; display: block;"
                      loading="lazy"
                      decoding="async">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </div>
 
             {{-- Slide 4 --}}
-            <div class="carousel-slide min-w-full relative flex-shrink-0">
+            <div class="carousel-slide min-w-full h-full relative flex-shrink-0 bg-gray-50">
                 <img src="{{ asset('images/slide_4.png') }}"
                      alt="Authentic homemade masalas" 
-                     class="w-full h-full object-cover"
+                     class="w-full h-full object-cover object-center"
+                     style="max-width: 100%; display: block;"
                      loading="lazy"
                      decoding="async">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </div>
 
             {{-- Slide 5 --}}
-            <div class="carousel-slide min-w-full relative flex-shrink-0">
+            <div class="carousel-slide min-w-full h-full relative flex-shrink-0 bg-gray-50">
                 <img src="{{ asset('images/slide_5.png') }}"
                      alt="Natural beauty and care products" 
-                     class="w-full h-full object-cover"
+                     class="w-full h-full object-cover object-center"
+                     style="max-width: 100%; display: block;"
                      loading="lazy"
                      decoding="async">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
             </div>
         </div>
 
@@ -371,232 +402,12 @@
     </div>
 </div>
 
-<style>
-    /* Optimize carousel animations */
-    #carousel-wrapper {
-        backface-visibility: hidden;
-        perspective: 1000px;
-        transform: translate3d(0, 0, 0);
-    }
-    
-    .carousel-slide img {
-        backface-visibility: hidden;
-        transform: translate3d(0, 0, 0);
-    }
-    
-    /* Active dot styling */
-    .carousel-dot.active {
-        background: white !important;
-        transform: scale(1.3);
-    }
-    
-    @media (prefers-reduced-motion: reduce) {
-        #carousel-wrapper {
-            transition: none !important;
-        }
-    }
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.getElementById('carousel-wrapper');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const progressBar = document.getElementById('progress-bar');
-    const slides = document.querySelectorAll('.carousel-slide');
-    
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    const slideInterval = 5000; // 5 seconds
-    let autoplayTimer;
-    let progressTimer;
-    let startTime;
-    let isTransitioning = false;
-
-    // Preload next image for smoother transitions
-    function preloadNextImage() {
-        const nextIndex = (currentSlide + 1) % totalSlides;
-        const nextImg = slides[nextIndex].querySelector('img');
-        if (nextImg && !nextImg.complete) {
-            const img = new Image();
-            img.src = nextImg.src;
-        }
-    }
-
-    // Update progress bar
-    function updateProgress() {
-        if (!startTime) startTime = Date.now();
-        const elapsed = Date.now() - startTime;
-        const progress = (elapsed / slideInterval) * 100;
-        
-        if (progress >= 100) {
-            progressBar.style.width = '100%';
-            return;
-        }
-        
-        progressBar.style.width = progress + '%';
-        progressTimer = requestAnimationFrame(updateProgress);
-    }
-
-    // Reset progress
-    function resetProgress() {
-        if (progressTimer) {
-            cancelAnimationFrame(progressTimer);
-        }
-        startTime = Date.now();
-        progressBar.style.width = '0%';
-        progressTimer = requestAnimationFrame(updateProgress);
-    }
-
-    // Navigate to specific slide
-    function goToSlide(index, skipAnimation = false) {
-        if (isTransitioning || index === currentSlide) return;
-        
-        isTransitioning = true;
-        currentSlide = index;
-        
-        // Use transform for GPU acceleration
-        const offset = -currentSlide * 100;
-        wrapper.style.transform = `translateX(${offset}%)`;
-        
-        // Update dots
-        dots.forEach((dot, i) => {
-            if (i === currentSlide) {
-                dot.classList.add('active');
-                dot.style.background = 'white';
-            } else {
-                dot.classList.remove('active');
-                dot.style.background = 'rgba(255, 255, 255, 0.5)';
-            }
-        });
-        
-        // Preload next image
-        preloadNextImage();
-        
-        // Reset progress
-        resetProgress();
-        
-        // Reset transition flag after animation
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 800);
-    }
-
-    // Next slide
-    function nextSlide() {
-        const next = (currentSlide + 1) % totalSlides;
-        goToSlide(next);
-    }
-
-    // Previous slide
-    function prevSlide() {
-        const prev = (currentSlide - 1 + totalSlides) % totalSlides;
-        goToSlide(prev);
-    }
-
-    // Start autoplay
-    function startAutoplay() {
-        stopAutoplay();
-        resetProgress();
-        autoplayTimer = setInterval(nextSlide, slideInterval);
-    }
-
-    // Stop autoplay
-    function stopAutoplay() {
-        if (autoplayTimer) {
-            clearInterval(autoplayTimer);
-        }
-        if (progressTimer) {
-            cancelAnimationFrame(progressTimer);
-        }
-    }
-
-    // Event listeners
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        startAutoplay();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        startAutoplay();
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-            startAutoplay();
-        });
-    });
-
-    // Pause on hover
-    wrapper.parentElement.addEventListener('mouseenter', stopAutoplay);
-    wrapper.parentElement.addEventListener('mouseleave', startAutoplay);
-
-    // Touch support for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    wrapper.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        stopAutoplay();
-    }, { passive: true });
-
-    wrapper.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-        startAutoplay();
-    }, { passive: true });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                nextSlide();
-            } else {
-                prevSlide();
-            }
-        }
-    }
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-            startAutoplay();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-            startAutoplay();
-        }
-    });
-
-    // Visibility API - pause when tab is hidden
-    document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            stopAutoplay();
-        } else {
-            startAutoplay();
-        }
-    });
-
-    // Initialize
-    preloadNextImage();
-    startAutoplay();
-    
-    // Initial dot state
-    goToSlide(0, true);
-});
-</script>
-
 
 
 {{-- Product Categories Grid Section --}}
 <div class="bg-white py-8 md:py-12 lg:py-16">
     <div class="container mx-auto px-4">
-        {{-- Section Title (Optional) --}}
+        {{-- Section Title --}}
         <div class="text-center mb-8">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
                 Shop by Category
@@ -608,12 +419,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         {{-- Categories Grid --}}
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
-            {{-- Category 1: Foods --}}
+            {{-- Category: Foods --}}
             <div class="group">
                 <a href="{{url('/foods')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
                         <img src="{{ asset('images/foods.png') }}"
                              alt="Foods" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -625,13 +438,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
 
-
-             {{-- Category 12: Farm Fresh Vegetables --}}
-            <div class="babyCare">
+            {{-- Category: Farm Fresh Vegetables --}}
+            <div class="group">
                 <a href="{{url('/vegetables')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/vegetables.jpg') }}"
-                             alt="Baby Care" 
+                        <img src="{{ asset('images/vegetables.jpg') }}"
+                             alt="Farm Fresh Vegetables" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -643,33 +457,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
 
-            {{-- Category 3:Fish&meat --}}
+            {{-- Category: Fish & Meat --}}
             <div class="group">
                 <a href="{{url('/fish&meat')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                 
-                        <img 
-                        src="{{ asset('images/fish_meat.png') }}"
-                        
-                             alt="Fruits & Vegetables" 
+                        <img src="{{ asset('images/fish_meat.png') }}"
+                             alt="Fish & Meat" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                          Fish & Meat
+                            Fish & Meat
                         </h3>
                     </div>
                 </a>
             </div>
 
-
-             {{-- Category 5: Homemade Masala--}}
+            {{-- Category: Homemade Masala --}}
             <div class="group">
                 <a href="{{url('/homemadeMasala')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/Masala.jpg"
-                             alt="Commodities" 
+                        <img src="{{ asset('images/Masala.jpg') }}"
+                             alt="Homemade Masala" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -681,52 +495,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
 
-            {{-- Category 2: Pickles & Condiments--}}
+            {{-- Category: Pickles & Condiments --}}
             <div class="group">
                 <a href="{{url('/pickles&condiments')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                        src="{{ asset('images/pickles.jpg') }}"
-                             alt="Food & Snacks" 
+                        <img src="{{ asset('images/pickles.jpg') }}"
+                             alt="Pickles & Condiments" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Pickles & Condiments
+                            Pickles & Condiments
                         </h3>
                     </div>
                 </a>
             </div>
 
-
-            {{-- Category 9:Home & Kitchen  --}}
+            {{-- Category: Home & Kitchen --}}
             <div class="group">
                 <a href="{{url('/home&kitchen')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/home&kitchen.jpg') }}"
-
-                             alt="Beauty & Personal Care" 
+                        <img src="{{ asset('images/home&kitchen.jpg') }}"
+                             alt="Home & Kitchen" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Home & Kitchen 
+                            Home & Kitchen
                         </h3>
                     </div>
                 </a>
             </div>
 
-            
-
-            {{-- Category 4: Organic Roots --}}
+            {{-- Category: Organic Roots --}}
             <div class="group">
                 <a href="{{url('/organicRoots')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img 
-                         src="{{ asset('images/organicroots.jpg') }}"
-                             alt="Fish & Meat" 
+                        <img src="{{ asset('images/organicroots.jpg') }}"
+                             alt="Organic Roots" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -738,31 +552,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
 
-           
-
-            {{-- Category 6: Beauty & Care --}}
+            {{-- Category: Beauty & Care --}}
             <div class="group">
                 <a href="{{url('/beauty&care')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="images/beauty&care.jpg"
+                        <img src="{{ asset('images/beauty&care.jpg') }}"
                              alt="Beauty & Care" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                           Beauty & Care
+                            Beauty & Care
                         </h3>
                     </div>
                 </a>
             </div>
 
-            {{-- Category 7:Clothing&Apparels  --}}
+            {{-- Category: Clothing & Apparels --}}
             <div class="group">
                 <a href="{{url('/Clothing&Apparels')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img src="{{ asset('images/Cloths&apparels.png') }}" alt="cloths"
-                             alt="Dairy" 
+                        <img src="{{ asset('images/Cloths&apparels.png') }}"
+                             alt="Clothing & Apparels" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
@@ -774,66 +590,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 </a>
             </div>
 
-            {{-- Category 8:Crafted Goods--}}
+            {{-- Category: Crafted Goods --}}
             <div class="group">
                 <a href="{{url('/craftItems')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/crafts.jpg') }}"
-                             alt="Frozen Item" 
+                        <img src="{{ asset('images/crafts.jpg') }}"
+                             alt="Crafted Goods" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
                             Crafted Goods
-
                         </h3>
                     </div>
                 </a>
             </div>
 
-            
-
-            {{-- Category 10: Flower & Gifts --}}
+            {{-- Category: Flower & Gifts --}}
             <div class="group">
                 <a href="{{url('/gift')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/flowerNgifts.jpg') }}"
-                             alt="Health & Wellness" 
+                        <img src="{{ asset('images/flowerNgifts.jpg') }}"
+                             alt="Flower & Gifts" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                              Flower N Gifts
+                            Flower & Gifts
                         </h3>
                     </div>
                 </a>
             </div>
 
-
+            {{-- Category: Eco Friendly Cleaning Products --}}
             <div class="group">
                 <a href="{{url('/ecoFriendlyProducts')}}" class="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
                     <div class="aspect-square relative">
-                        <img  src="{{ asset('images/cleaning.jpg') }}"
-                             alt="Health & Wellness" 
+                        <img src="{{ asset('images/cleaning.jpg') }}"
+                             alt="Eco Friendly Cleaning Products" 
+                             loading="lazy"
+                             decoding="async"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                     </div>
                     <div class="p-3 md:p-4">
                         <h3 class="text-sm md:text-base lg:text-lg font-semibold text-gray-800 text-center">
-                              Eco Friendly Cleaning Products
+                            Eco Friendly Cleaning Products
                         </h3>
                     </div>
                 </a>
             </div>
-
-            
-
-           
         </div>
 
-        {{-- View All Categories Button (Optional) --}}
+        {{-- View All Categories Button --}}
         <div class="text-center mt-8 md:mt-12">
             <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                 View All Categories
@@ -1303,158 +1118,251 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<style>
-/* Line clamp utility classes */
-.line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-</style>
-
-
-
-
+{{-- Optimized Carousel Script --}}
 <script>
-document.querySelectorAll('.add-to-cart-form').forEach(form => {
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+(function() {
+    'use strict';
+    
+    // Wait for DOM to be ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    } else {
+        initCarousel();
+    }
+    
+    function initCarousel() {
+        const wrapper = document.getElementById('carousel-wrapper');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const progressBar = document.getElementById('progress-bar');
+        const slides = document.querySelectorAll('.carousel-slide');
+        
+        if (!wrapper || !prevBtn || !nextBtn || !progressBar) return;
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const slideInterval = 5000;
+        let autoplayTimer = null;
+        let progressStart = 0;
+        let animFrameId = null;
+        let isTransitioning = false;
 
-        const productId = form.getAttribute('data-product-id');
-        const formData = new FormData(form);
-
-        fetch(`/cart/add/${productId}`, {
-            method: 'POST',
-            headers: {
-                'X-CSRF-TOKEN': formData.get('_token'),
-                'Accept': 'application/json',
-            },
-            body: formData
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                Swal.fire({
-                    toast: true,
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'Added to cart!',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            } else {
-                Swal.fire('Oops!', data.message || 'Something went wrong!', 'error');
+        // Preload next image
+        function preloadNext() {
+            const nextIdx = (currentSlide + 1) % totalSlides;
+            const img = slides[nextIdx]?.querySelector('img');
+            if (img && !img.complete) {
+                const preloader = new Image();
+                preloader.src = img.src;
             }
-        })
-        .catch(() => {
-            Swal.fire('Error', 'Could not add to cart. Please try again.', 'error');
+        }
+
+        // Update progress bar with RAF
+        function updateProgress(timestamp) {
+            if (!progressStart) progressStart = timestamp;
+            const elapsed = timestamp - progressStart;
+            const progress = Math.min((elapsed / slideInterval) * 100, 100);
+            
+            progressBar.style.width = progress + '%';
+            
+            if (progress < 100) {
+                animFrameId = requestAnimationFrame(updateProgress);
+            }
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            progressStart = 0;
+            progressBar.style.width = '0%';
+            animFrameId = requestAnimationFrame(updateProgress);
+        }
+
+        // Go to slide
+        function goToSlide(idx) {
+            if (isTransitioning || idx === currentSlide) return;
+            
+            isTransitioning = true;
+            currentSlide = idx;
+            
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+                dot.style.background = i === currentSlide ? 'white' : 'rgba(255,255,255,0.5)';
+            });
+            
+            preloadNext();
+            resetProgress();
+            
+            setTimeout(() => { isTransitioning = false; }, 800);
+        }
+
+        // Navigation
+        function nextSlide() { goToSlide((currentSlide + 1) % totalSlides); }
+        function prevSlide() { goToSlide((currentSlide - 1 + totalSlides) % totalSlides); }
+
+        // Autoplay
+        function startAutoplay() {
+            stopAutoplay();
+            resetProgress();
+            autoplayTimer = setInterval(nextSlide, slideInterval);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
+        nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+        dots.forEach((dot, i) => dot.addEventListener('click', () => { goToSlide(i); startAutoplay(); }));
+
+        // Hover pause
+        const container = wrapper.parentElement;
+        container.addEventListener('mouseenter', stopAutoplay);
+        container.addEventListener('mouseleave', startAutoplay);
+
+        // Touch support
+        let touchStartX = 0;
+        wrapper.addEventListener('touchstart', e => {
+            touchStartX = e.touches[0].clientX;
+            stopAutoplay();
+        }, { passive: true });
+        
+        wrapper.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) diff > 0 ? nextSlide() : prevSlide();
+            startAutoplay();
+        }, { passive: true });
+
+        // Keyboard
+        document.addEventListener('keydown', e => {
+            if (e.key === 'ArrowLeft') { prevSlide(); startAutoplay(); }
+            else if (e.key === 'ArrowRight') { nextSlide(); startAutoplay(); }
         });
-    });
-});
 
+        // Visibility API
+        document.addEventListener('visibilitychange', () => {
+            document.hidden ? stopAutoplay() : startAutoplay();
+        });
 
+        // Initialize
+        preloadNext();
+        goToSlide(0);
+        startAutoplay();
+    }
+})();
 
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const forms = document.querySelectorAll(".add-to-cart-form");
-
-    forms.forEach(form => {
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // stop page reload
-
+// Add to cart functionality
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.add-to-cart-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const productId = this.dataset.productId;
             const token = this.querySelector('input[name="_token"]').value;
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
 
-            fetch("{{ url('/cart/add') }}", {
-                method: "POST",
+            fetch(`/cart/add/${productId}`, {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": token,
+                    'X-CSRF-TOKEN': token,
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    product_id: productId
-                })
+                body: JSON.stringify({ product_id: productId })
             })
             .then(res => res.json())
             .then(data => {
-                // Update cart count badge
-                document.querySelector("#cart-count").innerText = data.cart_count;
+                if (data.success) {
+                    // Update cart count if element exists
+                    const cartBadge = document.querySelector('.fa-basket-shopping + span');
+                    if (cartBadge && data.cart_count) {
+                        cartBadge.textContent = data.cart_count;
+                    }
+                    
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            toast: true,
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Added to cart!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                    }
+                } else {
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire('Oops!', data.message || 'Could not add to cart', 'error');
+                    }
+                }
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                console.error('Cart error:', err);
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire('Error', 'Could not add to cart. Please try again.', 'error');
+                }
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            });
         });
     });
 });
 
-// Live Search Autocomplete for Homepage
-document.addEventListener('DOMContentLoaded', function() {
-    const homeSearchInput = document.getElementById('homeSearchInput');
-    const homeSearchSuggestions = document.getElementById('homeSearchSuggestions');
-    let debounceTimer;
+// Live Search Autocomplete
+(function() {
+    const searchInput = document.getElementById('homeSearchInput');
+    const suggestions = document.getElementById('homeSearchSuggestions');
+    if (!searchInput || !suggestions) return;
+    
+    let debounce = null;
 
-    if (homeSearchInput) {
-        homeSearchInput.addEventListener('input', function() {
-            const query = this.value.trim();
-            
-            clearTimeout(debounceTimer);
-            
-            if (query.length === 0) {
-                homeSearchSuggestions.classList.add('hidden');
-                return;
-            }
-            
-            debounceTimer = setTimeout(() => {
-                if (query.length >= 1) {
-                    fetchHomeSearchSuggestions(query);
-                }
-            }, 300);
-        });
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim();
+        clearTimeout(debounce);
+        
+        if (query.length === 0) {
+            suggestions.classList.add('hidden');
+            return;
+        }
+        
+        debounce = setTimeout(() => {
+            if (query.length >= 1) fetchSuggestions(query);
+        }, 300);
+    });
 
-        document.addEventListener('click', function(e) {
-            if (!homeSearchInput.contains(e.target) && !homeSearchSuggestions.contains(e.target)) {
-                homeSearchSuggestions.classList.add('hidden');
-            }
-        });
+    document.addEventListener('click', e => {
+        if (!searchInput.contains(e.target) && !suggestions.contains(e.target)) {
+            suggestions.classList.add('hidden');
+        }
+    });
 
-        homeSearchInput.addEventListener('focus', function() {
-            if (this.value.trim().length >= 1 && homeSearchSuggestions.children.length > 0) {
-                homeSearchSuggestions.classList.remove('hidden');
-            }
-        });
+    searchInput.addEventListener('focus', function() {
+        if (this.value.trim().length >= 1 && suggestions.children.length > 0) {
+            suggestions.classList.remove('hidden');
+        }
+    });
+
+    function fetchSuggestions(query) {
+        fetch(`/api/search-suggestions?query=${encodeURIComponent(query)}`)
+            .then(res => res.json())
+            .then(data => displaySuggestions(data.products, query))
+            .catch(err => console.error('Search error:', err));
     }
 
-    function fetchHomeSearchSuggestions(query) {
-        fetch(`{{ url('/api/search-suggestions') }}?query=${encodeURIComponent(query)}`)
-            .then(response => response.json())
-            .then(data => {
-                displayHomeSearchSuggestions(data.products, query);
-            })
-            .catch(error => {
-                console.error('Search error:', error);
-            });
-    }
-
-    function displayHomeSearchSuggestions(products, query) {
+    function displaySuggestions(products, query) {
         if (!products || products.length === 0) {
-            homeSearchSuggestions.innerHTML = `
+            suggestions.innerHTML = `
                 <div class="p-4 text-center text-gray-500">
                     <svg class="w-12 h-12 mx-auto mb-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -1462,22 +1370,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="text-sm">No products found for "${query}"</p>
                 </div>
             `;
-            homeSearchSuggestions.classList.remove('hidden');
+            suggestions.classList.remove('hidden');
             return;
         }
 
         let html = '<div class="py-2">';
         
         products.forEach(product => {
-            const imageUrl = product.image ? `{{ asset('storage/') }}/${product.image}` : '';
-            const productUrl = `{{ url('/product') }}/${product.id}`;
+            const img = product.image ? `/storage/${product.image}` : '';
+            const url = `/product/${product.id}`;
             const price = parseFloat(product.price).toFixed(2);
             
             html += `
-                <a href="${productUrl}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 group">
+                <a href="${url}" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 transition-colors duration-150 group">
                     <div class="w-12 h-12 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
-                        ${imageUrl ? 
-                            `<img src="${imageUrl}" alt="${product.name}" class="w-full h-full object-cover">` :
+                        ${img ? 
+                            `<img src="${img}" alt="${product.name}" class="w-full h-full object-cover" loading="lazy">` :
                             `<div class="w-full h-full flex items-center justify-center">
                                 <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -1487,14 +1395,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     <div class="flex-grow min-w-0">
                         <p class="font-medium text-gray-900 truncate group-hover:text-primary transition-colors">${product.name}</p>
-                        <p class="text-sm text-gray-500 truncate">${product.description || 'No description'}</p>
+                        <p class="text-sm text-gray-500 truncate">${product.description || ''}</p>
                     </div>
                     <div class="flex-shrink-0 text-right">
                         <p class="font-semibold text-gray-900">৳${price}</p>
-                        ${product.stock > 0 ? 
-                            `<p class="text-xs text-green-600">In Stock</p>` :
-                            `<p class="text-xs text-red-600">Out of Stock</p>`
-                        }
+                        <p class="text-xs ${product.stock > 0 ? 'text-green-600' : 'text-red-600'}">
+                            ${product.stock > 0 ? 'In Stock' : 'Out of Stock'}
+                        </p>
                     </div>
                 </a>
             `;
@@ -1502,131 +1409,19 @@ document.addEventListener('DOMContentLoaded', function() {
         
         html += `
             <div class="border-t border-gray-200 mt-2">
-                <button onclick="document.getElementById('homeSearchForm').submit()" class="w-full px-4 py-3 text-center text-sm font-medium text-primary hover:bg-primary/5 transition-colors">
+                <button onclick="document.getElementById('homeSearchForm').submit()" 
+                        class="w-full px-4 py-3 text-center text-sm font-medium text-primary hover:bg-primary/5 transition-colors">
                     View all results for "${query}"
                     <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                     </svg>
                 </button>
             </div>
-        `;
+        </div>`;
         
-        html += '</div>';
-        homeSearchSuggestions.innerHTML = html;
-        homeSearchSuggestions.classList.remove('hidden');
+        suggestions.innerHTML = html;
+        suggestions.classList.remove('hidden');
     }
-});
-
-
+})();
 </script>
-
-@push('styles')
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"></noscript>
-    <style>
-        .hero-slider {
-            border-radius: 1.25rem;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(19, 44, 70, 0.18);
-            will-change: transform;
-        }
-        .hero-slider .splide__track { background: #f7f9fc; }
-        .hero-slider .splide__slide {
-            position: relative;
-            min-height: clamp(18rem, 55vw, 26rem);
-            display: grid;
-            place-items: stretch;
-        }
-        .hero-slider .splide__slide > img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1.04);
-            transition: transform 1.4s cubic-bezier(0.22, 0.61, 0.36, 1);
-        }
-        .hero-slider .splide__slide.is-active > img { transform: scale(1); }
-        .hero-slider__caption {
-            position: absolute;
-            inset: auto 0 0 0;
-            padding: clamp(1.25rem, 3vw, 2.5rem);
-            background: linear-gradient(180deg, rgba(15, 25, 38, 0) 35%, rgba(15, 25, 38, 0.78) 100%);
-            color: #fff;
-        }
-        .hero-slider__caption h2 { font-size: clamp(1.5rem, 3.4vw, 2.4rem); font-weight: 700; }
-        .hero-slider__caption p { margin-top: .5rem; font-size: clamp(1rem, 2.2vw, 1.15rem); opacity: .92; }
-        .hero-slider .splide__arrow { background: rgba(255, 255, 255, 0.82); color: #25324b; box-shadow: 0 8px 24px rgba(25, 45, 75, 0.18); }
-        .hero-slider .splide__pagination__page { background: rgba(255, 255, 255, 0.65); }
-        .hero-slider .splide__pagination__page.is-active { transform: scale(1.25); background: #00a676; }
-        @media (max-width: 768px) {
-            .hero-slider { border-radius: 0.85rem; }
-            .hero-slider__caption { padding: 1.25rem; }
-        }
-    </style>
-@endpush
-
-<section class="hero-slider splide" aria-label="Featured collections">
-    <div class="splide__track">
-        <ul class="splide__list">
-            {{-- Convert each previous slide markup to:
-            <li class="splide__slide">
-                <img src="{{ asset('images/hero/produce.jpg') }}" alt="Fresh produce" loading="lazy" decoding="async">
-                <div class="hero-slider__caption">
-                    <h2>Fresh Produce</h2>
-                    <p>Hand-picked vegetables delivered same-day.</p>
-                </div>
-            </li>
-            --}}
-            <li class="splide__slide">
-                <img src="{{ asset('images/header1.png') }}" alt="Fresh produce" loading="lazy" decoding="async">
-                
-            </li>
-            <li class="splide__slide">
-                <img src="{{ asset('images/slide_2.png') }}" alt="Quality meats" loading="lazy" decoding="async">
-                
-            </li>
-            <li class="splide__slide">
-                <img src="{{ asset('images/slide_3.png') }}" alt="Organic vegetables" loading="lazy" decoding="async">
-                
-            </li>
-            <li class="splide__slide">
-                <img src="{{ asset('images/slide_4.png') }}" alt="Homemade masalas" loading="lazy" decoding="async">
-                
-            </li>
-            <li class="splide__slide">
-                <img src="{{ asset('images/slide_5.png') }}" alt="Beauty and care products" loading="lazy" decoding="async">
-                
-            </li>
-        </ul>
-    </div>
-</section>
-
-@push('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = new Splide('.hero-slider', {
-                type: 'loop',
-                autoplay: true,
-                interval: 4200,
-                speed: 900,
-                easing: 'cubic-bezier(0.22, 0.61, 0.36, 1)',
-                pauseOnHover: false,
-                pauseOnFocus: false,
-                arrows: true,
-                pagination: true,
-                drag: 'free',
-                flickPower: 420,
-                focus: 'center',
-                gap: '1.5rem',
-                perPage: 1,
-                breakpoints: {
-                    1024: { gap: '1rem', arrows: false },
-                    640: { gap: '0.5rem', pagination: true }
-                }
-            });
-
-            slider.mount();
-        });
-    </script>
-@endpush
 
