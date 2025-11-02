@@ -9,6 +9,7 @@
         "barryvdh/laravel-dompdf": "^2.2",
         "doctrine/dbal": "^4.3",
         "guzzlehttp/guzzle": "^7.2",
+        "intervention/image": "^3.11",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/socialite": "^5.23",
