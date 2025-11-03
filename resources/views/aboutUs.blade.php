@@ -25,7 +25,7 @@
 
             <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-4">
-                    <div class="text-3xl font-bold text-yellow-300">3</div>
+                    <div class="text-3xl font-bold text-yellow-300">2</div>
                     <div class="text-white/80">Team Members</div>
                 </div>
                 <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-8 py-4">
