@@ -17,8 +17,17 @@ class GoogleManualAuthController extends Controller
      */
     public function redirect()
     {
-        $clientId = config('app.google_client_id', env('GOOGLE_CLIENT_ID'));
-        $redirectUri = config('app.google_redirect_uri', env('GOOGLE_REDIRECT_URI'));
+        // PULLING CONFIG: Use config() to access values defined in config/services.php
+        $clientId = config('services.google.client_id');
+        $redirectUri = config('services.google.redirect');
+
+        if (!$clientId || !$redirectUri) {
+            Log::error('Google Auth Config Missing', [
+                'client_id' => $clientId ? 'set' : 'missing',
+                'redirect_uri' => $redirectUri ? 'set' : 'missing',
+            ]);
+            return redirect()->route('login')->with('error', 'Google configuration is missing. Please check .env and config/services.php.');
+        }
 
         $state = Str::random(32);
         session(['google_oauth_state' => $state]);
@@ -42,6 +51,11 @@ class GoogleManualAuthController extends Controller
      */
     public function callback(Request $request)
     {
+        // PULLING CONFIG: Use config() to access values defined in config/services.php
+        $clientId = config('services.google.client_id');
+        $clientSecret = config('services.google.client_secret');
+        $redirectUri = config('services.google.redirect');
+
         if ($request->has('error')) {
             return redirect()->route('login')->with('error', 'Google authentication canceled.');
         }
@@ -63,9 +77,10 @@ class GoogleManualAuthController extends Controller
             $tokenRes = $client->post('https://oauth2.googleapis.com/token', [
                 'form_params' => [
                     'code' => $code,
-                    'client_id' => env('GOOGLE_CLIENT_ID'),
-                    'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-                    'redirect_uri' => env('GOOGLE_REDIRECT_URI'),
+                    // Replaced env() with config() for consistency and cache support
+                    'client_id' => $clientId, 
+                    'client_secret' => $clientSecret,
+                    'redirect_uri' => $redirectUri,
                     'grant_type' => 'authorization_code',
                 ],
                 'http_errors' => false,

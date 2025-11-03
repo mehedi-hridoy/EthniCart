@@ -409,20 +409,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });
 
-
-
-// admin dashboard
-Route::middleware(['admin'])->prefix('admin')->group(function () {
-    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-    Route::delete('/delete-user/{id}', [AdminDashboardController::class, 'deleteUser'])->name('admin.deleteUser');
-    Route::delete('/delete-seller/{id}', [AdminDashboardController::class, 'deleteSeller'])->name('admin.deleteSeller');
-});
-
 Route::post('/admin/logout', function () {
     session()->forget('is_admin');
     return redirect('/admin/login');
 })->name('admin.logout');
 
+// Admin Dashboard Routes
 Route::prefix('admin')->middleware('admin')->group(function () {
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/inventory', [AdminDashboardController::class, 'inventory'])->name('admin.inventory');

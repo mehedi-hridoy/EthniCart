@@ -31,4 +31,12 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    // 💥 ADDED: Configuration for Google Auth to be read by the controller
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        // The controller relies on this 'redirect' key
+        'redirect' => env('GOOGLE_REDIRECT_URI'),
+    ],
+
 ];
