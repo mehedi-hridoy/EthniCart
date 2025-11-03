@@ -41,62 +41,6 @@
     </div>
 </section>
 
-<section class="py-24 bg-gradient-to-b from-slate-50 to-white">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-20">
-            
-            <h2 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                 Our Mentor
-            </h2>
-            
-        </div>
-
-        <div class="max-w-7xl mx-auto">
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200/50">
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-0 min-h-[600px]">
-                    <div class="lg:col-span-2 relative overflow-hidden bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center p-12">
-                        <div class="relative z-10">
-                            <div class="w-100 h-140 rounded-3xl overflow-hidden border-8 border-white/20 shadow-2xl backdrop-blur-sm">
-                                <img src="{{ asset('images/zionsir.jpg') }}" 
-                                     class="w-full h-full object-cover" 
-                                     alt="Md. Mezbaul Islam Zion">
-                            </div>
-                        </div>
-                        <div class="absolute inset-0 opacity-10">
-                            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:col-span-3 p-12 lg:p-16 flex flex-col justify-center">
-                        <div class="max-w-2xl">
-                            <h3 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                                Md. Mezbaul Islam Zion 
-                            </h3>
-                            
-                            <div class="flex flex-wrap gap-4 mb-8">
-                                <div class="bg-emerald-100 text-emerald-800 px-6 py-3 rounded-full text-lg font-semibold">
-                                    Lecturer
-                                </div>
-                                <div class="bg-slate-100 text-slate-700 px-6 py-3 rounded-full text-lg">
-                                    Daffodil International University
-                                </div>
-                            </div>
-                            
-                            <p class="text-xl text-slate-600 leading-relaxed mb-12 font-light">
-                                We sincerely thank our mentor, whose guidance helped us build EthniCart. With his support, 
-                                we gained strong knowledge in web development, PHP, and Laravel, and stayed focused through 
-                                his rigorous standards.
-                            </p>
-                            
-                            
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="py-24 bg-gradient-to-b from-slate-50/50 to-blue-50/30">
     <div class="container mx-auto px-6">
